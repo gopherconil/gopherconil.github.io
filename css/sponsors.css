@@ -1,15 +1,21 @@
 .sponsor-description {
-  padding-top: 120px;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  height: 500px;
 }
 
 .sponsor-description .logo {
-  max-height: 200px;
+  max-height: 80px;
   width: auto;
   margin-right: 24px;
 }
 
-.sponsor-description .logo {
-  max-height: 120px;
-  width: auto;
-  margin-right: 24px;
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  .sponsor-description {
+    height: 100%;
+  }
+  
+  .sponsor-description .logo {
+    max-width: 100%;
+  }
 }
