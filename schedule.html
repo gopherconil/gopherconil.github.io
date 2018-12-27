@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125301893-1"></script>
+    <script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-125301893-1');
+    </script>
+
+
+    <link href="#" rel="icon">
+    <title>GopherCon Israel</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/hover-min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+<style>
+td {
+    font-weight: bold;
+}
+tr {
+    background: white;
+}
+tr.break td {
+    background: lightsteelblue;
+}
+tr td:first-child {
+    font-family: monospace;
+}
+</style>
+    <header class="header">
+	<div class="container">
+	    <nav class="navbar navbar-default">
+		<div class="row">
+		    <div class="col-md-4">
+			<div class="logo_area"><a href="index.html" class="navbar-brand"><img alt="GopherCon Israel" src="images/logo.png"
+														      title="GopherCon Israel"></a></div>
+		    </div>
+		    <div class="col-md-8">
+			<div class="navbar-header"><button class="collapsed navbar-toggle" type="button" aria-controls="navbar"
+													 aria-expanded="false" data-target="#navbar" data-toggle="collapse"><span class="sr-only">Toggle
+													     navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+																				    class="icon-bar"></span></button></div>
+			<div class="rite_me">
+			    <div class="inner_menu">
+				<div class="collapse navbar-collapse" id="navbar">
+				    <ul class="nav navbar-nav">
+					<li class="active"><a href="index.html" title="Home">Home</a></li>
+					<li><a href="#aboutID" title="About us" class="page-scroll">About Us</a></li>
+					<li><a href="#sponsorID" title="Sponsors" class="page-scroll">Sponsors</a></li>
+					<li><a href="#speakerID" title="Speakers" class="page-scroll">Speakers</a></li>
+					<li><a href="#socialID" title="Social Area" class="page-scroll">Social Area</a></li>
+				    </ul>
+				</div>
+			    </div>
+			    <!--
+			    <div class="reg"><a href="#" title="Register"><i class="fa fa-user" aria-hidden="true"></i>
+				    Register</a></div>
+			</div>
+			    -->
+		    </div>
+		</div>
+	    </nav>
+	</div>
+    </header>
+    <section class="banner_area">
+	<div class="container">
+	    <div class="row">
+		<h1>Schedule</h1>
+		<table class="table table-striped table-bordered">
+		    <thead>
+			<tr>
+			    <th>Time</th>
+			    <th>Title</th>
+			    <th>Speaker</th>
+			</tr>
+		    </thead>
+		    <tbody>
+			<tr>
+			    <td>08:00-09:00</td>
+			    <td>Registration &amp; Breakfast</td>
+			    <td></td>
+			</tr>
+			<tr>
+			    <td>09:00-09:15</td>
+			    <td>Opening Words</td>
+			    <td></td>
+			</tr>
+			<tr>
+			    <td>09:15-10:15</td>
+			    <td>Keynote</td>
+			    <td>Francesc Campoy</td>
+			</tr>
+			<tr>
+			    <td>10:15-11:00</td>
+			    <td>Going Infinite, handling 1 millions websockets connections in Go</td>
+			    <td>Eran Yanay</td>
+			</tr>
+			<tr class="break">
+			    <td>11:00-11:15</td>
+			    <td>Break</td>
+			    <td></td>
+			</tr>
+			<tr>
+			    <td>11:15-12:00</td>
+			    <td>Debug a Go Application running on Kubernetes cluster</td>
+			    <td>Alexei Ledenev</td>
+			</tr>
+			<tr>
+			    <td>12:00-12:25</td>
+			    <td>The garbage collector</td>
+			    <td>Maya Rosecrance</td>
+			</tr>
+			<tr class="break">
+			    <td>12:25-13:30</td>
+			    <td>Lunch</td>
+			    <td></td>
+			</tr>
+			<tr>
+			    <td>13:30-14:30</td>
+			    <td>Keynote</td>
+			    <td>Natalie Pistunovich</td>
+			</tr>
+			<tr>
+			    <td>14:30-14:55</td>
+			    <td>Go Secrets &amp; Gotchas</td>
+			    <td>Yarel Maman</td>
+			</tr>
+			<tr class="break">
+			    <td>14:55-15:10</td>
+			    <td>Break</td>
+			    <td></td>
+			</tr>
+			<tr>
+			    <td>15:10-15:55</td>
+			    <td>The art of writing idiomatic test code</td>
+			    <td>Liron Levin</td>
+			</tr>
+			<tr>
+			    <td>15:55-16:20</td>
+			    <td>Functional Design in Go</td>
+			    <td>Boaz Shuster</td>
+			</tr>
+			<tr class="break">
+			    <td>16:20-16:35</td>
+			    <td>Break</td>
+			    <td></td>
+			</tr>
+			<tr>
+			    <td>16:35-17:20</td>
+			    <td>Refactoring to modules: why and how – all you need to know in an hour</td>
+			    <td>Baruch Sadogursky</td>
+			</tr>
+			<tr>
+			    <td>17:20-17:45</td>
+			    <td>go defer</td>
+			    <td>Eldad Marciano</td>
+			</tr>
+			<tr>
+			    <td>17:45-18:00</td>
+			    <td>Closing Words</td>
+			    <td></td>
+			</tr>
+			<tr>
+			    <td>18:00-19:00</td>
+			    <td>Social Event</td>
+			    <td></td>
+			</tr>
+		    </tbody>
+		</table>
+	    </div>
+	</div>
+    </section>
+    <footer class="footer">
+	<div class="container">
+	    <div class="row">
+		<div class="col-md-5 col-sm-5">
+		    <div class="footerlogo"><a href="index.html"><img alt="footerlogo" src="images/logo.png" title="GopherCon Israel"></a>
+			<p></p>
+			<p></p>
+		    </div>
+		</div>
+		<div class="col-md-3 col-sm-3">
+		    <div class="same_style footernav">
+			<h6>Quick links</h6>
+			<ul>
+			    <li><a href="index.html" title="Home">Home</a></li>
+			    <li><a href="#" title="About us">About Us</a></li>
+			    <li><a href="#" title="Sponsors">Sponsors</a></li>
+			    <li><a href="#" title="Speakers">Speakers</a></li>
+			    <li><a href="#" title="Social Area">Social Area</a></li>
+			</ul>
+		    </div>
+		</div>
+		<div class="col-md-4 col-sm-4 col-xs-12">
+		    <div class="same_style footersocial">
+			<h6>Code Of Conduct</h6>
+			<p>We operate a <a href="https://golang.org/conduct" target="_blank">code of conduct</a> to ensure all attendees are able to enjoy the conference.</p>
+			<div class="inner_area">
+			    <h6>Stay Informed</h6>
+			    <ul>
+				<li><a href="https://www.facebook.com/GopherCon-Israel-436928696811831" target="_blank" class="hvr-bob" title="Facebook"><i
+													class="fa fa-facebook-f"></i></a></li>
+				<!--
+				<li><a href="https://plus.google.com/" target="_blank" class="hvr-bob" title="Google Plus"><i
+												       class="fa fa-google-plus"></i></a></li>
+				<li><a href="https://www.pinterest.com" target="_blank" class="hvr-bob" title="Pinterest"><i
+													class="fa fa-pinterest"></i></a></li>
+				-->
+				<li><a href="https://twitter.com/gopherconil" target="_blank" class="hvr-bob" title="Twitter"><i
+												      class="fa fa-twitter"></i></a></li>
+				<!--
+				<li><a href="https://www.instagram.com" target="_blank" class="hvr-bob" title="Instagram"><i
+													class="fa fa-instagram"></i></a></li>
+				-->
+			    </ul>
+				<p></p>
+				<h6><small>In collaboration with  <a href="https://www.hamakor.org.il/" target="_blank">HaMakor</small> </h6>
+				<img alt="GopherCon Israel" src="images/Hamakor_logo.png" title="Hamakor"></a></div>
+		</div>
+	    </div>
+	    <!--
+	    <div class="row">
+		<div class="copyright">
+		    <div class="col-md-6 col-sm-6">
+			<p>Copyright ©2018 gophercon.com - All Rights Reserved</p>
+		    </div>
+		    <div class="col-md-6 col-sm-6">
+			<ul class="text-right">
+			    <li><a href="#" title="Terms Conditions">Terms & Conditions</a></li>
+			    <li>|</li>
+			    <li><a href="#" title="Privacy Policy">Privacy Policy</a></li>
+			</ul>
+		    </div>
+		</div>
+	    </div>
+	    -->
+	</div>
+    </footer><a href="#" class="scrollup"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></a>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.arctext.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+	(new WOW).init(), $(window).scroll(function () {
+	    300 <= $(window).scrollTop() ? $(".header").addClass("darkHeader") : $(".header").removeClass(
+		"darkHeader")
+	})
+    </script>
+
+</html>
