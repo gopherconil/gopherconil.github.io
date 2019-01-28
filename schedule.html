@@ -102,25 +102,55 @@ tr td:first-child {
 			    <td>Keynote</td>
 			    <td>Francesc Campoy</td>
 			</tr>
-			<tr>
+			<tr class="talk">
 			    <td>10:15-11:00</td>
 			    <td>Going Infinite, handling 1 millions websockets connections in Go</td>
 			    <td>Eran Yanay</td>
+			</tr>
+			<tr class="collapse">
+			    <td colspan="3">
+				<p>
+Go HTTP server provides great scalability, allocating a goroutine per connection, and reusing the efficient multiplexing and scheduling of the Go runtime. While this technique is almost ideal for most scenarios, it comes with limited scale for websockets apps due to high memory consumption
+</p><p>
+In this talk, we will show how we’ve implement our own event loop mechanism to overcome those limitations and efficiently manage millions of concurrent connections while minimizing resource utilization. We will compare the memory footprint of a naive implementation, relying on the standard way to handle those connections with go-routines, and explore the difficulties of using epoll and select in pure go to efficiently schedule and maintain all those concurrent connections
+</p>
+			    </td>
 			</tr>
 			<tr class="break">
 			    <td>11:00-11:15</td>
 			    <td>Break</td>
 			    <td></td>
 			</tr>
-			<tr>
+			<tr class="talk">
 			    <td>11:15-12:00</td>
 			    <td>Refactoring to modules: why and how – all you need to know in an hour</td>
 			    <td>Baruch Sadogursky &amp; Eyal Ben Moshe</td>
 			</tr>
-			<tr>
+			<tr class="collapse">
+			    <td colspan="3">
+				<p>
+Go modules are here to stay and it’s about time to start modularizing your code. We’re here to help! In this session, you’ll learn why and how to do it by examining a production code successfully refactored to modules.
+				</p><p>
+
+				In this talk, we’ll examine the refactoring of <a href="https://github.com/jfrog/jfrog-cli-go">JFrog CLI</a> project to modules. We’ll start by introducing modules – why and how, will talk about the benefits and the downsides of using modules and the difference between modules and go-dep. Next, we’ll review the changes switching to modules require and will finish up by reviewing the real-world application, before and after.
+				</p>
+			    </td>
+			</tr>
+			<tr class="talk">
 			    <td>12:00-12:25</td>
 			    <td>The garbage collector</td>
 			    <td>Maya Rosecrance</td>
+			</tr>
+			<tr class="collapse">
+			    <td colspan="3">
+				<p>
+				We’ll go through a high level overview of how the golang garbage collector works. We’ll also touch on the one knob we have to tweak, the garbage collector <code>GCPercent</code> and when it might make sense to do so.
+				</p><p>
+				As a golang developer, I usually assume that something is going to clean up memory and my programs will ‘just work’. But it’s worth it to take a peek under the covers to understand the tradeoffs that have been made for performance. <br />
+
+				In 20 minutes we’re going to run through a very high level overview of how the golang garbage collector works. I’ll illustrate what happens when a ‘stop-the-world’ is called and we’ll reason about how it impacts running go programs. We’ll also touch on the one knob we have to tweak, the garbage collector <code>GCPercent</code> and when it might make sense to use it.
+				</p>
+			    </td>
 			</tr>
 			<tr class="break">
 			    <td>12:25-13:30</td>
@@ -132,50 +162,116 @@ tr td:first-child {
 			    <td>Keynote</td>
 			    <td>Natalie Pistunovich</td>
 			</tr>
-			<tr>
+			<tr class="talk">
 			    <td>14:30-14:55</td>
 			    <td>Go Secrets &amp; Gotchas</td>
 			    <td>Yarel Maman</td>
+			</tr>
+			<tr class="collapse">
+			    <td colspan="3">
+				<p>
+				This talk will try to give you a taste of various secrets and gotchas in the Go language and its runtime, followed by examples. <br />
+Aimed for beginners as well as for experienced, The talk will present cases where awareness might save you from a bug, and might contribute to your code review process.
+				</p><p>
+				I would like to propose a 20min talk about various “secrets”, gotchas, caveats, and niche features I discovered in Go over the time.<br />
+				Overview: The talk is about my personal experience, and about things I wish I knew earlier. At first, Maybe you heard about the language or perhaps you’re starting a new job writing Go. So you go through the wonderful “Tour of Go”, then you go over “Effective Go”, maybe watch a few fun videos of Rob Pike on YouTube. Write a small CLI app or a web service. And then you might think you have a notion of Go as a simple language and that it might be difficult to surprise you. Well - You might be surprised! <br />
+				Over the time, perhaps through a Bug or a comment in a Code review, you discover small (and sometimes, significant) details about the language, about its standard libraries, and about its runtime behavior, that keeps you intrigued, and letting you know you still have a lot to learn. <br />
+				This talk isn’t about “the bad parts of Go”, but more about trying to present pretty common gotchas I often see in code reviews with Go developers. It’s less about style and more about “hidden” behavior you might want to be aware of.<br />
+It is aimed for beginners and experienced alike. Basic+ knowledge of Go is required.
+				</p>
+			    </td>
 			</tr>
 			<tr class="break">
 			    <td>14:55-15:10</td>
 			    <td>Break</td>
 			    <td></td>
 			</tr>
-			<tr>
+			<tr class="talk">
 			    <td>15:10-15:55</td>
 			    <td>The art of writing idiomatic test code</td>
 			    <td>Liron Levin</td>
 			</tr>
-			<tr>
+			<tr class="collapse">
+			    <td colspan="3">
+				<p>
+There are numerous guides, talks and discussions on writing idiomatic go code, however, clear guidelines on writing quality unit tests in go are sparse. In this talk, we will show you best-practices from popular-open source projects for writing clean, extendable and idiomatic test code.
+				</p><p>
+				There are numerous guides, talks and discussions on writing idiomatic go code, however, clear guidelines on writing quality unit tests in go are sparse. Should you use a test framework or rely on native go testing package? Should you hand-write your mocks? When should you use data-driven tests and how to write clear asserts? <br />
+				In this talk, we will provide a short introduction to writing solid unit tests in go. We will use examples from popular open source projects to demonstrate how leveraging test tools and test pattern can improve readability, speed and quality of your project. <br />
+				We will discuss: Common testing terminology Advantages and disadvantages of popular test framework Methods to incorporate test tools and auto-generated code in your build pipeline Writing elegant data-driven tests in go. <br />
+				In the end, attendees will have solid understanding on how to write clean idiomatic tests, what are the best-tools for the trade and how to incorporate them in your build pipeline.
+				</p>
+			    </td>
+			</tr>
+			<tr class="talk">
 			    <td>15:55-16:20</td>
 			    <td>Functional Design in Go</td>
 			    <td>Boaz Shuster</td>
+			</tr>
+			<tr class="collapse">
+			    <td colspan="3">
+				<p>
+				I got interested in Functional Design after one year of programing in Go. It showed me a new way of writing code. <br />
+In this talk I would like to show how using Functions can create a declarative, composable and testable code without much of an effort.
+				</p><p>
+				Before I programmed in Go I wrote a lot Python code and was used to the OOP world. You can realize how overwhelmed I was when I joined to a new team programming in Go which later turned to be interesting and satisfying. <br />
+				I had to get use to the idea of composition (vs. inheritance), high-order-functions and writing a declarative code. <br />
+In this session I would like to demonstrate those patterns: 1. What are closures and how we can use them to our benefit 2. How using interfaces and functions make the code more testable and composable 3. Channels and declarative code using functions
+				</p>
+			    </td>
 			</tr>
 			<tr class="break">
 			    <td>16:20-16:35</td>
 			    <td>Break</td>
 			    <td></td>
 			</tr>
-			<tr>
+			<tr class="talk">
 			    <td>16:35-17:20</td>
 			    <td>Debug a Go Application running on Kubernetes cluster</td>
 			    <td>Alexei Ledenev</td>
 			</tr>
-			<tr>
+			<tr class="collapse">
+			    <td colspan="3">
+				<p>
+Kubernetes is a popular platform for running microservices. Debugging a microservice running on Kubernetes cluster can be a challenge. In this session, I will present two approaches to debug a running microservice, written in Go, on Kubernetes cluster.
+				</p><p>
+				The session will demonstrate how to setup and configure a development environment to debug Go microservice, both remotely and locally. The remote debugging demo will focus on building “debug-ready” Docker image with Go app and properly configured <code>delve</code> debugger and configuring IDE access. The local debugging demo will show how to use <code>telepresence</code> tool to swap already deployed Go microservice with local debug session, without a need to package and redeploy every code change.
+
+				</p>
+			    </td>
+			</tr>
+			<tr class="talk">
 			    <td>17:20-17:45</td>
 			    <td>go defer</td>
 			    <td>Eldad Marciano</td>
+			</tr>
+			<tr class="collapse">
+			    <td colspan="3">
+				<p>
+As you may know golang is a GC lang. many times we write a peace of code, but we may forgot to defer some objects. memory leaks, over allocations, guess what we may defer some objects. in this talk i’m going dive into some edge cases that might cause to bad performance and even memory leaks
+				</p><p>
+				Many times we are not deferring an resources while coding applications. this is very important to use modules that has good defering, also it’s tricky where we’re going to place the defer statement.<br />
+Lets drill down into few examples, bad and good principals. stay tuned
+
+				</p>
+			    </td>
 			</tr>
 			<tr>
 			    <td>17:45-18:00</td>
 			    <td>Closing Words</td>
 			    <td></td>
 			</tr>
-			<tr>
+			<tr class="talk">
 			    <td>18:00-19:00</td>
 			    <td>Social Event</td>
 			    <td></td>
+			</tr>
+			<tr class="collapse">
+			    <td colspan="3">
+				<p>
+Come and geek out with fellow Gophers. Drinks &amp; snacks are on us!
+				</p>
+			    </td>
 			</tr>
 		    </tbody>
 		</table>
@@ -258,6 +354,12 @@ tr td:first-child {
 	    300 <= $(window).scrollTop() ? $(".header").addClass("darkHeader") : $(".header").removeClass(
 		"darkHeader")
 	})
+
+    $(function() {
+	$('.talk').click(function() {
+	    $(this).next().collapse('toggle');
+	});
+    });
     </script>
 
 </html>
