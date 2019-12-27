@@ -2202,3 +2202,26 @@ footer.footer {
         }
     }
 }
+
+.sponsor-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+.sponsor-column {
+display: flex;
+flex-direction: column;
+flex-basis: 100%;
+flex: 1;
+justify-content: flex-start;
+}
+
+.sponsor-image {
+    height: 60px;
+    width: 100px;
+    padding: 10px;
+}
+  
+  
