@@ -2224,4 +2224,7 @@ justify-content: flex-start;
     padding: 10px;
 }
   
+.sponsor-link {
+    z-index: 10;
+}
   
