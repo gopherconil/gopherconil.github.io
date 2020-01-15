@@ -567,7 +567,7 @@ header.darkHeader {
     position: relative;
     margin-bottom: 0;
     background-size: cover;
-    height: 850px;
+    height: auto;
 }
 
 .sponsors_sec .container-fluid {
