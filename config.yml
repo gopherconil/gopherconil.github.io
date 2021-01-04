@@ -1,0 +1,99 @@
+baseurl: "https://clever-hypatia-383903.netlify.app/"
+title: "Conference name"
+canonifyurls: true
+theme: "hugo-conference"
+
+GoogleAnalytics: ""
+
+params:
+  # Conference info
+  Name: "Gophercon Israel 2021"
+  Description: "Best Go Conference in Israel"
+  Date: "February 11"
+  # Price: "100NIS" # If your event is free, just comment this line
+  Venue: "Online"
+  Address: "Boulevard Kukulcan, 30"
+  City:  "Everywhere"
+  State: "Israel"
+  Images: ["/img/badge.jpg"]
+  GoogleMapsKey: "my-secret-maps-key"
+
+  # Active sections on the website to deactivate comment out with '#'
+  # you can also change order here and it will reflect on page
+  Sections:
+    - about
+    # - location
+    - speakers
+    - schedule
+    - sponsors
+    # - partners
+    #- contact
+
+  # Titles which you can translate to other languages
+  Titles:
+    about: "About"
+    location: "Location"
+    speakers: "Speakers"
+    schedule: "Schedule"
+    sponsors: "Sponsors"
+    partners: "Partners"
+    contact: "Contact"
+
+  # The Call To Action button at the header,
+  # If you don't want this, just remove the callToAction property.
+  # CallToAction:
+  #   text: "Submit a workshop!"
+  #   link: "https://www.papercall.io/gcil-2021"
+
+  # Fork me on GitHub, if you don't want this, just remove the forkButton property
+  # ForkButton:
+  #   repository: "https://github.com/jweslley/hugo-conference/"
+
+  # List of Sponsors
+  Sponsors:
+    - name: "Hugo"
+      logo: "/img/hugo.png"
+      url: "http://gohugo.io"
+      body:
+        - text: "At Hugo International we tackle complex problems of scale which are sometimes unique to internet-scale customers while using our expertise in resolving problems, coding, algorithms, complexity analysis, and large-scale system design."
+        - text: "Driven by highly-experienced, senior-level customer reliability engineers, Hugo International is a leading go-to innovation team that can help you make the cloud yours."
+    - name: "BrazilJS"
+      logo: "/img/partner.png"
+      url: "http://braziljs.org"
+      body:
+        - text: "At Brazil-Js International we tackle complex problems of scale which are sometimes unique to internet-scale customers while using our expertise in resolving problems, coding, algorithms, complexity analysis, and large-scale system design."
+        - text: "Driven by highly-experienced, senior-level customer reliability engineers, Brazil-Js International is a leading go-to innovation team that can help you make the cloud yours."
+  # List of Partners
+  Partners:
+    # - name: "Hugo"
+    #   logo: "/img/hugo.jpg"
+    #   url: "https://gohugo.io"
+    # - name: "BrazilJS"
+    #   logo: "/img/partner.png"
+    #   url: "http://braziljs.org"
+
+  # The entire schedule
+  Schedule:
+    - name: "CFW starts"
+      time: "November 15, 2020 "
+
+    - name: "CFW ends"
+      time: "December 31, 2021"
+
+    - name: "Workshop selected"
+      time: "January 8, 2021"
+
+    - name: "Conference day"
+      time: "February 11, 2021"
+
+    - name: "Bill Kennedy"
+      photo: "/img/bill_kennedy.jpg"
+      bio: "Walking the line between correctness and comprehension, youtube.ardanlabs.com"
+      company: "Ardan Labs"
+      link:
+        href: "http://twitter.com/goinggodotnet"
+        text: "@goinggodotnet"
+      presentation:
+        title: "Tracing and Profiling in Go"
+        description: "In this workshop Bill will walk you through the Go tooling on tracing and profiling.  Along the way, he will teach about escape analysis, garbage collection, and compiler optimizations"
+        time: "February 11, 2021"

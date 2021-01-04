@@ -1,0 +1,18 @@
+<h2 class="section-title">{{ .titles.sponsors }}</h2>
+
+<ul class="speakers-list">
+  {{ range $sponsor := .sponsors }}
+    <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+        <span class="speaker-photo">
+          <img class="photo" src="{{ .logo }}" alt="{{ .name }}" itemprop="image">
+        </span>
+  
+      <h3 class="speakers-name">
+        <a href="{{ .url }}" target="_blank" title="{{ .name }}"> To learn more, visit {{ .url }} </a>
+      </h3>
+      {{ range $b := .body }}
+        <p class="speakers-bio">{{ .text }}</p> 
+      {{ end }}
+    </li>
+  {{ end }}
+  </ul>
