@@ -1,0 +1,23 @@
+<nav id="nav">
+  <ul class="wrapper">
+    {{ range $section := $.Site.Params.Sections }}
+      <li class="nav-item">
+        <a href="#{{ $section }}" target="_blank" title="{{ index $.Site.Params.Titles $section }}" class="nav-link">
+          {{ index $.Site.Params.Titles $section }}
+        </a>
+      </li>
+    {{ end }}
+    <li class="nav-item">
+      <a href="/2020" target="_blank" title="Gophercon Israel 2020" class="nav-link">
+        2020
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="/2019" target="_blank" title="Gophercon Israel 2019" class="nav-link">
+        2019
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<hr>

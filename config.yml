@@ -53,13 +53,13 @@ params:
   Sponsors:
     - name: "Hugo"
       logo: "/img/hugo.png"
-      url: "/2020"
+      url: "http://gohugo.io"
       body:
         - text: "At Hugo International we tackle complex problems of scale which are sometimes unique to internet-scale customers while using our expertise in resolving problems, coding, algorithms, complexity analysis, and large-scale system design."
         - text: "Driven by highly-experienced, senior-level customer reliability engineers, Hugo International is a leading go-to innovation team that can help you make the cloud yours."
     - name: "BrazilJS"
       logo: "/img/partner.png"
-      url: "/2019"
+      url: "http://braziljs.org"
       body:
         - text: "At Brazil-Js International we tackle complex problems of scale which are sometimes unique to internet-scale customers while using our expertise in resolving problems, coding, algorithms, complexity analysis, and large-scale system design."
         - text: "Driven by highly-experienced, senior-level customer reliability engineers, Brazil-Js International is a leading go-to innovation team that can help you make the cloud yours."
