@@ -57,12 +57,11 @@ params:
       body:
         - text: "At Hugo International we tackle complex problems of scale which are sometimes unique to internet-scale customers while using our expertise in resolving problems, coding, algorithms, complexity analysis, and large-scale system design."
         - text: "Driven by highly-experienced, senior-level customer reliability engineers, Hugo International is a leading go-to innovation team that can help you make the cloud yours."
-    - name: "BrazilJS"
-      logo: "/img/partner.png"
-      url: "http://braziljs.org"
+    - name: "Cloudinary"
+      logo: "/img/cloudinary.png"
+      url: "https://cloudinary.com/careers"
       body:
-        - text: "At Brazil-Js International we tackle complex problems of scale which are sometimes unique to internet-scale customers while using our expertise in resolving problems, coding, algorithms, complexity analysis, and large-scale system design."
-        - text: "Driven by highly-experienced, senior-level customer reliability engineers, Brazil-Js International is a leading go-to innovation team that can help you make the cloud yours."
+        - text: "Cloudinary’s mission is to empower companies to deliver visual experiences that inspire and connect by unleashing the full potential of their media. With more than 40 billion assets under management and 7,000 customers worldwide, Cloudinary is the industry standard for developers, creators, and marketers looking to upload, store, transform, manage, and deliver images and videos online. As a result, leading brands like Atlassian, Bleacher Report, Grubhub, Hinge, Lyft, NBC, Mediavine, Peloton, Petco, and Under Armour are seeing significant business value in using Cloudinary, including faster time to market, higher user satisfaction, and increased engagement and conversions."
   # List of Partners
   Partners:
     # - name: "Hugo"
