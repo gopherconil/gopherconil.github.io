@@ -1,4 +1,4 @@
-baseurl: "https://https://www.gophercon.org.il/"
+baseurl: "https://www.gophercon.org.il/"
 title: "Conference name"
 canonifyurls: true
 theme: "hugo-conference"
