@@ -63,6 +63,15 @@ params:
       body:
         - text: "DoiT International, the strategic partner of Google Cloud and Amazon Web Services, provides cloud expertise, proprietary cloud optimization, and governance software. The company tackles complex problems of scale for customers, using expertise in machine learning, algorithms, complexity analysis, and system design."
         - text: "Founded in 2011, DoiT International operates in nearly 70 countries, including the United States, the United Kingdom, Germany, France, Australia, and Israel. For more information, please visit www.doit-intl.com."
+    - name: "Palo Alto"
+      logo: "/img/paloalto.png"
+      url: "http://bit.ly/32UOuhh"
+      body:
+        - text: "Palo Alto Networks is the largest Cyber Security company in the world that helps tens of thousands of organizations worldwide prevent cyber breaches.
+                  At Palo Alto Networks® everything starts and ends with our mission:
+                  Being the cybersecurity partner of choice, protecting our digital way of life.
+                  We have the vision of a world where each day is safer and more secure than the one before. These aren’t easy goals to accomplish – but we’re not here for easy. We’re here for the better. We are a company built on the foundation of challenging and disrupting the way things are done, and we’re looking for innovators who are as committed to shaping the future of cybersecurity as we are.  
+                  As our founder and CTO Nir Zuk once said: \"the hacker only needs to succeed once, and we need to succeed 100% of the time!\""
     
   # List of Partners
   Partners:
