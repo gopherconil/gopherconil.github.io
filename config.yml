@@ -63,7 +63,7 @@ params:
       body:
         - text: "DoiT International, the strategic partner of Google Cloud and Amazon Web Services, provides cloud expertise, proprietary cloud optimization, and governance software. The company tackles complex problems of scale for customers, using expertise in machine learning, algorithms, complexity analysis, and system design."
         - text: "Founded in 2011, DoiT International operates in nearly 70 countries, including the United States, the United Kingdom, Germany, France, Australia, and Israel. For more information, please visit www.doit-intl.com."
-    - name: "Palo Alto"
+    - name: "Palo Alto Networks"
       logo: "/img/paloalto.png"
       url: "http://bit.ly/32UOuhh"
       body:
