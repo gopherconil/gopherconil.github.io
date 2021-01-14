@@ -84,17 +84,30 @@ params:
 
   # The entire schedule
   Schedule:
-    - name: "CFW starts"
-      time: "November 15, 2020 "
+    - name: "Miki Tebeka"
+      presentation:
+        title: "The Daily Go"
+        description: "In this workshop Bill will walk you through the Go tooling on tracing and profiling.  Along the way, he will teach about escape analysis, garbage collection, and compiler optimizations"
+        time: "09:30 12:30"
+    
+    - name: "Amit Davidson"
+      presentation:
+        title: "Static Analysis with Go - A Practitioner's Guide "
+        description: "In this workshop Bill will walk you through the Go tooling on tracing and profiling.  Along the way, he will teach about escape analysis, garbage collection, and compiler optimizations"
+        time: "09:30 12:30"
 
-    - name: "CFW ends"
-      time: "December 31, 2021"
-
-    - name: "Workshop selected"
-      time: "January 8, 2021"
-
-    - name: "Conference day"
-      time: "February 11, 2021"
+    - name: "Preslav Mihaylov"
+      presentation:
+        title: "Hands-on gRPC with Go"
+        description: "In this workshop Bill will walk you through the Go tooling on tracing and profiling.  Along the way, he will teach about escape analysis, garbage collection, and compiler optimizations"
+        time: "13:00 16:00"
+    
+    - name: "Eran Levy"
+      presentation:
+        title: "Building cloud native services in Go"
+        description: "In this workshop Bill will walk you through the Go tooling on tracing and profiling.  Along the way, he will teach about escape analysis, garbage collection, and compiler optimizations"
+        time: "13:00 16:00"
+         
 
     - name: "Bill Kennedy"
       photo: "/img/bill_kennedy.jpg"
@@ -106,4 +119,4 @@ params:
       presentation:
         title: "Tracing and Profiling in Go"
         description: "In this workshop Bill will walk you through the Go tooling on tracing and profiling.  Along the way, he will teach about escape analysis, garbage collection, and compiler optimizations"
-        time: "February 11, 2021"
+        time: "16:30 20:30"
