@@ -28,7 +28,11 @@
             </td>
             <td class="schedule-description">{{ .presentation.description }}</td>
             <td>
+            {{ if eq .presentation.language "English" }}
+              <img src="img/gb.svg" style="width:50%">
+            {{ else }}
               <img src="img/il.svg" style="width:50%">
+            {{ end }}
             </td>
           </tr>
         {{ else }}
@@ -36,6 +40,13 @@
             <td class="schedule-time">{{ .time }}</td>
             <td class="schedule-slot">{{ .name }}</td>
             <td class="schedule-description">-</td>
+            <td>
+            {{ if eq  .presentation.language "English" }}
+              <img src="img/gb.svg" style="width:50%">
+            {{ else }}
+              <img src="img/il.svg" style="width:50%">
+            {{ end }}
+            </td>
           </tr>
         {{ end }}
       {{ end }}

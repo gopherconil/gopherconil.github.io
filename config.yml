@@ -89,24 +89,28 @@ params:
         title: "The Daily Go"
         description: "Writing code is hard, maintaining it is even harder. In this workshop we’ll cover the daily tasks a typical gopher goes through (aka “best practices”) such as testing, documenting..."
         time: "09:30 12:30"
+        language: "Hebrew"
     
     - name: "Amit Davidson"
       presentation:
         title: "Static Analysis with Go - A Practitioner's Guide "
         description: "Static code analyzers are valuable tools that are easy to write and serve as low-effort bug catchers. Wonder how your IDE knows what it should be yelling at you? Want to make sure no bug (well, many bugs) make it into production? This workshop will guide you in creating your own analyzer in Go!"
         time: "09:30 12:30"
+        language: "English"
 
     - name: "Preslav Mihaylov"
       presentation:
         title: "Hands-on gRPC with Go"
         description: "In this workshop, we’ll go through a small micro services setup and we’ll focus on establishing the communication between them using the gRPC protocol. We’ll explore all communication types gRPC supports and by the end, you’ll have sufficient knowledge to integrate gRPC in your own infrastructure."
         time: "13:00 16:00"
+        language: "English"
     
     - name: "Eran Levy"
       presentation:
         title: "Building cloud native services in Go"
         description: "Cloud brings with it many benefits but also challenges. Building cloud native services is challenging. Even though the general guidelines are not development language dependent, there are still many differences. The workshop will focus on building an e2e Go cloud native service from scratch."
         time: "13:00 16:00"
+        language: "English"
          
 
     - name: "Bill Kennedy"
@@ -120,3 +124,4 @@ params:
         title: "Tracing and Profiling in Go"
         description: "In this workshop Bill will walk you through the Go tooling on tracing and profiling.  Along the way, he will teach about escape analysis, garbage collection, and compiler optimizations"
         time: "16:30 20:30"
+        language: "English"
