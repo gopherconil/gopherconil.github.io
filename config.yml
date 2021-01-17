@@ -42,9 +42,9 @@ params:
 
   # The Call To Action button at the header,
   # If you don't want this, just remove the callToAction property.
-  # CallToAction:
-  #   text: "Submit a workshop!"
-  #   link: "https://www.papercall.io/gcil-2021"
+  CallToAction:
+    text: "Get Your Ticket"
+    link: "https://ti.to/hamakor/gophercon-workshops-2021"
 
   # Fork me on GitHub, if you don't want this, just remove the forkButton property
   # ForkButton:
