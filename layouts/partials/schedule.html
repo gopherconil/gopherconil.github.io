@@ -1,6 +1,6 @@
 <h2 class="section-title">{{ .titles.schedule }}</h2>
 
-<p>Our timeline up to conference day.</p>
+<p>2 Workshops For Each Time Slot.</p>
 <div class="schedule-tbl">
   <table>
     <thead>
@@ -8,6 +8,7 @@
         <th class="schedule-time">Time</th>
         <th class="schedule-slot">Slot</th>
         <th class="schedule-description">Description</th>
+        <th class="language-slot">Language</th>
       </tr>
     </thead>
     <tbody>
@@ -26,12 +27,26 @@
               <span class="speakers-company">{{ .company }}</span>
             </td>
             <td class="schedule-description">{{ .presentation.description }}</td>
+            <td>
+            {{ if eq .presentation.language "English" }}
+              <img src="img/gb.svg" style="width:50%">
+            {{ else }}
+              <img src="img/il.svg" style="width:50%">
+            {{ end }}
+            </td>
           </tr>
         {{ else }}
           <tr class="schedule-other">
             <td class="schedule-time">{{ .time }}</td>
             <td class="schedule-slot">{{ .name }}</td>
             <td class="schedule-description">-</td>
+            <td>
+            {{ if eq  .presentation.language "English" }}
+              <img src="img/gb.svg" style="width:50%">
+            {{ else }}
+              <img src="img/il.svg" style="width:50%">
+            {{ end }}
+            </td>
           </tr>
         {{ end }}
       {{ end }}
