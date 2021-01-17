@@ -96,7 +96,7 @@ params:
         title: "Static Analysis with Go - A Practitioner's Guide "
         description: "Static code analyzers are valuable tools that are easy to write and serve as low-effort bug catchers. Wonder how your IDE knows what it should be yelling at you? Want to make sure no bug (well, many bugs) make it into production? This workshop will guide you in creating your own analyzer in Go!"
         time: "09:30 12:30"
-        language: "English"
+        language: "Hebrew"
 
     - name: "Preslav Mihaylov"
       presentation:
@@ -110,7 +110,7 @@ params:
         title: "Building cloud native services in Go"
         description: "Cloud brings with it many benefits but also challenges. Building cloud native services is challenging. Even though the general guidelines are not development language dependent, there are still many differences. The workshop will focus on building an e2e Go cloud native service from scratch."
         time: "13:00 16:00"
-        language: "English"
+        language: "Hebrew"
          
 
     - name: "Bill Kennedy"
