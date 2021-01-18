@@ -1,5 +1,5 @@
 baseurl: "https://www.gophercon.org.il/"
-title: "Conference name"
+title: "Gophercon Israel 2021"
 canonifyurls: true
 theme: "hugo-conference"
 publishDir: "docs"
