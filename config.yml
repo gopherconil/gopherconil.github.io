@@ -52,6 +52,11 @@ params:
 
   # List of Sponsors
   Sponsors:
+    - name: "AppsFlyer"
+      logo: "/img/appsflyer-logo.png"
+      url: "https://www.appsflyer.com/jobs/office/4007790002/herzliya/"
+      body:
+        - text: "AppsFlyer, the global attribution leader, empowers marketers to grow their business and innovate with a suite of comprehensive measurement and analytics solutions. Built around privacy by design, AppsFlyer takes a customer-centric approach to help 12,000+ brands and 8,000+ technology partners make better business decisions every day. To learn more, visit www.appsflyer.com."
     - name: "Cloudinary"
       logo: "/img/cloudinary.png"
       url: "https://cloudinary.com/careers"
