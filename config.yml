@@ -24,7 +24,7 @@ params:
   Sections:
     - about
     # - location
-    # - speakers
+    - speakers
     - schedule
     - sponsors
     # - partners
@@ -110,6 +110,13 @@ params:
         language: "Hebrew"
 
     - name: "Preslav Mihaylov"
+      photo: "/img/preslav_mihaylov.jpg"
+      bio: "I’m a software engineer at Uber, working with microservices written in Go & Java.
+            I’ve also been teaching programming since 2015, leading lectures & seminars on various topics from the programming world to both aspiring programmers & experienced developers from Bulgaria, Serbia, Australia, Singapore, The Philippines & more. Topics range from Basics of Programming to Data structures, Algorithms, Web Development & even Blockchain.
+            In my free time, I’m maintaining todocheck - a tiny linter, written in Go which connects your TODOs to your tasks in your issue tracker."
+      link:
+        href: "https://twitter.com/PreslavMihaylov"
+        text: "@PreslavMihaylov"
       presentation:
         title: "Hands-on gRPC with Go"
         description: "In this workshop, we’ll go through a small micro services setup and we’ll focus on establishing the communication between them using the gRPC protocol. We’ll explore all communication types gRPC supports and by the end, you’ll have sufficient knowledge to integrate gRPC in your own infrastructure."
@@ -117,6 +124,11 @@ params:
         language: "English"
     
     - name: "Eran Levy"
+      photo: "/img/eran_levy.jpg"
+      bio: "Eran has worked as a R&D leader and software architect in a diverse range of companies and managed activities in Israel and abroad. Technology for fun and living. Love to share my knowledge and experience with others. Holds a B.Sc. in Computer Science."
+      link:
+        href: "https://twitter.com/levyeran"
+        text: "@levyeran"
       presentation:
         title: "Building cloud native services in Go"
         description: "Cloud brings with it many benefits but also challenges. Building cloud native services is challenging. Even though the general guidelines are not development language dependent, there are still many differences. The workshop will focus on building an e2e Go cloud native service from scratch."
@@ -129,7 +141,7 @@ params:
       bio: "Walking the line between correctness and comprehension, youtube.ardanlabs.com"
       company: "Ardan Labs"
       link:
-        href: "http://twitter.com/goinggodotnet"
+        href: "https://twitter.com/goinggodotnet"
         text: "@goinggodotnet"
       presentation:
         title: "Tracing and Profiling in Go"
