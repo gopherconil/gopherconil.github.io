@@ -96,6 +96,14 @@ params:
   # The entire schedule
   Schedule:
     - name: "Miki Tebeka"
+      photo: "/img/miki_tebeka.png"
+      bio: "Miki has a B.Sc. in computer science from Ben Gurion University. Has also studied there toward an M.Sc. in computational linguistics.
+            Miki had worked in many companies from small startups to big multinational corporations and has written software in many areas from linkers and hardware simulators to news analysis for high frequency traders and handling big data pipelines.
+            Miki has a passion for teaching and mentoring. He has spent many hours giving workshops on various technical subjects, he also mentored many young developers on their way to success.
+            Miki also contributed to many open source projects including Python core, Go, Selenium, Apache Avro and many more. He had worked with several of the leading Python developers gaining deep understanding of the language and help improving it as well."
+      link:
+        href: "https://twitter.com/tebeka"
+        text: "@tebeka"
       presentation:
         title: "The Daily Go"
         description: "Writing code is hard, maintaining it is even harder. In this workshop we’ll cover the daily tasks a typical gopher goes through (aka “best practices”) such as testing, documenting..."
@@ -103,6 +111,11 @@ params:
         language: "Hebrew"
     
     - name: "Amit Davidson"
+      photo: "/img/amit_davidson.jpg"
+      bio: "Hey! my name is Amit Davidson. I’m a senior software engineer for Palo Alto Networks. I’ve been involved with code analysis tools in Go, and I’m the author of Chronos (https://github.com/amit-davidson/Chronos), a tool used to detect race conditions."
+      link:
+        href: "https://github.com/amit-davidson"
+        text: "@amit-davidson"
       presentation:
         title: "Static Analysis with Go - A Practitioner's Guide "
         description: "Static code analyzers are valuable tools that are easy to write and serve as low-effort bug catchers. Wonder how your IDE knows what it should be yelling at you? Want to make sure no bug (well, many bugs) make it into production? This workshop will guide you in creating your own analyzer in Go!"
