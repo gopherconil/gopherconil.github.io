@@ -24,7 +24,7 @@ params:
   Sections:
     - about
     # - location
-    # - speakers
+    - speakers
     - schedule
     - sponsors
     # - partners
@@ -96,6 +96,15 @@ params:
   # The entire schedule
   Schedule:
     - name: "Miki Tebeka"
+      photo: "/img/miki_tebeka.png"
+      company: "353solutions"
+      bio: "Miki has a B.Sc. in computer science from Ben Gurion University. Has also studied there toward an M.Sc. in computational linguistics.
+            Miki had worked in many companies from small startups to big multinational corporations and has written software in many areas from linkers and hardware simulators to news analysis for high frequency traders and handling big data pipelines.
+            Miki has a passion for teaching and mentoring. He has spent many hours giving workshops on various technical subjects, he also mentored many young developers on their way to success.
+            Miki also contributed to many open source projects including Python core, Go, Selenium, Apache Avro and many more. He had worked with several of the leading Python developers gaining deep understanding of the language and help improving it as well."
+      link:
+        href: "https://twitter.com/tebeka"
+        text: "@tebeka"
       presentation:
         title: "The Daily Go"
         description: "Writing code is hard, maintaining it is even harder. In this workshop we’ll cover the daily tasks a typical gopher goes through (aka “best practices”) such as testing, documenting..."
@@ -103,6 +112,12 @@ params:
         language: "Hebrew"
     
     - name: "Amit Davidson"
+      photo: "/img/amit_davidson.jpg"
+      company: "Palo Alto Networks"
+      bio: "Hey! my name is Amit Davidson. I’m a senior software engineer for Palo Alto Networks. I’ve been involved with code analysis tools in Go, and I’m the author of Chronos (https://github.com/amit-davidson/Chronos), a tool used to detect race conditions."
+      link:
+        href: "https://github.com/amit-davidson"
+        text: "@amit-davidson"
       presentation:
         title: "Static Analysis with Go - A Practitioner's Guide "
         description: "Static code analyzers are valuable tools that are easy to write and serve as low-effort bug catchers. Wonder how your IDE knows what it should be yelling at you? Want to make sure no bug (well, many bugs) make it into production? This workshop will guide you in creating your own analyzer in Go!"
@@ -110,6 +125,14 @@ params:
         language: "Hebrew"
 
     - name: "Preslav Mihaylov"
+      photo: "/img/preslav_mihaylov.jpg"
+      company: "Uber"
+      bio: "I’m a software engineer at Uber, working with microservices written in Go & Java.
+            I’ve also been teaching programming since 2015, leading lectures & seminars on various topics from the programming world to both aspiring programmers & experienced developers from Bulgaria, Serbia, Australia, Singapore, The Philippines & more. Topics range from Basics of Programming to Data structures, Algorithms, Web Development & even Blockchain.
+            In my free time, I’m maintaining todocheck - a tiny linter, written in Go which connects your TODOs to your tasks in your issue tracker."
+      link:
+        href: "https://twitter.com/PreslavMihaylov"
+        text: "@PreslavMihaylov"
       presentation:
         title: "Hands-on gRPC with Go"
         description: "In this workshop, we’ll go through a small micro services setup and we’ll focus on establishing the communication between them using the gRPC protocol. We’ll explore all communication types gRPC supports and by the end, you’ll have sufficient knowledge to integrate gRPC in your own infrastructure."
@@ -117,6 +140,11 @@ params:
         language: "English"
     
     - name: "Eran Levy"
+      photo: "/img/eran_levy.jpg"
+      bio: "Eran has worked as a R&D leader and software architect in a diverse range of companies and managed activities in Israel and abroad. Technology for fun and living. Love to share my knowledge and experience with others. Holds a B.Sc. in Computer Science."
+      link:
+        href: "https://twitter.com/levyeran"
+        text: "@levyeran"
       presentation:
         title: "Building cloud native services in Go"
         description: "Cloud brings with it many benefits but also challenges. Building cloud native services is challenging. Even though the general guidelines are not development language dependent, there are still many differences. The workshop will focus on building an e2e Go cloud native service from scratch."
@@ -129,7 +157,7 @@ params:
       bio: "Walking the line between correctness and comprehension, youtube.ardanlabs.com"
       company: "Ardan Labs"
       link:
-        href: "http://twitter.com/goinggodotnet"
+        href: "https://twitter.com/goinggodotnet"
         text: "@goinggodotnet"
       presentation:
         title: "Tracing and Profiling in Go"
