@@ -83,6 +83,12 @@ params:
       body:
         - text: "JFrog is on a mission to enable continuous updates through Liquid Software, empowering developers to code high-quality applications that securely flow to end-users with zero downtime.The company is the global standard for shipping high-quality software continuously and efficiently. With thousands of customers and a community of millions of developers across the world.
                  The world’s top brands such as Amazon, Facebook, Google, Netflix, Uber, VMware, and Spotify are among the 5,000+ companies that already depend on JFrog to manage binaries for their mission-critical applications."
+    - name: "Ardan Labs"
+      logo: "/img/ardanlabs-logo.svg"
+      url: "https://www.ardanlabs.com/"
+      body:
+        - text: "Special thanks to Ardan Labs
+"
     
   # List of Partners
   Partners:
