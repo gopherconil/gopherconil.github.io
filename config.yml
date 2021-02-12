@@ -46,9 +46,9 @@ params:
   #  text: "Get Your Ticket"
   #  link: "https://ti.to/hamakor/gophercon-workshops-2021"
   
-  CallToAction:
-    text: "Join Us on Discord"
-    link: "https://discord.gg/mJJFXzpC"
+  #CallToAction:
+  #  text: "Join Us on Discord"
+  #  link: "https://discord.gg/mJJFXzpC"
 
   # Fork me on GitHub, if you don't want this, just remove the forkButton property
   # ForkButton:
