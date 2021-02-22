@@ -49,6 +49,10 @@ params:
   #CallToAction:
   #  text: "Join Us on Discord"
   #  link: "https://discord.gg/mJJFXzpC"
+  
+  CallToAction:
+    text: "Watch the Videos"
+    link: "https://youtube.com/playlist?list=PLRM-8sTy13XvBSwVwVNc2ZR7dTP1wa4zY"
 
   # Fork me on GitHub, if you don't want this, just remove the forkButton property
   # ForkButton:
