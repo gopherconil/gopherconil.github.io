@@ -8,25 +8,25 @@ GoogleAnalytics: "UA-125301893-1"
 
 params:
   # Conference info
-  Name: "Gophercon Israel 2021"
+  Name: "Gophercon Israel 2022"
   Description: "Best Go Conference in Israel"
-  Date: "February 11"
+  Date: "Coming Soon!"
   # Price: "100NIS" # If your event is free, just comment this line
-  Venue: "Online"
-  Address: "Boulevard Kukulcan, 30"
-  City:  "Everywhere"
+  Venue: "Expo"
+  # Address: "Boulevard Kukulcan, 30"
+  City:  "Tel Aviv"
   State: "Israel"
   Images: ["/img/badge.jpg"]
-  GoogleMapsKey: "my-secret-maps-key"
+  # GoogleMapsKey: "my-secret-maps-key"
 
   # Active sections on the website to deactivate comment out with '#'
   # you can also change order here and it will reflect on page
   Sections:
     - about
     # - location
-    - speakers
-    - schedule
-    - sponsors
+    # - speakers
+    # - schedule
+    # - sponsors
     # - partners
     #- contact
 
@@ -50,9 +50,9 @@ params:
   #  text: "Join Us on Discord"
   #  link: "https://discord.gg/mJJFXzpC"
   
-  CallToAction:
-    text: "Watch the Videos"
-    link: "https://youtube.com/playlist?list=PLRM-8sTy13XvBSwVwVNc2ZR7dTP1wa4zY"
+  # CallToAction:
+  #   text: "Watch the Videos"
+  #   link: "https://youtube.com/playlist?list=PLRM-8sTy13XvBSwVwVNc2ZR7dTP1wa4zY"
 
   # Fork me on GitHub, if you don't want this, just remove the forkButton property
   # ForkButton:
@@ -95,17 +95,10 @@ params:
       logo: "/img/ardanlabs-logo.svg"
       url: "https://www.ardanlabs.com/"
       body:
-        - text: "Special thanks to Ardan Labs
-"
+        - text: "Special thanks to Ardan Labs"
     
   # List of Partners
   Partners:
-    # - name: "Hugo"
-    #   logo: "/img/hugo.jpg"
-    #   url: "https://gohugo.io"
-    # - name: "BrazilJS"
-    #   logo: "/img/partner.png"
-    #   url: "http://braziljs.org"
 
   # The entire schedule
   Schedule:
