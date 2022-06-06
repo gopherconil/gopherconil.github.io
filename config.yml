@@ -1,5 +1,5 @@
 baseurl: "https://www.gophercon.org.il/"
-title: "Gophercon Israel 2021"
+title: "GopherCon Israel 2021"
 canonifyurls: true
 theme: "hugo-conference"
 publishDir: "docs"
@@ -8,7 +8,7 @@ GoogleAnalytics: "UA-125301893-1"
 
 params:
   # Conference info
-  Name: "Gophercon Israel 2022"
+  Name: "GopherCon Israel 2022"
   Description: "Best Go Conference in Israel"
   Date: "Coming Soon!"
   # Price: "100NIS" # If your event is free, just comment this line
