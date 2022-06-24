@@ -281,6 +281,7 @@ hr {
   position: relative;
 }
 .content {
+  background: #ffffff;
   padding: 50px 0;
 }
 .content section {
@@ -770,9 +771,7 @@ nav {
    ABOUT
    ========================================================================== */
 .about {
-  border: 1px solid #e7e7e7;
   background: #fff;
-  border-radius: 4px;
 }
 /* =============================================================================
    LOCATION
