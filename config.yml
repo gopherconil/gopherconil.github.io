@@ -23,6 +23,7 @@ params:
   # you can also change order here and it will reflect on page
   Sections:
     - about
+    - tweets
     # - location
     # - speakers
     # - schedule
