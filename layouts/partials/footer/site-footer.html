@@ -1,0 +1,23 @@
+<footer class="footer">
+    <div id="footer-info">
+        <div class="footer-section">
+            <h1>Follow Us</h1>
+            <a href="https://twitter.com/GopherConIL?ref_src=twsrc%5Etfw"><img alt="twitter logo"
+                                                                               src="img/twitter_logo.svg"/></a>
+        </div>
+        <!--Remove if statement once we support add to calendar links-->
+        {{ if false }}
+        <div class="footer-section">
+            <h1>Add to Calendar</h1>
+            <div id="footer-calendar-links">
+                <a class="footer-link" id="google-link" href="">Google</a>
+                <a class="footer-link" href="">Outlook</a>
+                <a class="footer-link" href="">iCal</a>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    <div id="copyright">
+        <p>© 2022 GopherCon Israel</p>
+    </div>
+</footer>
