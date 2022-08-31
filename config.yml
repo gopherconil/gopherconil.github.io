@@ -55,6 +55,10 @@ params:
   #   text: "Watch the Videos"
   #   link: "https://youtube.com/playlist?list=PLRM-8sTy13XvBSwVwVNc2ZR7dTP1wa4zY"
 
+  CallToAction:
+    text: "Become a Sponsor"
+    link: "/sponsor2023.html"
+
   # Fork me on GitHub, if you don't want this, just remove the forkButton property
   # ForkButton:
   #   repository: "https://github.com/jweslley/hugo-conference/"
