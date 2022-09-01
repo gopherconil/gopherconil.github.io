@@ -1076,6 +1076,8 @@ nav {
     line-height: 1.5em;
     height: 1.5em;
     font-size: 1.3em;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 .footer-link {
