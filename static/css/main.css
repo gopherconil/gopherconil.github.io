@@ -375,6 +375,18 @@ p {
     top: -1px;
 }
 
+.pink-bear{
+    position: absolute;
+    height: 100px;
+    right:2px
+}
+
+.green-bear{
+    position: absolute;
+    height: 100px;
+    left:2px
+}
+
 /* =============================================================================
    NAVIGATION
    ========================================================================== */
