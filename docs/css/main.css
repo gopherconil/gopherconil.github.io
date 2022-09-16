@@ -375,6 +375,18 @@ p {
     top: -1px;
 }
 
+.pink-bear{
+    position: absolute;
+    height: 100px;
+    right:2px
+}
+
+.green-bear{
+    position: absolute;
+    height: 100px;
+    left:2px
+}
+
 /* =============================================================================
    NAVIGATION
    ========================================================================== */
@@ -852,7 +864,7 @@ nav {
    HEADER
    ========================================================================== */
 .header {
-    background-image: url('../img/cover.jpg');
+    background-image: url('../img/bg-blue.jpg');
     background-color: #214f87;
     background-repeat: no-repeat;
     background-position: center bottom;

@@ -4,13 +4,16 @@
   </a>
 {{ end }}
 
-<header class="header">
+<header class="header" id="clouds">
+  <div class="cloud x1"></div>
   <div class="wrapper">
+    <div class="cloud x2"></div>
     <h1 class="logo-name">
       <a class="logo-link" href="#" title="{{ .name }}" itemprop="name">{{ .name }}</a>
     </h1>
-    <h2 class="tagline">{{ .date }}, {{ .venue }}, {{ .city }}</h2>
-
+    <div class="cloud x3"></div>
+    <h2 class="tagline">{{ .date }} {{ .venue }}, {{ .city }}</h2>
+    <div class="cloud x4"></div>
     <div class="call-action-area">
       {{ with .price }}
         <span class="price">{{ . }}</span>
@@ -20,6 +23,9 @@
         <a href="{{ .link }}" class="call-action-link" target="_blank" title="{{ .text }}">{{ .text }}</a>
       {{ end }}
     </div>
+    <div class="cloud x5"></div>
+    <img src="/img/pink_bear.png" alt="Pink Bear" class="pink-bear">
+    <img src="/img/green_bear.png" alt="Green Bear" class="green-bear">
   </div>
 </header>
 
