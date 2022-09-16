@@ -377,13 +377,13 @@ p {
 
 .pink-bear{
     position: absolute;
-    height: 100px;
+    height: 10vh;
     right:2px
 }
 
 .green-bear{
     position: absolute;
-    height: 100px;
+    height: 10vh;
     left:2px
 }
 
