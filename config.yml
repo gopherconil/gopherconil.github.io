@@ -42,22 +42,14 @@ params:
     contact: "Contact"
 
   # The Call To Action button at the header,
-  # If you don't want this, just remove the callToAction property.
-  #CallToAction:
-  #  text: "Get Your Ticket"
-  #  link: "https://ti.to/hamakor/gophercon-workshops-2021"
-  
-  #CallToAction:
-  #  text: "Join Us on Discord"
-  #  link: "https://discord.gg/mJJFXzpC"
-  
-  # CallToAction:
-  #   text: "Watch the Videos"
-  #   link: "https://youtube.com/playlist?list=PLRM-8sTy13XvBSwVwVNc2ZR7dTP1wa4zY"
-
   CallToAction:
     text: "Become a Sponsor"
     link: "/sponsor2023.html"
+
+  # The Call For Paper button at the header,
+  CallForPaper:
+    text: "Apply to Speak"
+    link: "https://www.papercall.io/gcil-2023"
 
   # Fork me on GitHub, if you don't want this, just remove the forkButton property
   # ForkButton:
