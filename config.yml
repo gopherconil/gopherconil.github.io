@@ -47,9 +47,14 @@ params:
     link: "/sponsor2023.html"
 
   # The Call For Paper button at the header,
-  CallForPaper:
-    text: "Apply to Speak"
-    link: "https://www.papercall.io/gcil-2023"
+#  CallForPaper:
+#    text: "Apply to Speak"
+#    link: "https://www.papercall.io/gcil-2023"
+
+#  # The tickets button at the header,
+#  Tickets:
+#    text: "Purchase Ticket"
+#    link: "https://ti.to/hamakor/gophercon-2023"
 
   # Fork me on GitHub, if you don't want this, just remove the forkButton property
   # ForkButton:

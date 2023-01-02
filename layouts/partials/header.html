@@ -18,11 +18,13 @@
       {{ with .price }}
         <span class="price">{{ . }}</span>
       {{ end }}
-
       {{ with .calltoaction }}
         <a href="{{ .link }}" class="call-action-link" target="_blank" title="{{ .text }}">{{ .text }}</a>
       {{ end }}
       {{ with .callforpaper }}
+        <a href="{{ .link }}" class="call-action-link" target="_blank" title="{{ .text }}">{{ .text }}</a>
+      {{ end }}
+      {{ with .tickets }}
         <a href="{{ .link }}" class="call-action-link" target="_blank" title="{{ .text }}">{{ .text }}</a>
       {{ end }}
     </div>
