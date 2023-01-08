@@ -124,17 +124,75 @@ params:
         description: "Nir Barak"
         time: "11:00 11:30"
         language: "Hebrew"
-    - name: "Miki Tebeka"
-      photo: "/img/your-logo.jpg"
-      bio: "Miki has a B.Sc. in computer science from Ben Gurion University. Has also studied there toward an M.Sc. in computational linguistics.
-            Miki had worked in many companies from small startups to big multinational corporations and has written software in many areas from linkers and hardware simulators to news analysis for high frequency traders and handling big data pipelines.
-            Miki has a passion for teaching and mentoring. He has spent many hours giving workshops on various technical subjects, he also mentored many young developers on their way to success.
-            Miki also contributed to many open source projects including Python core, Go, Selenium, Apache Avro and many more. He had worked with several of the leading Python developers gaining deep understanding of the language and help improving it as well."
-      link:
-        href: "https://twitter.com/tebeka"
-        text: "@tebeka"
+    - name: "Break"
+      time: "11:30 11:45"
+    - name: "Roni Dover"
       presentation:
-        title: "The Daily Go"
-        description: "Miki Tebeka"
-        time: "09:30 12:30"
+        title: "Coding with the lights ON - OpenTelemetry for Gophers"
+        description: "Roni Dover"
+        time: "11:45 12:15"
         language: "Hebrew"
+    - name: "Natalie Pistunovich"
+      presentation:
+        title: "AI-Assisted Go: Up Your Game and Have More Fun"
+        description: "Natalie Pistunovich"
+        time: "11:45 12:15"
+        language: "Hebrew"
+    - name: "Lunch"
+      time: "12:15 13:15"
+    - name: "Guy Brandwine"
+      presentation:
+        title: "A journey from development chaos to total control"
+        description: "Guy Brandwine"
+        time: "11:45 12:15"
+        language: "English"
+    - name: "Doron Segal"
+      presentation:
+        title: "How Golang can help fighting global warming"
+        description: "Doron Segal"
+        time: "11:45 12:15"
+        language: "Hebrew"
+    - name: "Break"
+      time: "13:45 14:00"
+    - name: "Hagai Dayan"
+      presentation:
+        title: "Bottlenecks in Golang memory management"
+        description: "Hagai Dayan"
+        time: "14:45 15:15"
+        language: "Hebrew"
+    - name: "Sayani Bhattacharjee"
+      presentation:
+        title: "How Golang can help fighting global warming"
+        description: "Sayani Bhattacharjee"
+        time: "14:45 15:15"
+        language: "English"
+    - name: "Break"
+      time: "15:15 15:45"
+    - name: "Lightning Talks"
+      presentation:
+        description: "Lightning Talks"
+        time: "14:45 15:15"
+    - name: ""
+      presentation:
+        title: "Writing a custom golang linter"
+        description: "Nahshon Unna - Tsameret"
+    - name: ""
+      presentation:
+        title: "Single Method Interfaces and How to Use Them"
+        description: "Noam Soloveichik"
+    - name: ""
+      presentation:
+        title: "In the Loop"
+        description: "Miki Tebeka"
+    - name: ""
+      presentation:
+        title: "Ain't nobody got time.Time fo' that"
+        description: "Idan Katz"
+    - name: ""
+      presentation:
+        title: "People-oriented programming: effectively using Go's built-in features to make life easier for your fellow devs"
+        description: "Ori Shoshan"
+    - name: "Closing words"
+      time: "16:30 16:45"
+    - name: "Social Event"
+      time: "16:45 17:30"
