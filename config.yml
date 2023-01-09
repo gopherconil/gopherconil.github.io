@@ -154,6 +154,20 @@ params:
         language: "Hebrew"
     - name: "Break"
       time: "13:45 14:00"
+    - name: "Liri Sokol"
+      presentation:
+        title: "Writing a virtual file system was never simpler"
+        description: "Liri Sokol"
+        time: "14:00 14:30"
+        language: "Hebrew"
+    - name: "SAdrian Cole"
+      presentation:
+        title: "WebAssembly for the backend"
+        description: "Adrian Cole"
+        time: "14:00 14:30"
+        language: "English"
+    - name: "Break"
+      time: "14:30 14:45"
     - name: "Hagai Dayan"
       presentation:
         title: "Bottlenecks in Golang memory management"
