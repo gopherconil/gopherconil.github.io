@@ -8,7 +8,6 @@
         <th class="schedule-time">Time</th>
         <th class="schedule-slot">Slot</th>
         <th class="schedule-description">Description</th>
-        <th class="language-slot">Language</th>
       </tr>
     </thead>
     <tbody>
@@ -26,18 +25,13 @@
               {{ .presentation.title }}
               <span class="speakers-company">{{ .company }}</span>
             </td>
-            <td class="schedule-description">{{ .presentation.description }}</td>
-            <td>
-            {{ if eq .presentation.language "English" }}
-              <span class="speaker-photo">
-              <img src="img/gb.svg" style="width:50%">
-              </span>
-            {{ end }}
-            {{ if eq .presentation.language "Hebrew" }}
-              <span class="speaker-photo">
-              <img src="img/il.svg" style="width:50%">
-              </span>
-            {{ end }}
+            <td class="schedule-description">{{ .presentation.description }}
+              {{ if eq .presentation.language "English" }}
+              <img src="img/gb.svg" style="float: right;width: 10px;height: 10px">
+              {{ end }}
+              {{ if eq .presentation.language "Hebrew" }}
+              <img src="img/il.svg" style="float: right;width: 10px;height: 10px">
+              {{ end }}
             </td>
           </tr>
         {{ else }}
@@ -45,7 +39,6 @@
             <td class="schedule-time">{{ .time }}</td>
             <td class="schedule-slot"><span class="speaker-photo"><img class="photo" src="img/your-logo.jpg" alt="{{ $slot.name }}"></span></td>
             <td class="schedule-description">{{ .name }}</td>
-            <td></td>
           </tr>
         {{ end }}
       {{ end }}
