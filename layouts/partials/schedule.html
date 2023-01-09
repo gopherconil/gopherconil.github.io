@@ -29,24 +29,23 @@
             <td class="schedule-description">{{ .presentation.description }}</td>
             <td>
             {{ if eq .presentation.language "English" }}
+              <span class="speaker-photo">
               <img src="img/gb.svg" style="width:50%">
-            {{ else }}
+              </span>
+            {{ end }}
+            {{ if eq .presentation.language "Hebrew" }}
+              <span class="speaker-photo">
               <img src="img/il.svg" style="width:50%">
+              </span>
             {{ end }}
             </td>
           </tr>
         {{ else }}
           <tr class="schedule-other">
             <td class="schedule-time">{{ .time }}</td>
-            <td class="schedule-slot">{{ .name }}</td>
-            <td class="schedule-description">-</td>
-            <td>
-            {{ if eq  .presentation.language "English" }}
-              <img src="img/gb.svg" style="width:50%">
-            {{ else }}
-              <img src="img/il.svg" style="width:50%">
-            {{ end }}
-            </td>
+            <td class="schedule-slot"><span class="speaker-photo"><img class="photo" src="img/your-logo.jpg" alt="{{ $slot.name }}"></span></td>
+            <td class="schedule-description">{{ .name }}</td>
+            <td></td>
           </tr>
         {{ end }}
       {{ end }}
