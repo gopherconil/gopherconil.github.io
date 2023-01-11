@@ -108,7 +108,7 @@ params:
       time: "08:30 09:30"
     - name: "Opening Words"
       time: "09:30 09:45"
-    - name: "Keynote"
+    - name: "Keynote - Derek Parkar (author of the Delve Debugger)"
       time: "09:45 10:30"
     - name: "Break"
       time: "10:30 11:00"
