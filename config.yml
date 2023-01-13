@@ -114,8 +114,15 @@ params:
       talk:
         - name: "Keynote"
           description: "Derek Parkar - author of the Delve Debugger"
-    # - name: "Break"
-    #   time: "10:30 11:00"
+    - time: "10:30 11:00"
+      event:
+        name: "Break"
+    - time: "11:00 11:30"
+      talk:
+        - name: "Generics are a Gopher's Best Friend - Amit Lichtenberg"
+          description: "Amit Lichtenberg"
+        # - name: "Shifting Left with Protobuf - a multi-disciplinary approach to schema management"
+        #   description: "Nir Barak"
     # - name: "Amit Lichtenberg"
     #   presentation:
     #     title: "Generics are a Gopher's Best Friend"
