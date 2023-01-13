@@ -111,9 +111,9 @@ params:
       event:
         name: "Opening Words"
     - time: "09:45 10:30"
-      presenation:
-        name: "Keynote"
-        description: "Derek Parkar - author of the Delve Debugger"
+      talk:
+        - name: "Keynote"
+          description: "Derek Parkar - author of the Delve Debugger"
     # - name: "Break"
     #   time: "10:30 11:00"
     # - name: "Amit Lichtenberg"

@@ -13,50 +13,16 @@
     <tbody>
       {{ range $slot := .schedule }}
       <tr>
-        <td class="schedule-time">{{ .time }}</td>
-        {{ if ne .event nil}}
-          <td class="schedule-slot">
-            <span class="schedule-description">{{ .event.name }}</span>
-          </td>
-          <td class="schedule-slot"></td>
-        </tr>
-        {{ end }}
-        {{ if ne .presenation nil}}
-        <td class="schedule-slot">
-          <span class="schedule-description">{{ .presenation.name }}</span>
-        </td>
-        <td class="schedule-description"> {{ .presenation.description }}</td>
-        </tr>
-        {{ end }}
-        <!-- {{ if ne .presentation nil }}
-          <tr>
-            <td class="schedule-time">{{ .presentation.time }}</td>
-            <td class="schedule-slot">
-            {{ with .photo }}
-              <span class="speaker-photo">
-                <img class="photo" src="{{ . }}" alt="{{ $slot.name }}">
-              </span>
-            {{ end }}
-
-              {{ .presentation.title }}
-              <span class="speakers-company">{{ .company }}</span>
-            </td>
-            <td class="schedule-description">{{ .presentation.description }}
-              {{ if eq .presentation.language "English" }}
-              <img src="img/gb.svg" style="float: right;width: 10px;height: 10px">
-              {{ end }}
-              {{ if eq .presentation.language "Hebrew" }}
-              <img src="img/il.svg" style="float: right;width: 10px;height: 10px">
-              {{ end }}
-            </td>
-          </tr> -->
-        <!-- {{ else }}
-          <tr class="schedule-other">
-            <td class="schedule-time">{{ .time }}</td>
-            <td class="schedule-slot"><span class="speaker-photo"><img class="photo" src="img/your-logo.jpg" alt="{{ $slot.name }}"></span></td>
-            <td class="schedule-description">{{ .name }}</td>
-          </tr>
-        {{ end }} -->
+      <td class="schedule-time">{{ .time }}</td>
+      {{ if ne .event nil}}
+        <td class="schedule-slot">{{ .event.name }}</td>
+        <td class="schedule-description"></td>
+      {{ end }}
+      {{ range $t := .talk}}
+        <td class="schedule-slot">{{ $t.name }}</td>
+        <td class="schedule-description">{{ $t.description }}</td>
+      {{ end }}
+      </tr>
       {{ end }}
     </tbody>
   </table>
