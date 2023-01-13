@@ -21,6 +21,13 @@
           <td class="schedule-slot"></td>
         </tr>
         {{ end }}
+        {{ if ne .presenation nil}}
+        <td class="schedule-slot">
+          <span class="schedule-description">{{ .presenation.name }}</span>
+        </td>
+        <td class="schedule-description"> {{ .presenation.description }}</td>
+        </tr>
+        {{ end }}
         <!-- {{ if ne .presentation nil }}
           <tr>
             <td class="schedule-time">{{ .presentation.time }}</td>
