@@ -12,9 +12,9 @@
     </thead>
     <tbody>
       {{ range $slot := .schedule }}
+      <tr>
+        <td class="schedule-time">{{ .time }}</td>
         {{ if ne .event nil}}
-        <tr>
-          <td class="schedule-time">{{ .event.time }}</td>
           <td class="schedule-slot">
             <span class="schedule-description">{{ .event.name }}</span>
           </td>

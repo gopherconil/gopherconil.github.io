@@ -104,12 +104,17 @@ params:
 
   # The entire schedule
   Schedule:
-    - event:
+    - time: "08:30 09:30"
+      event:
         name: "Registration & Breakfast"
-        time: "08:30 09:30"
-    - event:
+    - time: "09:30 09:45"
+      event:
         name: "Opening Words"
-        time: "09:30 09:45"
+    # - presenation:
+    #   time: "09:45 10:30"
+    #   talk:
+      
+
     # - name: "Keynote - Derek Parkar (author of the Delve Debugger)"
     #   time: "09:45 10:30"
     # - name: "Break"
