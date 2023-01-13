@@ -12,7 +12,16 @@
     </thead>
     <tbody>
       {{ range $slot := .schedule }}
-        {{ if ne .presentation nil }}
+        {{ if ne .event nil}}
+        <tr>
+          <td class="schedule-time">{{ .event.time }}</td>
+          <td class="schedule-slot">
+            <span class="schedule-description">{{ .event.name }}</span>
+          </td>
+          <td class="schedule-slot"></td>
+        </tr>
+        {{ end }}
+        <!-- {{ if ne .presentation nil }}
           <tr>
             <td class="schedule-time">{{ .presentation.time }}</td>
             <td class="schedule-slot">
@@ -33,14 +42,14 @@
               <img src="img/il.svg" style="float: right;width: 10px;height: 10px">
               {{ end }}
             </td>
-          </tr>
-        {{ else }}
+          </tr> -->
+        <!-- {{ else }}
           <tr class="schedule-other">
             <td class="schedule-time">{{ .time }}</td>
             <td class="schedule-slot"><span class="speaker-photo"><img class="photo" src="img/your-logo.jpg" alt="{{ $slot.name }}"></span></td>
             <td class="schedule-description">{{ .name }}</td>
           </tr>
-        {{ end }}
+        {{ end }} -->
       {{ end }}
     </tbody>
   </table>
