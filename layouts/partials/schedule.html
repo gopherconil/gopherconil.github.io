@@ -12,17 +12,27 @@
     </thead>
     <tbody>
       {{ range $slot := .schedule }}
-      <tr>
-      <td class="schedule-time">{{ .time }}</td>
       {{ if ne .event nil}}
-        <td class="schedule-slot">{{ .event.name }}</td>
-        <td class="schedule-description"></td>
+        <tr>
+          <td class="schedule-time">{{ .time }}</td>
+          <td class="schedule-slot">{{ .event.name }}</td>
+          <td class="schedule-description"></td>
+        </tr>
       {{ end }}
-      {{ range $t := .talk}}
-        <td class="schedule-slot">{{ $t.name }}</td>
-        <td class="schedule-description">{{ $t.description }}</td>
-      {{ end }}
-      </tr>
+      {{ if ne .talk nil}}
+        {{ $l := len .talk }}
+          <tr>
+          <td rowspan={{ $l }} class="schedule-time">{{ .time }}</td>
+          <td class="schedule-slot">&nbsp;</td>
+          <td class="schedule-description">&nbsp;</td>
+          </tr>
+          {{ range $t := .talk}}
+            <tr>
+              <td class="schedule-slot">{{ $t.name }}</td>
+              <td class="schedule-description">{{ $t.description }}</td>
+            </tr>
+          {{ end }}
+        {{ end }}
       {{ end }}
     </tbody>
   </table>

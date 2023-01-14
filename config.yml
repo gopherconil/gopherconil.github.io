@@ -121,8 +121,8 @@ params:
       talk:
         - name: "Generics are a Gopher's Best Friend - Amit Lichtenberg"
           description: "Amit Lichtenberg"
-        # - name: "Shifting Left with Protobuf - a multi-disciplinary approach to schema management"
-        #   description: "Nir Barak"
+        - name: "Shifting Left with Protobuf - a multi-disciplinary approach to schema management"
+          description: "Nir Barak"
     # - name: "Amit Lichtenberg"
     #   presentation:
     #     title: "Generics are a Gopher's Best Friend"
