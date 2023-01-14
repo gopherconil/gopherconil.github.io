@@ -26,8 +26,15 @@
               {{ if eq $i 0 }}
               <td rowspan={{ $l }} class="schedule-time">{{ $time }}</td>
               {{ end }}  
-              <td class="schedule-slot"><span style="color: blue;">{{- $t.name -}}-</span> {{- $t.title -}}</td>
-              <td class="schedule-description">{{ $t.description }}</td>
+              <td class="schedule-slot"><span style="color: blue;">{{ $t.name }}-</span> {{ $t.title }}</td>
+              <td class="schedule-description">{{ $t.description }}
+                {{ if eq $t.language "English" }}
+              <img src="img/gb.svg" style="float: right;width: 10px;height: 10px"/>
+              {{ end }}
+              {{ if eq $t.language "Hebrew" }}
+              <img src="img/il.svg" style="float: right;width: 10px;height: 10px"/>
+              {{ end }}
+              </td>
             </tr>
           {{ end }}
         {{ end }}

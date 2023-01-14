@@ -113,9 +113,9 @@ params:
     - time: "09:45 10:30"
       talk:
         - name: "Derek Parkar"
-          title: "Keynote"
-          description: "author of the Delve Debugger"
-          langauge: "English"
+          title: "Go: the language of dreamers"
+          description: "Keynote"
+          language: "English"
     - time: "10:30 11:00"
       event:
         name: "Break"
@@ -123,10 +123,10 @@ params:
       talk:
         - name: "Amit Lichtenberg "
           title: "Generics are a Gopher's Best Friend"
-          langauge: "Hebrew"
+          language: "Hebrew"
         - name: "Nir Barak"
           title: "Shifting Left with Protobuf - a multi-disciplinary approach to schema management"
-          langauge: "Hebrew"
+          language: "Hebrew"
     - time: "11:30 11:45"
       event:
         name: "Break"
@@ -134,10 +134,10 @@ params:
       talk:
         - name: "Hagai Dayan"
           title: "Bottlenecks in Golang memory management"
-          langauge: "Hebrew"
+          language: "Hebrew"
         - name: "Natalie Pistunovich"
           title: "AI-Assisted Go: Up Your Game and Have More Fun"
-          langauge: "Hebrew"
+          language: "Hebrew"
     - time: "12:15 13:15"
       event:
        name: "Lunch"
@@ -145,10 +145,10 @@ params:
       talk:
         - name: "Guy Brandwine"
           title: "A journey from development chaos to total control"
-          langauge: "English"
+          language: "English"
         - name: "Doron Segal"
           title: "How Golang can help fighting global warming"
-          langauge: "Hebrew"
+          language: "Hebrew"
     - time: "13:45 14:00"
       event:
        name: "Break"
@@ -156,10 +156,10 @@ params:
       talk:
         - name: "Liri Sokol"
           title: "Writing a virtual file system was never simpler"
-          langauge: "Hebrew"
+          language: "Hebrew"
         - name: "Adrian Cole"
           title: "WebAssembly for the backend"
-          langauge: "English"
+          language: "English"
     - time: "14:30 14:45"
       event:
        name: "Break"
@@ -167,10 +167,10 @@ params:
       talk:
         - name: "David Freilich"
           title: "Creating a CLI Manager with Cobra"
-          langauge: "English"
+          language: "English"
         - name: "Aviv Klasquin Komissar"
           title: "Hot path optimizations for latency-critical applications in GO"
-          langauge: "Hebrew"
+          language: "Hebrew"
     - time: "15:15 15:45"
       event:
        name: "Break"
