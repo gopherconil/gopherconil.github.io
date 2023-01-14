@@ -21,14 +21,12 @@
       {{ end }}
       {{ if ne .talk nil}}
         {{ $l := len .talk }}
-          <tr>
-          <td rowspan={{ $l }} class="schedule-time">{{ .time }}</td>
-          <td class="schedule-slot">&nbsp;</td>
-          <td class="schedule-description">&nbsp;</td>
-          </tr>
-          {{ range $t := .talk}}
+        {{ $time := .time }}{{ range $i, $t := .talk}}
             <tr>
-              <td class="schedule-slot">{{ $t.name }}</td>
+              {{ if eq $i 0 }}
+              <td rowspan={{ $l }} class="schedule-time">{{ $time }}</td>
+              {{ end }}  
+              <td class="schedule-slot">{{ $t.name }}: {{ $t.title }}</td>
               <td class="schedule-description">{{ $t.description }}</td>
             </tr>
           {{ end }}
