@@ -26,7 +26,7 @@
               {{ if eq $i 0 }}
               <td rowspan={{ $l }} class="schedule-time">{{ $time }}</td>
               {{ end }}  
-              <td class="schedule-slot">{{ $t.name }}: {{ $t.title }}</td>
+              <td class="schedule-slot"><span style="color: blue;">{{- $t.name -}}-</span> {{- $t.title -}}</td>
               <td class="schedule-description">{{ $t.description }}</td>
             </tr>
           {{ end }}
