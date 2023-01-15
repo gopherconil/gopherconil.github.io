@@ -42,9 +42,9 @@ params:
     contact: "Contact"
 
   # The Call To Action button at the header,
-  CallToAction:
-    text: "Become a Sponsor"
-    link: "/sponsor2023.html"
+  # CallToAction:
+  #   text: "Become a Sponsor"
+  #   link: "/sponsor2023.html"
 
   # The Call For Paper button at the header,
 #  CallForPaper:
