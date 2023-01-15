@@ -104,109 +104,96 @@ params:
 
   # The entire schedule
   Schedule:
-    - name: "Registration & Breakfast"
-      time: "08:30 09:30"
-    - name: "Opening Words"
-      time: "09:30 09:45"
-    - name: "Keynote - Derek Parkar (author of the Delve Debugger)"
-      time: "09:45 10:30"
-    - name: "Break"
-      time: "10:30 11:00"
-    - name: "Amit Lichtenberg"
-      presentation:
-        title: "Generics are a Gopher's Best Friend"
-        description: "Amit Lichtenberg"
-        time: "11:00 11:30"
-        language: "Hebrew"
-    - name: "Nir Barak"
-      presentation:
-        title: "Shifting Left with Protobuf - a multi-disciplinary approach to schema management"
-        description: "Nir Barak"
-        time: "11:00 11:30"
-        language: "Hebrew"
-    - name: "Break"
-      time: "11:30 11:45"
-    - name: "Hagai Dayan"
-      presentation:
-        title: "Bottlenecks in Golang memory management"
-        description: "Hagai Dayan"
-        time: "11:45 12:15"
-        language: "Hebrew"
-    - name: "Natalie Pistunovich"
-      presentation:
-        title: "AI-Assisted Go: Up Your Game and Have More Fun"
-        description: "Natalie Pistunovich"
-        time: "11:45 12:15"
-        language: "Hebrew"
-    - name: "Lunch"
-      time: "12:15 13:15"
-    - name: "Guy Brandwine"
-      presentation:
-        title: "A journey from development chaos to total control"
-        description: "Guy Brandwine"
-        time: "13:15 13:45"
-        language: "English"
-    - name: "Doron Segal"
-      presentation:
-        title: "How Golang can help fighting global warming"
-        description: "Doron Segal"
-        time: "13:15 13:45"
-        language: "Hebrew"
-    - name: "Break"
-      time: "13:45 14:00"
-    - name: "Liri Sokol"
-      presentation:
-        title: "Writing a virtual file system was never simpler"
-        description: "Liri Sokol"
-        time: "14:00 14:30"
-        language: "Hebrew"
-    - name: "Adrian Cole"
-      presentation:
-        title: "WebAssembly for the backend"
-        description: "Adrian Cole"
-        time: "14:00 14:30"
-        language: "English"
-    - name: "Break"
-      time: "14:30 14:45"
-    - name: "David Freilich"
-      presentation:
-        title: "Creating a CLI Manager with Cobra"
-        description: "David Freilich"
-        time: "14:45 15:15"
-        language: "English"
-    - name: "Aviv Klasquin Komissar"
-      presentation:
-        title: "Hot path optimizations for latency-critical applications in GO"
-        description: "Aviv Klasquin Komissar"
-        time: "14:45 15:15"
-        language: "Hebrew"
-    - name: "Break"
-      time: "15:15 15:45"
-    - name: "Lightning Talks"
-      presentation:
-        description: "Lightning Talks"
-        time: "15:45 16:30"
-    - name: ""
-      presentation:
-        title: "Writing a custom golang linter"
-        description: "Nahshon Unna - Tsameret"
-    - name: ""
-      presentation:
-        title: "Single Method Interfaces and How to Use Them"
-        description: "Noam Soloveichik"
-    - name: ""
-      presentation:
-        title: "In the Loop"
-        description: "Miki Tebeka"
-    - name: ""
-      presentation:
-        title: "Ain't nobody got time.Time fo' that"
-        description: "Idan Katz"
-    - name: ""
-      presentation:
-        title: "People-oriented programming: effectively using Go's built-in features to make life easier for your fellow devs"
-        description: "Ori Shoshan"
-    - name: "Closing words"
-      time: "16:30 16:45"
-    - name: "Social Event"
-      time: "16:45 17:30"
+    - time: "08:30 09:30"
+      event:
+        name: "Registration & Breakfast"
+    - time: "09:30 09:45"
+      event:
+        name: "Opening Words"
+    - time: "09:45 10:30"
+      talk:
+        - name: "Derek Parkar"
+          title: "Go: the language of dreamers"
+          description: "Keynote"
+          language: "English"
+    - time: "10:30 11:00"
+      event:
+        name: "Break"
+    - time: "11:00 11:30"
+      talk:
+        - name: "Amit Lichtenberg "
+          title: "Generics are a Gopher's Best Friend"
+          language: "Hebrew"
+        - name: "Nir Barak"
+          title: "Shifting Left with Protobuf - a multi-disciplinary approach to schema management"
+          language: "Hebrew"
+    - time: "11:30 11:45"
+      event:
+        name: "Break"
+    - time: "11:45 12:15"
+      talk:
+        - name: "Hagai Dayan"
+          title: "Bottlenecks in Golang memory management"
+          language: "Hebrew"
+        - name: "Natalie Pistunovich"
+          title: "AI-Assisted Go: Up Your Game and Have More Fun"
+          language: "Hebrew"
+    - time: "12:15 13:15"
+      event:
+       name: "Lunch"
+    - time: "13:15 13:45"
+      talk:
+        - name: "Guy Brandwine"
+          title: "A journey from development chaos to total control"
+          language: "English"
+        - name: "Doron Segal"
+          title: "How Golang can help fighting global warming"
+          language: "Hebrew"
+    - time: "13:45 14:00"
+      event:
+       name: "Break"
+    - time: "14:00 14:30"
+      talk:
+        - name: "Liri Sokol"
+          title: "Writing a virtual file system was never simpler"
+          language: "Hebrew"
+        - name: "Adrian Cole"
+          title: "WebAssembly for the backend"
+          language: "English"
+    - time: "14:30 14:45"
+      event:
+       name: "Break"
+    - time: "14:45 15:15"
+      talk:
+        - name: "David Freilich"
+          title: "Creating a CLI Manager with Cobra"
+          language: "English"
+        - name: "Aviv Klasquin Komissar"
+          title: "Hot path optimizations for latency-critical applications in GO"
+          language: "Hebrew"
+    - time: "15:15 15:45"
+      event:
+       name: "Break"
+    - time: "15:45 16:30"
+      event:
+       name: "Lightning Talks"
+    - time: ""
+      talk:
+        - name: "Nahshon Unna - Tsameret"
+          title: "Writing a custom golang linter"
+        - name: "Noam Soloveichik"
+          title: "Single Method Interfaces and How to Use Them"
+        - name: "Miki Tebeka"
+          title: "In the Loop"
+        - name: "Idan Katz"
+          title: "Ain't nobody got time.Time fo' that"
+        - name: "Ori Shoshan"
+          title: "People-oriented programming: effectively using Go's built-in features to make life easier for your fellow devs"
+    - time: "16:30 16:45"
+      event:
+       name: "Closing words"
+    - time: "16:45 17:30"
+      event:
+       name: "Social Event"
+    
+    # change to title, move names to description (in the futuer it will be images)
