@@ -125,7 +125,7 @@ params:
         - name: "Amit Lichtenberg "
           title: "Generics are a Gopher's Best Friend"
           language: "Hebrew"
-        - name: "Nir Barak"
+        - name: "Nir Barak & Shay Nehmad"
           title: "Shifting Left with Protobuf - a multi-disciplinary approach to schema management"
           language: "Hebrew"
     - time: "11:30 11:45"
