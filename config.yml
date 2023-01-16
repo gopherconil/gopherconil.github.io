@@ -3,6 +3,7 @@ title: "GopherCon Israel 2023"
 canonifyurls: true
 theme: "hugo-conference"
 publishDir: "docs"
+enableRobotsTXT: true
 
 GoogleAnalytics: "UA-125301893-1"
 
@@ -195,5 +196,4 @@ params:
     - time: "16:45 17:30"
       event:
        name: "Social Event"
-    
-    # change to title, move names to description (in the futuer it will be images)
+       
