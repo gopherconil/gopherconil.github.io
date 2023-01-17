@@ -1,46 +1,46 @@
-baseurl: "https://www.gophercon.org.il/"
-title: "GopherCon Israel 2023"
+baseurl: 'https://www.gophercon.org.il/'
+title: 'GopherCon Israel 2023'
 canonifyurls: true
-theme: "hugo-conference"
-publishDir: "docs"
+theme: 'hugo-conference'
+publishDir: 'docs'
 enableRobotsTXT: true
 
-GoogleAnalytics: "UA-125301893-1"
+GoogleAnalytics: 'UA-125301893-1'
 
 params:
   # Conference info
-  Name: "GopherCon Israel 2023"
-  Description: "Best Go Conference in Israel"
-  Date: "February 7"
+  Name: 'GopherCon Israel 2023'
+  Description: 'Best Go Conference in Israel'
+  Date: 'February 7'
   # Price: "100NIS" # If your event is free, just comment this line
-  Venue: "Expo"
+  Venue: 'Expo'
   # Address: "Boulevard Kukulcan, 30"
-  City:  "Tel Aviv"
-  State: "Israel"
-  Images: ["/img/badge.jpg"]
+  City: 'Tel Aviv'
+  State: 'Israel'
+  Images: ['/img/badge.jpg']
   # GoogleMapsKey: "my-secret-maps-key"
 
   # Active sections on the website to deactivate comment out with '#'
   # you can also change order here and it will reflect on page
   Sections:
     - about
-    - tweets
     # - location
     # - speakers
     - schedule
+    - tweets
     # - sponsors
     # - partners
     #- contact
 
   # Titles which you can translate to other languages
   Titles:
-    about: "About"
-    location: "Location"
-    speakers: "Speakers"
-    schedule: "Schedule"
-    sponsors: "Sponsors"
-    partners: "Partners"
-    contact: "Contact"
+    about: 'About'
+    location: 'Location'
+    speakers: 'Speakers'
+    schedule: 'Schedule'
+    sponsors: 'Sponsors'
+    partners: 'Partners'
+    contact: 'Contact'
 
   # The Call To Action button at the header,
   # CallToAction:
@@ -48,14 +48,14 @@ params:
   #   link: "/sponsor2023.html"
 
   # The Call For Paper button at the header,
-#  CallForPaper:
-#    text: "Apply to Speak"
-#    link: "https://www.papercall.io/gcil-2023"
+  #  CallForPaper:
+  #    text: "Apply to Speak"
+  #    link: "https://www.papercall.io/gcil-2023"
 
-# The tickets button at the header,
+  # The tickets button at the header,
   Tickets:
-    text: "Purchase Ticket"
-    link: "https://ti.to/hamakor/gophercon-2023"
+    text: 'Purchase Ticket'
+    link: 'https://ti.to/hamakor/gophercon-2023'
 
   # Fork me on GitHub, if you don't want this, just remove the forkButton property
   # ForkButton:
@@ -63,137 +63,138 @@ params:
 
   # List of Sponsors
   Sponsors:
-    - name: "AppsFlyer"
-      logo: "/img/appsflyer-logo.png"
-      url: "https://www.appsflyer.com/jobs/office/4007790002/herzliya/"
+    - name: 'AppsFlyer'
+      logo: '/img/appsflyer-logo.png'
+      url: 'https://www.appsflyer.com/jobs/office/4007790002/herzliya/'
       body:
-        - text: "AppsFlyer, the global attribution leader, empowers marketers to grow their business and innovate with a suite of comprehensive measurement and analytics solutions. Built around privacy by design, AppsFlyer takes a customer-centric approach to help 12,000+ brands and 8,000+ technology partners make better business decisions every day. To learn more, visit www.appsflyer.com."
-    - name: "Cloudinary"
-      logo: "/img/cloudinary.png"
-      url: "https://cloudinary.com/careers"
+        - text: 'AppsFlyer, the global attribution leader, empowers marketers to grow their business and innovate with a suite of comprehensive measurement and analytics solutions. Built around privacy by design, AppsFlyer takes a customer-centric approach to help 12,000+ brands and 8,000+ technology partners make better business decisions every day. To learn more, visit www.appsflyer.com.'
+    - name: 'Cloudinary'
+      logo: '/img/cloudinary.png'
+      url: 'https://cloudinary.com/careers'
       body:
-        - text: "Cloudinary’s mission is to empower companies to deliver visual experiences that inspire and connect by unleashing the full potential of their media. With more than 40 billion assets under management and 7,000 customers worldwide, Cloudinary is the industry standard for developers, creators, and marketers looking to upload, store, transform, manage, and deliver images and videos online. As a result, leading brands like Atlassian, Bleacher Report, Grubhub, Hinge, Lyft, NBC, Mediavine, Peloton, Petco, and Under Armour are seeing significant business value in using Cloudinary, including faster time to market, higher user satisfaction, and increased engagement and conversions."
-    - name: "DoiT"
-      logo: "/img/doit.png"
-      url: "https://grnh.se/6cc8447d3us"
+        - text: 'Cloudinary’s mission is to empower companies to deliver visual experiences that inspire and connect by unleashing the full potential of their media. With more than 40 billion assets under management and 7,000 customers worldwide, Cloudinary is the industry standard for developers, creators, and marketers looking to upload, store, transform, manage, and deliver images and videos online. As a result, leading brands like Atlassian, Bleacher Report, Grubhub, Hinge, Lyft, NBC, Mediavine, Peloton, Petco, and Under Armour are seeing significant business value in using Cloudinary, including faster time to market, higher user satisfaction, and increased engagement and conversions.'
+    - name: 'DoiT'
+      logo: '/img/doit.png'
+      url: 'https://grnh.se/6cc8447d3us'
       body:
-        - text: "DoiT International, the strategic partner of Google Cloud and Amazon Web Services, provides cloud expertise, proprietary cloud optimization, and governance software. The company tackles complex problems of scale for customers, using expertise in machine learning, algorithms, complexity analysis, and system design."
-        - text: "Founded in 2011, DoiT International operates in nearly 70 countries, including the United States, the United Kingdom, Germany, France, Australia, and Israel. For more information, please visit www.doit-intl.com."
-    - name: "Palo Alto Networks"
-      logo: "/img/paloalto.png"
-      url: "http://bit.ly/32UOuhh"
+        - text: 'DoiT International, the strategic partner of Google Cloud and Amazon Web Services, provides cloud expertise, proprietary cloud optimization, and governance software. The company tackles complex problems of scale for customers, using expertise in machine learning, algorithms, complexity analysis, and system design.'
+        - text: 'Founded in 2011, DoiT International operates in nearly 70 countries, including the United States, the United Kingdom, Germany, France, Australia, and Israel. For more information, please visit www.doit-intl.com.'
+    - name: 'Palo Alto Networks'
+      logo: '/img/paloalto.png'
+      url: 'http://bit.ly/32UOuhh'
       body:
-        - text: "Palo Alto Networks is the largest Cyber Security company in the world that helps tens of thousands of organizations worldwide prevent cyber breaches.
-                  At Palo Alto Networks® everything starts and ends with our mission:
-                  Being the cybersecurity partner of choice, protecting our digital way of life.
-                  We have the vision of a world where each day is safer and more secure than the one before. These aren’t easy goals to accomplish – but we’re not here for easy. We’re here for the better. We are a company built on the foundation of challenging and disrupting the way things are done, and we’re looking for innovators who are as committed to shaping the future of cybersecurity as we are.  
-                  As our founder and CTO Nir Zuk once said: \"the hacker only needs to succeed once, and we need to succeed 100% of the time!\""
-    - name: "JFrog"
-      logo: "/img/jfrog.png"
-      url: "https://grnh.se/9bad4ebf1us"
+        - text:
+            'Palo Alto Networks is the largest Cyber Security company in the world that helps tens of thousands of organizations worldwide prevent cyber breaches.
+            At Palo Alto Networks® everything starts and ends with our mission:
+            Being the cybersecurity partner of choice, protecting our digital way of life.
+            We have the vision of a world where each day is safer and more secure than the one before. These aren’t easy goals to accomplish – but we’re not here for easy. We’re here for the better. We are a company built on the foundation of challenging and disrupting the way things are done, and we’re looking for innovators who are as committed to shaping the future of cybersecurity as we are.
+            As our founder and CTO Nir Zuk once said: "the hacker only needs to succeed once, and we need to succeed 100% of the time!"'
+    - name: 'JFrog'
+      logo: '/img/jfrog.png'
+      url: 'https://grnh.se/9bad4ebf1us'
       body:
-        - text: "JFrog is on a mission to enable continuous updates through Liquid Software, empowering developers to code high-quality applications that securely flow to end-users with zero downtime.The company is the global standard for shipping high-quality software continuously and efficiently. With thousands of customers and a community of millions of developers across the world.
-                 The world’s top brands such as Amazon, Facebook, Google, Netflix, Uber, VMware, and Spotify are among the 5,000+ companies that already depend on JFrog to manage binaries for their mission-critical applications."
-    - name: "Ardan Labs"
-      logo: "/img/ardanlabs-logo.svg"
-      url: "https://www.ardanlabs.com/"
+        - text:
+            'JFrog is on a mission to enable continuous updates through Liquid Software, empowering developers to code high-quality applications that securely flow to end-users with zero downtime.The company is the global standard for shipping high-quality software continuously and efficiently. With thousands of customers and a community of millions of developers across the world.
+            The world’s top brands such as Amazon, Facebook, Google, Netflix, Uber, VMware, and Spotify are among the 5,000+ companies that already depend on JFrog to manage binaries for their mission-critical applications.'
+    - name: 'Ardan Labs'
+      logo: '/img/ardanlabs-logo.svg'
+      url: 'https://www.ardanlabs.com/'
       body:
-        - text: "Special thanks to Ardan Labs"
-    
+        - text: 'Special thanks to Ardan Labs'
+
   # List of Partners
   Partners:
 
   # The entire schedule
   Schedule:
-    - time: "08:30 09:30"
+    - time: '08:30 09:30'
       event:
-        name: "Registration & Breakfast"
-    - time: "09:30 09:45"
+        name: 'Registration & Breakfast'
+    - time: '09:30 09:45'
       event:
-        name: "Opening Words"
-    - time: "09:45 10:30"
+        name: 'Opening Words'
+    - time: '09:45 10:30'
       talk:
-        - name: "Derek Parker"
-          title: "Go: the language of dreamers"
-          description: "Keynote"
-          language: "English"
-    - time: "10:30 11:00"
+        - name: 'Derek Parker'
+          title: 'Go: the language of dreamers'
+          description: 'Keynote'
+          language: 'English'
+    - time: '10:30 11:00'
       event:
-        name: "Break"
-    - time: "11:00 11:30"
+        name: 'Break'
+    - time: '11:00 11:30'
       talk:
-        - name: "Amit Lichtenberg "
+        - name: 'Amit Lichtenberg '
           title: "Generics are a Gopher's Best Friend"
-          language: "Hebrew"
-        - name: "Nir Barak & Shay Nehmad"
-          title: "Shifting Left with Protobuf - a multi-disciplinary approach to schema management"
-          language: "Hebrew"
-    - time: "11:30 11:45"
+          language: 'Hebrew'
+        - name: 'Nir Barak & Shay Nehmad'
+          title: 'Shifting Left with Protobuf - a multi-disciplinary approach to schema management'
+          language: 'Hebrew'
+    - time: '11:30 11:45'
       event:
-        name: "Break"
-    - time: "11:45 12:15"
+        name: 'Break'
+    - time: '11:45 12:15'
       talk:
-        - name: "Hagai Dayan"
-          title: "Bottlenecks in Golang memory management"
-          language: "Hebrew"
-        - name: "Natalie Pistunovich"
-          title: "AI-Assisted Go: Up Your Game and Have More Fun"
-          language: "Hebrew"
-    - time: "12:15 13:15"
+        - name: 'Hagai Dayan'
+          title: 'Bottlenecks in Golang memory management'
+          language: 'Hebrew'
+        - name: 'Natalie Pistunovich'
+          title: 'AI-Assisted Go: Up Your Game and Have More Fun'
+          language: 'Hebrew'
+    - time: '12:15 13:15'
       event:
-       name: "Lunch"
-    - time: "13:15 13:45"
+        name: 'Lunch'
+    - time: '13:15 13:45'
       talk:
-        - name: "Guy Brandwine"
-          title: "A journey from development chaos to total control"
-          language: "English"
-        - name: "Doron Segal"
-          title: "How Golang can help fighting global warming"
-          language: "Hebrew"
-    - time: "13:45 14:00"
+        - name: 'Guy Brandwine'
+          title: 'A journey from development chaos to total control'
+          language: 'English'
+        - name: 'Doron Segal'
+          title: 'How Golang can help fighting global warming'
+          language: 'Hebrew'
+    - time: '13:45 14:00'
       event:
-       name: "Break"
-    - time: "14:00 14:30"
+        name: 'Break'
+    - time: '14:00 14:30'
       talk:
-        - name: "Liri Sokol"
-          title: "Writing a virtual file system was never simpler"
-          language: "Hebrew"
-        - name: "Adrian Cole"
-          title: "WebAssembly for the backend"
-          language: "English"
-    - time: "14:30 14:45"
+        - name: 'Liri Sokol'
+          title: 'Writing a virtual file system was never simpler'
+          language: 'Hebrew'
+        - name: 'Adrian Cole'
+          title: 'WebAssembly for the backend'
+          language: 'English'
+    - time: '14:30 14:45'
       event:
-       name: "Break"
-    - time: "14:45 15:15"
+        name: 'Break'
+    - time: '14:45 15:15'
       talk:
-        - name: "David Freilich"
-          title: "Creating a CLI Manager with Cobra"
-          language: "English"
-        - name: "Aviv Klasquin Komissar"
-          title: "Hot path optimizations for latency-critical applications in GO"
-          language: "Hebrew"
-    - time: "15:15 15:45"
+        - name: 'David Freilich'
+          title: 'Creating a CLI Manager with Cobra'
+          language: 'English'
+        - name: 'Aviv Klasquin Komissar'
+          title: 'Hot path optimizations for latency-critical applications in GO'
+          language: 'Hebrew'
+    - time: '15:15 15:45'
       event:
-       name: "Break"
-    - time: "15:45 16:30"
+        name: 'Break'
+    - time: '15:45 16:30'
       event:
-       name: "Lightning Talks"
-    - time: ""
+        name: 'Lightning Talks'
+    - time: ''
       talk:
-        - name: "Nahshon Unna - Tsameret"
-          title: "Writing a custom golang linter"
-        - name: "Noam Soloveichik"
-          title: "Single Method Interfaces and How to Use Them"
-        - name: "Miki Tebeka"
-          title: "In the Loop"
-        - name: "Idan Katz"
+        - name: 'Nahshon Unna - Tsameret'
+          title: 'Writing a custom golang linter'
+        - name: 'Noam Soloveichik'
+          title: 'Single Method Interfaces and How to Use Them'
+        - name: 'Miki Tebeka'
+          title: 'In the Loop'
+        - name: 'Idan Katz'
           title: "Ain't nobody got time.Time fo' that"
-        - name: "Ori Shoshan"
+        - name: 'Ori Shoshan'
           title: "People-oriented programming: effectively using Go's built-in features to make life easier for your fellow devs"
-    - time: "16:30 16:45"
+    - time: '16:30 16:45'
       event:
-       name: "Closing words"
-    - time: "16:45 17:30"
+        name: 'Closing words'
+    - time: '16:45 17:30'
       event:
-       name: "Social Event"
-       
+        name: 'Social Event'
