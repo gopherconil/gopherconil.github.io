@@ -113,7 +113,7 @@ params:
         name: "Opening Words"
     - time: "09:45 10:30"
       talk:
-        - name: "Derek Parkar"
+        - name: "Derek Parker"
           title: "Go: the language of dreamers"
           description: "Keynote"
           language: "English"
