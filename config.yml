@@ -28,7 +28,7 @@ params:
     # - speakers
     - schedule
     - tweets
-    # - sponsors
+    - sponsors
     # - partners
     #- contact
 
@@ -63,44 +63,46 @@ params:
 
   # List of Sponsors
   Sponsors:
-    - name: 'AppsFlyer'
-      logo: '/img/appsflyer-logo.png'
-      url: 'https://www.appsflyer.com/jobs/office/4007790002/herzliya/'
-      body:
-        - text: 'AppsFlyer, the global attribution leader, empowers marketers to grow their business and innovate with a suite of comprehensive measurement and analytics solutions. Built around privacy by design, AppsFlyer takes a customer-centric approach to help 12,000+ brands and 8,000+ technology partners make better business decisions every day. To learn more, visit www.appsflyer.com.'
-    - name: 'Cloudinary'
-      logo: '/img/cloudinary.png'
-      url: 'https://cloudinary.com/careers'
-      body:
-        - text: 'Cloudinary’s mission is to empower companies to deliver visual experiences that inspire and connect by unleashing the full potential of their media. With more than 40 billion assets under management and 7,000 customers worldwide, Cloudinary is the industry standard for developers, creators, and marketers looking to upload, store, transform, manage, and deliver images and videos online. As a result, leading brands like Atlassian, Bleacher Report, Grubhub, Hinge, Lyft, NBC, Mediavine, Peloton, Petco, and Under Armour are seeing significant business value in using Cloudinary, including faster time to market, higher user satisfaction, and increased engagement and conversions.'
-    - name: 'DoiT'
-      logo: '/img/doit.png'
-      url: 'https://grnh.se/6cc8447d3us'
-      body:
-        - text: 'DoiT International, the strategic partner of Google Cloud and Amazon Web Services, provides cloud expertise, proprietary cloud optimization, and governance software. The company tackles complex problems of scale for customers, using expertise in machine learning, algorithms, complexity analysis, and system design.'
-        - text: 'Founded in 2011, DoiT International operates in nearly 70 countries, including the United States, the United Kingdom, Germany, France, Australia, and Israel. For more information, please visit www.doit-intl.com.'
-    - name: 'Palo Alto Networks'
-      logo: '/img/paloalto.png'
-      url: 'http://bit.ly/32UOuhh'
-      body:
-        - text:
-            'Palo Alto Networks is the largest Cyber Security company in the world that helps tens of thousands of organizations worldwide prevent cyber breaches.
-            At Palo Alto Networks® everything starts and ends with our mission:
-            Being the cybersecurity partner of choice, protecting our digital way of life.
-            We have the vision of a world where each day is safer and more secure than the one before. These aren’t easy goals to accomplish – but we’re not here for easy. We’re here for the better. We are a company built on the foundation of challenging and disrupting the way things are done, and we’re looking for innovators who are as committed to shaping the future of cybersecurity as we are.
-            As our founder and CTO Nir Zuk once said: "the hacker only needs to succeed once, and we need to succeed 100% of the time!"'
-    - name: 'JFrog'
-      logo: '/img/jfrog.png'
-      url: 'https://grnh.se/9bad4ebf1us'
-      body:
-        - text:
-            'JFrog is on a mission to enable continuous updates through Liquid Software, empowering developers to code high-quality applications that securely flow to end-users with zero downtime.The company is the global standard for shipping high-quality software continuously and efficiently. With thousands of customers and a community of millions of developers across the world.
-            The world’s top brands such as Amazon, Facebook, Google, Netflix, Uber, VMware, and Spotify are among the 5,000+ companies that already depend on JFrog to manage binaries for their mission-critical applications.'
-    - name: 'Ardan Labs'
-      logo: '/img/ardanlabs-logo.svg'
-      url: 'https://www.ardanlabs.com/'
-      body:
-        - text: 'Special thanks to Ardan Labs'
+    gold:
+      - name: 'AppsFlyer'
+        logo: '/img/appsflyer-logo.png'
+        url: 'https://www.appsflyer.com/jobs/office/4007790002/herzliya/'
+        body:
+          - text: 'AppsFlyer, the global attribution leader, empowers marketers to grow their business and innovate with a suite of comprehensive measurement and analytics solutions. Built around privacy by design, AppsFlyer takes a customer-centric approach to help 12,000+ brands and 8,000+ technology partners make better business decisions every day. To learn more, visit www.appsflyer.com.'
+      - name: 'Cloudinary'
+        logo: '/img/cloudinary.png'
+        url: 'https://cloudinary.com/careers'
+        body:
+          - text: 'Cloudinary’s mission is to empower companies to deliver visual experiences that inspire and connect by unleashing the full potential of their media. With more than 40 billion assets under management and 7,000 customers worldwide, Cloudinary is the industry standard for developers, creators, and marketers looking to upload, store, transform, manage, and deliver images and videos online. As a result, leading brands like Atlassian, Bleacher Report, Grubhub, Hinge, Lyft, NBC, Mediavine, Peloton, Petco, and Under Armour are seeing significant business value in using Cloudinary, including faster time to market, higher user satisfaction, and increased engagement and conversions.'
+      - name: 'DoiT'
+        logo: '/img/doit.png'
+        url: 'https://grnh.se/6cc8447d3us'
+        body:
+          - text: 'DoiT International, the strategic partner of Google Cloud and Amazon Web Services, provides cloud expertise, proprietary cloud optimization, and governance software. The company tackles complex problems of scale for customers, using expertise in machine learning, algorithms, complexity analysis, and system design.'
+          - text: 'Founded in 2011, DoiT International operates in nearly 70 countries, including the United States, the United Kingdom, Germany, France, Australia, and Israel. For more information, please visit www.doit-intl.com.'
+      - name: 'Palo Alto Networks'
+        logo: '/img/paloalto.png'
+        url: 'http://bit.ly/32UOuhh'
+        body:
+          - text:
+              'Palo Alto Networks is the largest Cyber Security company in the world that helps tens of thousands of organizations worldwide prevent cyber breaches.
+              At Palo Alto Networks® everything starts and ends with our mission:
+              Being the cybersecurity partner of choice, protecting our digital way of life.
+              We have the vision of a world where each day is safer and more secure than the one before. These aren’t easy goals to accomplish – but we’re not here for easy. We’re here for the better. We are a company built on the foundation of challenging and disrupting the way things are done, and we’re looking for innovators who are as committed to shaping the future of cybersecurity as we are.
+              As our founder and CTO Nir Zuk once said: "the hacker only needs to succeed once, and we need to succeed 100% of the time!"'
+    silver:
+      - name: 'JFrog'
+        logo: '/img/jfrog.png'
+        url: 'https://grnh.se/9bad4ebf1us'
+        body:
+          - text:
+              'JFrog is on a mission to enable continuous updates through Liquid Software, empowering developers to code high-quality applications that securely flow to end-users with zero downtime.The company is the global standard for shipping high-quality software continuously and efficiently. With thousands of customers and a community of millions of developers across the world.
+              The world’s top brands such as Amazon, Facebook, Google, Netflix, Uber, VMware, and Spotify are among the 5,000+ companies that already depend on JFrog to manage binaries for their mission-critical applications.'
+      - name: 'Ardan Labs'
+        logo: '/img/ardanlabs-logo.svg'
+        url: 'https://www.ardanlabs.com/'
+        body:
+          - text: 'Special thanks to Ardan Labs'
 
   # List of Partners
   Partners:
