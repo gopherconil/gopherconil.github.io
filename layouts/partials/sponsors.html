@@ -1,5 +1,7 @@
 <h2 class="section-title">{{ .titles.sponsors }}</h2>
 
+<section class=“list-with-heading”>
+  <h3>Gold</h3>
 <ul class="speakers-list">
   {{ range $sponsor := .sponsors.gold }}
     <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
@@ -19,6 +21,11 @@
       {{ end }}
     </li>
   {{ end }}
+</ul>
+</section>
+<section class=“list-with-heading”>
+  <h3>Silver</h3>
+<ul class="speakers-list">
   {{ range $sponsor := .sponsors.silver }}
     <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
         <span class="speaker-photo">
@@ -37,4 +44,5 @@
       {{ end }}
     </li>
   {{ end }}
-  </ul>
+</ul>
+</section>
