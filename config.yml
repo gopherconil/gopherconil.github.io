@@ -68,7 +68,7 @@ params:
         logo: '/img/appsflyer-logo.png'
         url: 'https://careers.appsflyer.com/'
         body:
-          - text: 'About AppsFlyer: AppsFlyer helps brands make good choices for their business and their customers with its advanced measurement, data analytics, deep linking, engagement, fraud protection, data clean room and privacy preserving technologies. Built on the idea that brands can increase customer privacy while providing exceptional experiences, AppsFlyer empowers thousands of creators and 10,000+ technology partners to create better, more meaningful customer relationships. To learn more, visit www.appsflyer.com.'
+          - text: 'AppsFlyer helps brands make good choices for their business and their customers with its advanced measurement, data analytics, deep linking, engagement, fraud protection, data clean room and privacy preserving technologies. Built on the idea that brands can increase customer privacy while providing exceptional experiences, AppsFlyer empowers thousands of creators and 10,000+ technology partners to create better, more meaningful customer relationships. To learn more, visit www.appsflyer.com.'
       # - name: 'Cloudinary'
       #   logo: '/img/cloudinary.png'
       #   url: 'https://cloudinary.com/careers'
@@ -96,7 +96,7 @@ params:
         url: 'https://careers.google.com/jobs/results/'
         body:
           - text:
-              ''
+              'Our mission is to organise the world’s information and make it universally accessible and useful.'
     #   - name: 'Ardan Labs'
     #     logo: '/img/ardanlabs-logo.svg'
     #     url: 'https://www.ardanlabs.com/'
