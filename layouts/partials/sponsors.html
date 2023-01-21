@@ -4,7 +4,7 @@
   {{ range $sponsor := .sponsors.gold }}
     <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
         <span class="speaker-photo">
-          <img class="photo" src="{{ .logo }}" alt="{{ .name }}" itemprop="image">
+          <object data="{{ .logo }}" x="0" y="0" width="100%" height="50%"> </object>
         </span>
 
       <h3 class="speech-title">
@@ -27,7 +27,7 @@
   {{ range $sponsor := .sponsors.silver }}
     <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
         <span class="speaker-photo">
-          <img class="photo" src="{{ .logo }}" alt="{{ .name }}" itemprop="image">
+          <object data="{{ .logo }}" x="0" y="0" width="100%" height="100%"> </object>
         </span>
 
       <h3 class="speech-title">
