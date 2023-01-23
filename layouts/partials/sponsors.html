@@ -1,10 +1,10 @@
-<h2 class="section-title">{{ .titles.sponsors }}</h2>
-
+<section>
+  <h2 class="section-title">Gold {{ .titles.sponsors }}</h2>
 <ul class="speakers-list">
-  {{ range $sponsor := .sponsors }}
+  {{ range $sponsor := .sponsors.gold }}
     <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
         <span class="speaker-photo">
-          <img class="photo" src="{{ .logo }}" alt="{{ .name }}" itemprop="image">
+          <object data="{{ .logo }}" x="0" y="0" width="100%" height="50%"> </object>
         </span>
 
       <h3 class="speech-title">
@@ -19,4 +19,28 @@
       {{ end }}
     </li>
   {{ end }}
-  </ul>
+</ul>
+</section>
+<section>
+  <h2 class="section-title">Silver {{ .titles.sponsors }}</h2>
+<ul class="speakers-list">
+  {{ range $sponsor := .sponsors.silver }}
+    <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+        <span class="speaker-photo">
+          <object data="{{ .logo }}" x="0" y="0" width="100%" height="100%"> </object>
+        </span>
+
+      <h3 class="speech-title">
+        <span>{{ .name }}</span>
+      </h3>
+  
+      <h3 class="speakers-name">
+        <a href="{{ .url }}" target="_blank" title="{{ .name }}"> To learn more, click me </a>
+      </h3>
+      {{ range $b := .body }}
+        <p class="speakers-bio">{{ .text }}</p> 
+      {{ end }}
+    </li>
+  {{ end }}
+</ul>
+</section>
