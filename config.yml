@@ -193,6 +193,8 @@ params:
           title: "Ain't nobody got time.Time fo' that"
         - name: 'Ori Shoshan'
           title: "People-oriented programming: effectively using Go's built-in features to make life easier for your fellow devs"
+        - name: 'Jonathan Harel'
+          title: "Code Smarter not Harder"
     - time: '16:30 16:45'
       event:
         name: 'Closing words'
