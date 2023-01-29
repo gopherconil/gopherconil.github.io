@@ -21,8 +21,9 @@
       {{ if ne .talk nil}}
         <tr>
           <td class="schedule-time">{{ .time }}</td>
+          {{$cs := cond (eq (len .talk) 1) "2" "1" }}
           {{ range $i, $t := .talk}}
-                <td class="schedule-slot">
+                <td colspan={{$cs}} class="schedule-slot">
                 <span style="color: blue;">{{ $t.name }}-</span>
                    {{ $t.title }}
                 <span>
