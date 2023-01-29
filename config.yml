@@ -120,6 +120,11 @@ params:
           title: 'Go: the language of dreamers'
           description: 'Keynote'
           language: 'English'
+        - name: 'Derek Parker'
+          title: 'Go: the language of dreamers'
+          description: 'Keynote'
+          language: 'English'
+      
     - time: '10:30 11:00'
       event:
         name: 'Break'
@@ -185,16 +190,38 @@ params:
       talk:
         - name: 'Nahshon Unna - Tsameret'
           title: 'Writing a custom golang linter'
+        - name: ''
+          title: ''
+    - time: ''
+      talk:    
         - name: 'Noam Soloveichik'
           title: 'Single Method Interfaces and How to Use Them'
+        - name: ''
+          title: ''
+    - time: ''
+      talk:
         - name: 'Miki Tebeka'
           title: 'In the Loop'
+        - name: ''
+          title: ""
+    - time: ''
+      talk:
         - name: 'Idan Katz'
           title: "Ain't nobody got time.Time fo' that"
+        - name: ''
+          title: ''
+    - time: ''
+      talk:
         - name: 'Ori Shoshan'
           title: "People-oriented programming: effectively using Go's built-in features to make life easier for your fellow devs"
+        - name: ''
+          title: ""
+    - time: ''
+      talk:      
         - name: 'Jonathan Harel'
           title: "Code Smarter not Harder"
+        - name: ''
+          title: ""
     - time: '16:30 16:45'
       event:
         name: 'Closing words'
