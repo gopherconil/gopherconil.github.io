@@ -117,9 +117,10 @@ params:
     - time: '09:45 10:30'
       talk:
         - name: 'Derek Parker'
-          title: 'Go: the language of dreamers'
+          title: 'Go: the language of dreamers - Keynote'
           description: 'Keynote'
-          language: 'English'
+          language: 'English'        
+      
     - time: '10:30 11:00'
       event:
         name: 'Break'
@@ -184,17 +185,27 @@ params:
     - time: ''
       talk:
         - name: 'Nahshon Unna - Tsameret'
-          title: 'Writing a custom golang linter'
+          title: 'Writing a custom golang linter'   
+    - time: ''
+      talk:    
         - name: 'Noam Soloveichik'
-          title: 'Single Method Interfaces and How to Use Them'
+          title: 'Single Method Interfaces and How to Use Them'   
+    - time: ''
+      talk:
         - name: 'Miki Tebeka'
           title: 'In the Loop'
+    - time: ''
+      talk:
         - name: 'Idan Katz'
-          title: "Ain't nobody got time.Time fo' that"
+          title: "Ain't nobody got time.Time fo' that"        
+    - time: ''
+      talk:
         - name: 'Ori Shoshan'
-          title: "People-oriented programming: effectively using Go's built-in features to make life easier for your fellow devs"
+          title: "People-oriented programming: effectively using Go's built-in features to make life easier for your fellow devs"        
+    - time: ''
+      talk:      
         - name: 'Jonathan Harel'
-          title: "Code Smarter not Harder"
+          title: "Code Smarter not Harder"    
     - time: '16:30 16:45'
       event:
         name: 'Closing words'

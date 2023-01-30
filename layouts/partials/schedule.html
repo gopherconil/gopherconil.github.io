@@ -6,8 +6,8 @@
     <thead>
       <tr>
         <th class="schedule-time">Time</th>
-        <th class="schedule-slot">Slot</th>
-        <th class="schedule-description">Description</th>
+        <th class="schedule-slot">Track 1</th>
+        <th class="schedule-slot">Track 2</th>
       </tr>
     </thead>
     <tbody>
@@ -15,28 +15,28 @@
       {{ if ne .event nil}}
         <tr>
           <td class="schedule-time">{{ .time }}</td>
-          <td class="schedule-slot">{{ .event.name }}</td>
-          <td class="schedule-description"></td>
+          <td colspan="2" class="schedule-slot">{{ .event.name }}</td>
         </tr>
       {{ end }}
       {{ if ne .talk nil}}
-        {{ $l := len .talk }}
-        {{ $time := .time }}{{ range $i, $t := .talk}}
-            <tr>
-              {{ if eq $i 0 }}
-              <td rowspan={{ $l }} class="schedule-time">{{ $time }}</td>
-              {{ end }}  
-              <td class="schedule-slot"><span style="color: blue;">{{ $t.name }}-</span> {{ $t.title }}</td>
-              <td class="schedule-description">{{ $t.description }}
-                {{ if eq $t.language "English" }}
-              <img src="img/gb.svg" style="float: right;width: 10px;height: 10px"/>
-              {{ end }}
-              {{ if eq $t.language "Hebrew" }}
-              <img src="img/il.svg" style="float: right;width: 10px;height: 10px"/>
-              {{ end }}
+        <tr>
+          <td class="schedule-time">{{ .time }}</td>
+          {{$cs := cond (eq (len .talk) 1) "2" "1" }}
+          {{ range $i, $t := .talk}}
+                <td colspan={{$cs}} class="schedule-slot">
+                <span style="color: blue;">{{ $t.name }}-</span>
+                   {{ $t.title }}
+                <span>
+                   {{ if eq $t.language "English" }}
+                    <img src="img/gb.svg" style="float: right;width: 10px;height: 10px"/>
+                  {{ end }}
+                  {{ if eq $t.language "Hebrew" }}
+                    <img src="img/il.svg" style="float: right;width: 10px;height: 10px"/>
+                  {{ end }}
+                </span>
               </td>
-            </tr>
           {{ end }}
+        </tr>
         {{ end }}
       {{ end }}
     </tbody>
