@@ -73,7 +73,7 @@ params:
         logo: '/img/rookout-logo.png'
         url: 'https://www.rookout.com/careers/'
         body:
-          - text: 'Reduce debugging time and instantly review live environments w/ non-breaking breakpoints. Supports JVM, Python, Node, Ruby and .NET. Integrates with a variety of tools.'
+          - text: 'Reduce debugging time and instantly review live environments w/ non-breaking breakpoints. Supports Go, JVM, Python, Node, Ruby and .NET. Integrates with a variety of tools.'
       - name: 'Descope'
         logo: '/img/descope-logo.png'
         url: 'https://www.descope.com/'
@@ -89,14 +89,12 @@ params:
         logo: '/img/google-logo.svg'
         url: 'https://careers.google.com/jobs/results/'
         body:
-          - text:
-              'Our mission is to organise the world’s information and make it universally accessible and useful.'
+          - text: 'Our mission is to organise the world’s information and make it universally accessible and useful.'
       - name: 'RedHat'
         logo: '/img/redhat-logo.svg'
         url: 'https://redhat.dejobs.org/isr/jobs/'
         body:
-          - text:
-              'We’re the world’s leading provider of enterprise open source solutions—including Linux, cloud, container, and Kubernetes. We deliver hardened solutions that make it easier for enterprises to work across platforms and environments, from the core datacenter to the network edge.'
+          - text: 'We’re the world’s leading provider of enterprise open source solutions—including Linux, cloud, container, and Kubernetes. We deliver hardened solutions that make it easier for enterprises to work across platforms and environments, from the core datacenter to the network edge.'
       - name: 'Jetbrains'
         logo: '/img/goland-logo.svg'
         url: 'https://www.jetbrains.com/go/'
@@ -119,8 +117,8 @@ params:
         - name: 'Derek Parker'
           title: 'Go: the language of dreamers - Keynote'
           description: 'Keynote'
-          language: 'English'        
-      
+          language: 'English'
+
     - time: '10:30 11:00'
       event:
         name: 'Break'
@@ -185,11 +183,11 @@ params:
     - time: ''
       talk:
         - name: 'Nahshon Unna - Tsameret'
-          title: 'Writing a custom golang linter'   
+          title: 'Writing a custom golang linter'
     - time: ''
-      talk:    
+      talk:
         - name: 'Noam Soloveichik'
-          title: 'Single Method Interfaces and How to Use Them'   
+          title: 'Single Method Interfaces and How to Use Them'
     - time: ''
       talk:
         - name: 'Miki Tebeka'
@@ -197,15 +195,15 @@ params:
     - time: ''
       talk:
         - name: 'Idan Katz'
-          title: "Ain't nobody got time.Time fo' that"        
+          title: "Ain't nobody got time.Time fo' that"
     - time: ''
       talk:
         - name: 'Ori Shoshan'
-          title: "People-oriented programming: effectively using Go's built-in features to make life easier for your fellow devs"        
+          title: "People-oriented programming: effectively using Go's built-in features to make life easier for your fellow devs"
     - time: ''
-      talk:      
+      talk:
         - name: 'Jonathan Harel'
-          title: "Code Smarter not Harder"    
+          title: 'Code Smarter not Harder'
     - time: '16:30 16:45'
       event:
         name: 'Closing words'
