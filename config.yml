@@ -25,7 +25,7 @@ params:
   Sections:
     - about
     # - location
-    # - speakers
+    - speakers
     - schedule
     - sponsors
     - tweets
@@ -103,6 +103,22 @@ params:
 
   # List of Partners
   Partners:
+
+  Speakers:
+    - name: "Idan Katz"
+      # link: "link"
+      photo: "img/idan-katz.jpg"
+      bio: "Senior Developer and Team Leader @ Raftt"
+      # presentation:
+      #   time: "15:45"
+      #   title: "Ain't nobody got time.Time fo' that"
+    - name: "Liri Sokol"
+      # link: "link"
+      photo: "img/liri-sokol.jpeg"
+      bio: "Tech Lead @Diversion"
+      # presentation:
+      #   time: "15:45"
+      #   title: "Ain't nobody got time.Time fo' that"
 
   # The entire schedule
   Schedule:
