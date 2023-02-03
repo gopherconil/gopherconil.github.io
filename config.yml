@@ -92,9 +92,9 @@ params:
           - text: 'Our mission is to organise the world’s information and make it universally accessible and useful.'
       - name: 'RedHat'
         logo: '/img/redhat-logo.svg'
-        url: 'https://redhat.dejobs.org/isr/jobs/'
+        url: 'https://www.redhat.com/en/jobs'
         body:
-          - text: 'We’re the world’s leading provider of enterprise open source solutions—including Linux, cloud, container, and Kubernetes. We deliver hardened solutions that make it easier for enterprises to work across platforms and environments, from the core datacenter to the network edge.'
+          - text: 'Red Hat is the world’s leading provider of enterprise open-source solutions, using a community-powered approach to deliver high-performing Linux, cloud, container, and Kubernetes technologies. We help customers standardize across environments, develop cloud-native applications, and integrate, automate, secure, and manage complex environments with award-winning support, training, and consulting services.'
       - name: 'Jetbrains'
         logo: '/img/goland-logo.svg'
         url: 'https://www.jetbrains.com/go/'
