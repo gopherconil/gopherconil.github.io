@@ -78,7 +78,7 @@ params:
         logo: '/img/descope-logo.svg'
         url: 'https://www.descope.com/'
         body:
-          - text: 'Descope helps every developer build secure, frictionless authentication and user journeys for any application. Our no-code workflow builder, SDKs, and APIs enable developers to easily create and customize authentication flows for every user interaction. We use a scalable multitenant architecture with high availability that can support advanced enterprise B2B requirements. Designed by security experts, Descope also protects against account takeover fraud and session theft by identifying risky user signals to enact step-up authentication. Our customers launch and grow their apps faster, securely onboard and adopt more users, and “descope” authentication as a sprint line item to free up dev time and resources. Founded in 2022, Descope is headquartered in Los Altos, CA and is a member of the FIDO Alliance. To learn more, visit https://www.descope.com/'
+          - text: 'Descope helps every developer build secure, frictionless authentication and user journeys for any application. Our no-code workflow builder, SDKs, and APIs enable developers to easily create and customize authentication flows for every user interaction. Designed by security experts, Descope also protects against account takeover fraud, session theft, and bot attacks on login pages. Founded in 2022, Descope is headquartered in Los Altos, CA and is a member of the FIDO Alliance. To learn more, visit https://www.descope.com.'
       - name: 'RavenDB'
         logo: '/img/ravendb-logo.png'
         url: 'https://ravendb.net/'
