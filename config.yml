@@ -150,6 +150,9 @@ params:
     - name: "Hagai Dayan"
       photo: "img/hagai-dayan.jpeg"
       bio: "Working in the industry in the past couple of years as a Backend Engineer and as an Engineering Team Lead. I took a part in designing, implementing and improving real-time systems that process data at high scale, mostly in Go."
+    - name: "Shay Nehmad"
+      photo: "img/shay-nehmad.png"
+      bio: "Founding Engineer @Reco"  
   # The entire schedule
   Schedule:
     - time: '08:30 09:30'
