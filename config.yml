@@ -87,9 +87,9 @@ params:
     silver:
       - name: 'Google'
         logo: '/img/google-logo.svg'
-        url: 'https://careers.google.com/jobs/results/'
+        url: 'https://careers.google.com/'
         body:
-          - text: 'Our mission is to organise the world’s information and make it universally accessible and useful.'
+          - text: 'Google believes that open source is good for everyone. By being open and freely available, it enables and encourages collaboration and the development of technology.'
       - name: 'RedHat'
         logo: '/img/redhat-logo.svg'
         url: 'https://www.redhat.com/en/jobs'
