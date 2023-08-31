@@ -4,6 +4,7 @@
     <title>GopherCon Israel 2023</title>
     <link>https://www.gophercon.org.il/</link>
     <description>Recent content on GopherCon Israel 2023</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://www.gophercon.org.il/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://www.gophercon.org.il/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
