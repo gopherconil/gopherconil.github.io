@@ -9,9 +9,9 @@ GoogleAnalytics: 'UA-125301893-1'
 
 params:
   # Conference info
-  Name: 'GopherCon Israel 2023'
+  Name: 'GopherCon Israel 2024'
   Description: 'Best Go Conference in Israel'
-  Date: 'February 7'
+  Date: 'September 9'
   # Price: "100NIS" # If your event is free, just comment this line
   Venue: 'Expo'
   # Address: "Boulevard Kukulcan, 30"
@@ -25,9 +25,9 @@ params:
   Sections:
     - about
     # - location
-    - speakers
-    - schedule
-    - sponsors
+    # - speakers
+    # - schedule
+    # - sponsors
     - tweets
     # - partners
     #- contact
