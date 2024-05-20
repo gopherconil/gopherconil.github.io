@@ -42,20 +42,20 @@ params:
     partners: 'Partners'
     contact: 'Contact'
 
-  # The Call To Action button at the header,
-  CallToAction:
-    text: "Photos from GopherCon Israel 2023"
-    link: "https://photos.app.goo.gl/B1zTtdvXow1c1qEu8"
+  # # The Call To Action button at the header,
+  # CallToAction:
+  #   text: "Photos from GopherCon Israel 2023"
+  #   link: "https://photos.app.goo.gl/B1zTtdvXow1c1qEu8"
 
   # The Call To Action button at the header,
   VideoButton:
-    text: "Watch the Videos"
+    text: "2023 Videos"
     link: "https://www.youtube.com/watch?v=yEcabpza3XA&list=PLRM-8sTy13Xvr1ZaZarF5t_PBPxJdZHxt"
 
   # The Call For Paper button at the header,
-  #  CallForPaper:
-  #    text: "Apply to Speak"
-  #    link: "https://www.papercall.io/gcil-2023"
+  CallForPaper:
+     text: "Apply to Speak"
+     link: "https://sessionize.com/gophercon-israel-2024/"
 
   # The tickets button at the header,
   # Tickets:
