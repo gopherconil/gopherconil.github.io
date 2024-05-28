@@ -43,9 +43,9 @@ params:
     contact: 'Contact'
 
   # # The Call To Action button at the header,
-  # CallToAction:
-  #   text: "Photos from GopherCon Israel 2023"
-  #   link: "https://photos.app.goo.gl/B1zTtdvXow1c1qEu8"
+  CallToAction:
+    text: "Become a Sponsor"
+    link: "https://drive.google.com/file/d/1AMOlktDfgX_aQJKtZDaU6uDCsUpb-GF3/view"
 
   # The Call To Action button at the header,
   VideoButton:
@@ -61,10 +61,6 @@ params:
   # Tickets:
   #   text: 'Purchase Ticket'
   #   link: 'https://ti.to/hamakor/gophercon-2023'
-
-  # Fork me on GitHub, if you don't want this, just remove the forkButton property
-  # ForkButton:
-  #   repository: "https://github.com/jweslley/hugo-conference/"
 
   # List of Sponsors
   Sponsors:
