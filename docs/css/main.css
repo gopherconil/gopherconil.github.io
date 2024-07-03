@@ -375,16 +375,16 @@ p {
     top: -1px;
 }
 
-.pink-bear{
+.pink-bear {
     position: absolute;
     height: 100px;
-    right:2px
+    right: 2px
 }
 
-.green-bear{
+.green-bear {
     position: absolute;
     height: 100px;
-    left:2px
+    left: 2px
 }
 
 /* =============================================================================
@@ -642,6 +642,7 @@ nav {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 800px) {
+
     /* schedule */
     .schedule-tbl {
         padding: 1px;
@@ -710,6 +711,7 @@ nav {
 }
 
 @media only screen and (max-width: 480px) {
+
     /* nav */
     nav {
         display: none;
@@ -1124,6 +1126,7 @@ nav {
 }
 
 @media only screen and (max-width: 480px) {
+
     /* speakers */
     .speaker-photo .photo {
         box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.07);
@@ -1142,4 +1145,48 @@ nav {
     .github-link {
         display: none;
     }
+}
+
+.rounded-image-container {
+    text-align: center;
+    flex: 1 0 20%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.rounded-image-container .round-image {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.rounded-image-container .name {
+    font-size: 200%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    word-wrap: break-word;
+}
+
+.rounded-image-container .links {
+    margin-top: 5px;
+    font-size: 150%;
+}
+
+.rounded-image-container .links a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.rounded-image-container .links a:hover {
+    text-decoration: underline;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -10px;
 }

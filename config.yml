@@ -1,23 +1,23 @@
-baseurl: 'https://www.gophercon.org.il/'
-title: 'GopherCon Israel 2024'
+baseurl: "https://www.gophercon.org.il/"
+title: "GopherCon Israel 2024"
 canonifyurls: true
-theme: 'hugo-conference'
-publishDir: 'docs'
+theme: "hugo-conference"
+publishDir: "docs"
 enableRobotsTXT: true
 
-GoogleAnalytics: 'UA-125301893-1'
+GoogleAnalytics: "UA-125301893-1"
 
 params:
   # Conference info
-  Name: 'GopherCon Israel 2024'
-  Description: 'Best Go Conference in Israel'
-  Date: 'September 9'
+  Name: "GopherCon Israel 2024"
+  Description: "Best Go Conference in Israel"
+  Date: "September 9"
   # Price: "100NIS" # If your event is free, just comment this line
-  Venue: 'Expo'
+  Venue: "Expo"
   # Address: "Boulevard Kukulcan, 30"
-  City: 'Tel Aviv'
-  State: 'Israel'
-  Images: ['/img/badge.jpg']
+  City: "Tel Aviv"
+  State: "Israel"
+  Images: ["/img/badge.jpg"]
   # GoogleMapsKey: "my-secret-maps-key"
 
   # Active sections on the website to deactivate comment out with '#'
@@ -34,13 +34,14 @@ params:
 
   # Titles which you can translate to other languages
   Titles:
-    about: 'About'
-    location: 'Location'
-    speakers: 'Speakers'
-    schedule: 'Schedule'
-    sponsors: 'Sponsors'
-    partners: 'Partners'
-    contact: 'Contact'
+    about: "About"
+    location: "Location"
+    speakers: "Speakers"
+    schedule: "Schedule"
+    sponsors: "Sponsors"
+    partners: "Partners"
+    contact: "Contact"
+    team: "Team"
 
   # # The Call To Action button at the header,
   CallToAction:
@@ -54,8 +55,8 @@ params:
 
   # The Call For Paper button at the header,
   CallForPaper:
-     text: "Apply to Speak"
-     link: "https://sessionize.com/gophercon-israel-2024/"
+    text: "Apply to Speak"
+    link: "https://sessionize.com/gophercon-israel-2024/"
 
   # The tickets button at the header,
   # Tickets:
@@ -65,46 +66,78 @@ params:
   # List of Sponsors
   Sponsors:
     gold:
-      - name: 'AppsFlyer'
-        logo: '/img/appsflyer-logo.png'
-        url: 'https://careers.appsflyer.com/'
+      - name: "AppsFlyer"
+        logo: "/img/appsflyer-logo.png"
+        url: "https://careers.appsflyer.com/"
         body:
-          - text: 'AppsFlyer helps brands make good choices for their business and their customers with its advanced measurement, data analytics, deep linking, engagement, fraud protection, data clean room and privacy preserving technologies. Built on the idea that brands can increase customer privacy while providing exceptional experiences, AppsFlyer empowers thousands of creators and 10,000+ technology partners to create better, more meaningful customer relationships. To learn more, visit www.appsflyer.com.'
-      - name: 'Rookout'
-        logo: '/img/rookout-logo.png'
-        url: 'https://www.rookout.com/careers/'
+          - text: "AppsFlyer helps brands make good choices for their business and their customers with its advanced measurement, data analytics, deep linking, engagement, fraud protection, data clean room and privacy preserving technologies. Built on the idea that brands can increase customer privacy while providing exceptional experiences, AppsFlyer empowers thousands of creators and 10,000+ technology partners to create better, more meaningful customer relationships. To learn more, visit www.appsflyer.com."
+      - name: "Rookout"
+        logo: "/img/rookout-logo.png"
+        url: "https://www.rookout.com/careers/"
         body:
-          - text: 'Reduce debugging time and instantly review live environments w/ non-breaking breakpoints. Supports Go, JVM, Python, Node, Ruby and .NET. Integrates with a variety of tools.'
-      - name: 'Descope'
-        logo: '/img/descope-logo.svg'
-        url: 'https://www.descope.com/'
+          - text: "Reduce debugging time and instantly review live environments w/ non-breaking breakpoints. Supports Go, JVM, Python, Node, Ruby and .NET. Integrates with a variety of tools."
+      - name: "Descope"
+        logo: "/img/descope-logo.svg"
+        url: "https://www.descope.com/"
         body:
-          - text: 'Descope helps every developer build secure, frictionless authentication and user journeys for any application. Our no-code workflow builder, SDKs, and APIs enable developers to easily create and customize authentication flows for every user interaction. Designed by security experts, Descope also protects against account takeover fraud, session theft, and bot attacks on login pages. Founded in 2022, Descope is headquartered in Los Altos, CA and is a member of the FIDO Alliance. To learn more, visit https://www.descope.com.'
-      - name: 'RavenDB'
-        logo: '/img/ravendb-logo.png'
-        url: 'https://ravendb.net/'
+          - text: "Descope helps every developer build secure, frictionless authentication and user journeys for any application. Our no-code workflow builder, SDKs, and APIs enable developers to easily create and customize authentication flows for every user interaction. Designed by security experts, Descope also protects against account takeover fraud, session theft, and bot attacks on login pages. Founded in 2022, Descope is headquartered in Los Altos, CA and is a member of the FIDO Alliance. To learn more, visit https://www.descope.com."
+      - name: "RavenDB"
+        logo: "/img/ravendb-logo.png"
+        url: "https://ravendb.net/"
         body:
-          - text: 'RavenDB turn your Database complexity into an effortless solution Try us, Trust us, Forget we’re even there RavenDB is a leading distributed NoSQL, fully transactional indexing document database. Thanks to our unmatched ACID performance, smooth DevOps, wealth of features, and cost-effectiveness, RavenDB is many developers’ platform of choice.'
+          - text: "RavenDB turn your Database complexity into an effortless solution Try us, Trust us, Forget we’re even there RavenDB is a leading distributed NoSQL, fully transactional indexing document database. Thanks to our unmatched ACID performance, smooth DevOps, wealth of features, and cost-effectiveness, RavenDB is many developers’ platform of choice."
     silver:
-      - name: 'Google'
-        logo: '/img/google-logo.svg'
-        url: 'https://careers.google.com/'
+      - name: "Google"
+        logo: "/img/google-logo.svg"
+        url: "https://careers.google.com/"
         body:
-          - text: 'Google believes that open source is good for everyone. By being open and freely available, it enables and encourages collaboration and the development of technology.'
-      - name: 'RedHat'
-        logo: '/img/redhat-logo.svg'
-        url: 'https://www.redhat.com/en/jobs'
+          - text: "Google believes that open source is good for everyone. By being open and freely available, it enables and encourages collaboration and the development of technology."
+      - name: "RedHat"
+        logo: "/img/redhat-logo.svg"
+        url: "https://www.redhat.com/en/jobs"
         body:
-          - text: 'Red Hat is the world’s leading provider of enterprise open-source solutions, using a community-powered approach to deliver high-performing Linux, cloud, container, and Kubernetes technologies. We help customers standardize across environments, develop cloud-native applications, and integrate, automate, secure, and manage complex environments with award-winning support, training, and consulting services.'
-      - name: 'Jetbrains'
-        logo: '/img/goland-logo.svg'
-        url: 'https://www.jetbrains.com/go/'
+          - text: "Red Hat is the world’s leading provider of enterprise open-source solutions, using a community-powered approach to deliver high-performing Linux, cloud, container, and Kubernetes technologies. We help customers standardize across environments, develop cloud-native applications, and integrate, automate, secure, and manage complex environments with award-winning support, training, and consulting services."
+      - name: "Jetbrains"
+        logo: "/img/goland-logo.svg"
+        url: "https://www.jetbrains.com/go/"
         body:
-          - text: 'At JetBrains, we create cutting-edge development tools to help make your coding productive and enjoyable. Trusted by millions of developers worldwide, our products automate your mundane and routine tasks and simplify the challenging ones. We’re known for IDEs, such as IntelliJ IDEA for Java, PhpStorm for PHP, PyCharm for Python, CLion for C++, and many others. We created GoLand, an IDE that makes it easy to read, write, and change Go code, specifically for Go developers. However, GoLand is more than just a Go IDE. On top of the features available for working with Go code, it has extended support for JavaScript, TypeScript, and databases. Smart features, such as on-the-fly error detection and quick-fixes, top-notch integration with Go modules, powerful and safe refactorings with one-step undo, intelligent code completion, dead code detection, and documentation hints, help all Go developers, from novices to experienced professionals, to create fast, efficient, and reliable code.'
+          - text: "At JetBrains, we create cutting-edge development tools to help make your coding productive and enjoyable. Trusted by millions of developers worldwide, our products automate your mundane and routine tasks and simplify the challenging ones. We’re known for IDEs, such as IntelliJ IDEA for Java, PhpStorm for PHP, PyCharm for Python, CLion for C++, and many others. We created GoLand, an IDE that makes it easy to read, write, and change Go code, specifically for Go developers. However, GoLand is more than just a Go IDE. On top of the features available for working with Go code, it has extended support for JavaScript, TypeScript, and databases. Smart features, such as on-the-fly error detection and quick-fixes, top-notch integration with Go modules, powerful and safe refactorings with one-step undo, intelligent code completion, dead code detection, and documentation hints, help all Go developers, from novices to experienced professionals, to create fast, efficient, and reliable code."
 
   # List of Partners
   Partners:
 
+  Team:
+    - name: Miki Tebeka
+      photo: "img/miki-tebeka.jpg"
+      linkedin: "https://www.linkedin.com/in/mikitebeka/"
+      twitter: "https://twitter.com/tebeka"
+    - name: Eliran Bivas
+      photo: "img/eliran-bivas.jpg"
+      linkedin: "https://www.linkedin.com/in/bivas/"
+      twitter: "https://twitter.com/bivas"
+    - name: "David Bord"
+      photo: "img/david-bord.jpg"
+      linkedin: "https://www.linkedin.com/in/david-b-270b0415"
+    - name: Yoni Davidson
+      photo: "img/yoni-davidson.jpg"
+      linkedin: "https://www.linkedin.com/in/yoni-davidson-35b53222"
+      twitter: "https://twitter.com/yonidavidson"
+    - name: "Yarden Laifenfeld"
+      photo: "img/yarden-laifenfeld.jpg"
+      linkedin: "hhttps://www.linkedin.com/in/yarden-laifenfeld-37b9661b3/"
+      twitter: "https://twitter.com/YardenLaif"
+    - name: "Aviv Laufer"
+      photo: "img/aviv-laufer.jpg"
+      linkedin: "https://www.linkedin.com/in/avivl"
+    - name: Shlomi Noach
+      photo: "img/shlomi-noach.jpg"
+      linkedin: "https://www.linkedin.com/in/shlominoach"
+    - name: "Nahshon Unna-Tsameret"
+      photo: "img/nashon-unna-tsameret.jpg"
+      linkedin: "https://www.linkedin.com/in/nahsh"
+    - name: "Orit Wasserman"
+      photo: "img/orit-wasserman.jpg"
+      linkedin: "https://www.linkedin.com/in/orit-wasserman-73547"
   Speakers:
     - name: "Derek Parker"
       photo: "img/derek-parker.jpeg"
@@ -153,110 +186,110 @@ params:
       bio: "Working in the industry in the past couple of years as a Backend Engineer and as an Engineering Team Lead. I took a part in designing, implementing and improving real-time systems that process data at high scale, mostly in Go."
     - name: "Shay Nehmad"
       photo: "img/shay-nehmad.png"
-      bio: "Founding Engineer @Reco"  
+      bio: "Founding Engineer @Reco"
   # The entire schedule
   Schedule:
-    - time: '08:30 09:30'
+    - time: "08:30 09:30"
       event:
-        name: 'Registration & Breakfast'
-    - time: '09:30 09:45'
+        name: "Registration & Breakfast"
+    - time: "09:30 09:45"
       event:
-        name: 'Opening Words'
-    - time: '09:45 10:30'
+        name: "Opening Words"
+    - time: "09:45 10:30"
       talk:
-        - name: 'Derek Parker'
-          title: 'Go: the language of dreamers - Keynote'
-          description: 'Keynote'
-          language: 'English'
+        - name: "Derek Parker"
+          title: "Go: the language of dreamers - Keynote"
+          description: "Keynote"
+          language: "English"
 
-    - time: '10:30 11:00'
+    - time: "10:30 11:00"
       event:
-        name: 'Break'
-    - time: '11:00 11:30'
+        name: "Break"
+    - time: "11:00 11:30"
       talk:
-        - name: 'Amit Lichtenberg '
+        - name: "Amit Lichtenberg "
           title: "Generics are a Gopher's Best Friend"
-          language: 'Hebrew'
-        - name: 'Nir Barak & Shay Nehmad'
-          title: 'Shifting Left with Protobuf - a multi-disciplinary approach to schema management'
-          language: 'Hebrew'
-    - time: '11:30 11:45'
+          language: "Hebrew"
+        - name: "Nir Barak & Shay Nehmad"
+          title: "Shifting Left with Protobuf - a multi-disciplinary approach to schema management"
+          language: "Hebrew"
+    - time: "11:30 11:45"
       event:
-        name: 'Break'
-    - time: '11:45 12:15'
+        name: "Break"
+    - time: "11:45 12:15"
       talk:
-        - name: 'Hagai Dayan'
-          title: 'Bottlenecks in Golang memory management'
-          language: 'Hebrew'
-        - name: 'Natalie Pistunovich'
-          title: 'AI-Assisted Go: Up Your Game and Have More Fun'
-          language: 'Hebrew'
-    - time: '12:15 13:15'
+        - name: "Hagai Dayan"
+          title: "Bottlenecks in Golang memory management"
+          language: "Hebrew"
+        - name: "Natalie Pistunovich"
+          title: "AI-Assisted Go: Up Your Game and Have More Fun"
+          language: "Hebrew"
+    - time: "12:15 13:15"
       event:
-        name: 'Lunch'
-    - time: '13:15 13:45'
+        name: "Lunch"
+    - time: "13:15 13:45"
       talk:
-        - name: 'Guy Brandwine'
-          title: 'A journey from development chaos to total control'
-          language: 'English'
-        - name: 'Doron Segal'
-          title: 'How Golang can help fighting global warming'
-          language: 'Hebrew'
-    - time: '13:45 14:00'
+        - name: "Guy Brandwine"
+          title: "A journey from development chaos to total control"
+          language: "English"
+        - name: "Doron Segal"
+          title: "How Golang can help fighting global warming"
+          language: "Hebrew"
+    - time: "13:45 14:00"
       event:
-        name: 'Break'
-    - time: '14:00 14:30'
+        name: "Break"
+    - time: "14:00 14:30"
       talk:
-        - name: 'Liri Sokol'
-          title: 'Writing a virtual file system was never simpler'
-          language: 'Hebrew'
-        - name: 'Adrian Cole'
-          title: 'WebAssembly for the backend'
-          language: 'English'
-    - time: '14:30 14:45'
+        - name: "Liri Sokol"
+          title: "Writing a virtual file system was never simpler"
+          language: "Hebrew"
+        - name: "Adrian Cole"
+          title: "WebAssembly for the backend"
+          language: "English"
+    - time: "14:30 14:45"
       event:
-        name: 'Break'
-    - time: '14:45 15:15'
+        name: "Break"
+    - time: "14:45 15:15"
       talk:
-        - name: 'David Freilich'
-          title: 'Creating a CLI Manager with Cobra'
-          language: 'English'
-        - name: 'Aviv Klasquin Komissar'
-          title: 'Hot path optimizations for latency-critical applications in GO'
-          language: 'Hebrew'
-    - time: '15:15 15:45'
+        - name: "David Freilich"
+          title: "Creating a CLI Manager with Cobra"
+          language: "English"
+        - name: "Aviv Klasquin Komissar"
+          title: "Hot path optimizations for latency-critical applications in GO"
+          language: "Hebrew"
+    - time: "15:15 15:45"
       event:
-        name: 'Break'
-    - time: '15:45 16:30'
+        name: "Break"
+    - time: "15:45 16:30"
       event:
-        name: 'Lightning Talks'
-    - time: ''
+        name: "Lightning Talks"
+    - time: ""
       talk:
-        - name: 'Nahshon Unna - Tsameret'
-          title: 'Writing a custom golang linter'
-    - time: ''
+        - name: "Nahshon Unna - Tsameret"
+          title: "Writing a custom golang linter"
+    - time: ""
       talk:
-        - name: 'Noam Soloveichik'
-          title: 'Single Method Interfaces and How to Use Them'
-    - time: ''
+        - name: "Noam Soloveichik"
+          title: "Single Method Interfaces and How to Use Them"
+    - time: ""
       talk:
-        - name: 'Miki Tebeka'
-          title: 'In the Loop'
-    - time: ''
+        - name: "Miki Tebeka"
+          title: "In the Loop"
+    - time: ""
       talk:
-        - name: 'Idan Katz'
+        - name: "Idan Katz"
           title: "Ain't nobody got time.Time fo' that"
-    - time: ''
+    - time: ""
       talk:
-        - name: 'Ori Shoshan'
+        - name: "Ori Shoshan"
           title: "People-oriented programming: effectively using Go's built-in features to make life easier for your fellow devs"
-    - time: ''
+    - time: ""
       talk:
-        - name: 'Jonathan Harel'
-          title: 'Code Smarter not Harder'
-    - time: '16:30 16:45'
+        - name: "Jonathan Harel"
+          title: "Code Smarter not Harder"
+    - time: "16:30 16:45"
       event:
-        name: 'Closing words'
-    - time: '16:45 17:30'
+        name: "Closing words"
+    - time: "16:45 17:30"
       event:
-        name: 'Social Event'
+        name: "Social Event"
