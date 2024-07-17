@@ -53,15 +53,15 @@ params:
     text: "2023 Videos"
     link: "https://www.youtube.com/watch?v=yEcabpza3XA&list=PLRM-8sTy13Xvr1ZaZarF5t_PBPxJdZHxt"
 
-  # The Call For Paper button at the header,
-  CallForPaper:
-    text: "Apply to Speak"
-    link: "https://sessionize.com/gophercon-israel-2024/"
+  # # The Call For Paper button at the header,
+  # CallForPaper:
+  #   text: "Apply to Speak"
+  #   link: "https://sessionize.com/gophercon-israel-2024/"
 
   # The tickets button at the header,
-  # Tickets:
-  #   text: 'Purchase Ticket'
-  #   link: 'https://ti.to/hamakor/gophercon-2023'
+  Tickets:
+    text: 'Purchase Ticket'
+    link: 'https://www.eventer.co.il/gcil24'
 
   # List of Sponsors
   Sponsors:
