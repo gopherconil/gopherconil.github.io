@@ -1,44 +1,4 @@
-<h2 class="section-title">{{ .titles.schedule }}</h2>
-
-<p>2 Workshops For Each Time Slot.</p>
-<div class="schedule-tbl">
-  <table>
-    <thead>
-      <tr>
-        <th class="schedule-time">Time / Room</th>
-        <th class="schedule-slot">A2</th>
-        <th class="schedule-slot">A3</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{ range $slot := .schedule }}
-      {{ if ne .event nil}}
-        <tr>
-          <td class="schedule-time">{{ .time }}</td>
-          <td colspan="2" class="schedule-slot">{{ .event.name }}</td>
-        </tr>
-      {{ end }}
-      {{ if ne .talk nil}}
-        <tr>
-          <td class="schedule-time">{{ .time }}</td>
-          {{$cs := cond (eq (len .talk) 1) "2" "1" }}
-          {{ range $i, $t := .talk}}
-                <td colspan={{$cs}} class="schedule-slot">
-                <span style="color: blue;">{{ $t.name }}-</span>
-                   {{ $t.title }}
-                <span>
-                   {{ if eq $t.language "English" }}
-                    <img src="img/gb.svg" style="float: right;width: 10px;height: 10px"/>
-                  {{ end }}
-                  {{ if eq $t.language "Hebrew" }}
-                    <img src="img/il.svg" style="float: right;width: 10px;height: 10px"/>
-                  {{ end }}
-                </span>
-              </td>
-          {{ end }}
-        </tr>
-        {{ end }}
-      {{ end }}
-    </tbody>
-  </table>
+<div id="sessionize-container">
+  <h1>GopherCon Israel Schedule</h1>
+  <script type="text/javascript" src="https://sessionize.com/api/v2/wsb9oa1c/view/GridSmart"></script>
 </div>

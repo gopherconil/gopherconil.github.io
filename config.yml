@@ -26,7 +26,7 @@ params:
     - about
     # - location
     # - speakers
-    # - schedule
+    - schedule
     # - sponsors
     - tweets
     # - partners
