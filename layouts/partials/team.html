@@ -1,0 +1,20 @@
+<h2 class="section-title">{{ .titles.team }}</h2>
+
+<div class="flex-container">
+    {{ range $member := .team }}
+    <div class="rounded-image-container">
+        {{ if $member.photo }}
+        <img src="{{ $member.photo }}" class="round-image" alt="{{ $member.name }}">
+        {{ end }}
+        <div class="name">{{ $member.name }}</div>
+        <div class="links">
+            {{ if $member.linkedin }}
+            <a href="{{ $member.linkedin }}" target="_blank">LinkedIn</a>
+            {{ end }}
+            {{ if $member.twitter }}
+            <a href="{{ $member.twitter }}" target="_blank">Twitter</a>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>

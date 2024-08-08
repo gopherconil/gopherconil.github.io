@@ -4,25 +4,4 @@
 <p>GopherCon is focused on the Go programming language, nevertheless, the topics
     to be presented relate to many other domains, including: DevOps, cloud
     computing, web programming, hacking and more.</p>
-
-<h2 class="section-title">{{ .titles.team }}</h2>
-
-<div class="flex-container">
-    {{ range $member := .team }}
-    <div class="rounded-image-container">
-        {{ if $member.photo }}
-        <img src="{{ $member.photo }}" class="round-image" alt="{{ $member.name }}">
-        {{ end }}
-        <div class="name">{{ $member.name }}</div>
-        <div class="links">
-            {{ if $member.linkedin }}
-            <a href="{{ $member.linkedin }}" target="_blank">LinkedIn</a>
-            {{ end }}
-            {{ if $member.twitter }}
-            <a href="{{ $member.twitter }}" target="_blank">Twitter</a>
-            {{ end }}
-        </div>
-    </div>
-    {{ end }}
-</div>
 </p>
