@@ -27,7 +27,7 @@ params:
     # - location
     # - speakers
     - schedule
-    # - sponsors
+    - sponsors
     - team
     - tweets
     # - partners
@@ -61,8 +61,8 @@ params:
 
   # The tickets button at the header,
   Tickets:
-    text: 'Purchase Ticket'
-    link: 'https://www.eventer.co.il/gcil24'
+    text: "Purchase Ticket"
+    link: "https://www.eventer.co.il/gcil24"
 
   # List of Sponsors
   Sponsors:
@@ -71,7 +71,7 @@ params:
         logo: "/img/appsflyer-logo.png"
         url: "https://careers.appsflyer.com/"
         body:
-          - text: "AppsFlyer helps brands make good choices for their business and their customers with its advanced measurement, data analytics, deep linking, engagement, fraud protection, data clean room and privacy preserving technologies. Built on the idea that brands can increase customer privacy while providing exceptional experiences, AppsFlyer empowers thousands of creators and 10,000+ technology partners to create better, more meaningful customer relationships. To learn more, visit www.appsflyer.com."
+          - text: "The world’s leading brands use AppsFlyer to make good choices for their business and customers, through privacy-preserving measurement, analytics and engagement technologies."
       - name: "Rookout"
         logo: "/img/rookout-logo.png"
         url: "https://www.rookout.com/careers/"
