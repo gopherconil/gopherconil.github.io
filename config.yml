@@ -72,37 +72,22 @@ params:
         url: "https://careers.appsflyer.com/"
         body:
           - text: "The world’s leading brands use AppsFlyer to make good choices for their business and customers, through privacy-preserving measurement, analytics and engagement technologies."
-      - name: "Rookout"
-        logo: "/img/rookout-logo.png"
-        url: "https://www.rookout.com/careers/"
+      - name: "Google"
+        logo: "/img/google-logo.svg"
+        url: "https://careers.google.com/"
         body:
-          - text: "Reduce debugging time and instantly review live environments w/ non-breaking breakpoints. Supports Go, JVM, Python, Node, Ruby and .NET. Integrates with a variety of tools."
+          - text: ""
       - name: "Descope"
         logo: "/img/descope-logo.svg"
         url: "https://www.descope.com/"
         body:
           - text: "Descope helps every developer build secure, frictionless authentication and user journeys for any application. Our no-code workflow builder, SDKs, and APIs enable developers to easily create and customize authentication flows for every user interaction. Designed by security experts, Descope also protects against account takeover fraud, session theft, and bot attacks on login pages. Founded in 2022, Descope is headquartered in Los Altos, CA and is a member of the FIDO Alliance. To learn more, visit https://www.descope.com."
-      - name: "RavenDB"
-        logo: "/img/ravendb-logo.png"
-        url: "https://ravendb.net/"
-        body:
-          - text: "RavenDB turn your Database complexity into an effortless solution Try us, Trust us, Forget we’re even there RavenDB is a leading distributed NoSQL, fully transactional indexing document database. Thanks to our unmatched ACID performance, smooth DevOps, wealth of features, and cost-effectiveness, RavenDB is many developers’ platform of choice."
     silver:
-      - name: "Google"
-        logo: "/img/google-logo.svg"
-        url: "https://careers.google.com/"
-        body:
-          - text: "Google believes that open source is good for everyone. By being open and freely available, it enables and encourages collaboration and the development of technology."
       - name: "RedHat"
         logo: "/img/redhat-logo.svg"
         url: "https://www.redhat.com/en/jobs"
         body:
           - text: "Red Hat is the world’s leading provider of enterprise open-source solutions, using a community-powered approach to deliver high-performing Linux, cloud, container, and Kubernetes technologies. We help customers standardize across environments, develop cloud-native applications, and integrate, automate, secure, and manage complex environments with award-winning support, training, and consulting services."
-      - name: "Jetbrains"
-        logo: "/img/goland-logo.svg"
-        url: "https://www.jetbrains.com/go/"
-        body:
-          - text: "At JetBrains, we create cutting-edge development tools to help make your coding productive and enjoyable. Trusted by millions of developers worldwide, our products automate your mundane and routine tasks and simplify the challenging ones. We’re known for IDEs, such as IntelliJ IDEA for Java, PhpStorm for PHP, PyCharm for Python, CLion for C++, and many others. We created GoLand, an IDE that makes it easy to read, write, and change Go code, specifically for Go developers. However, GoLand is more than just a Go IDE. On top of the features available for working with Go code, it has extended support for JavaScript, TypeScript, and databases. Smart features, such as on-the-fly error detection and quick-fixes, top-notch integration with Go modules, powerful and safe refactorings with one-step undo, intelligent code completion, dead code detection, and documentation hints, help all Go developers, from novices to experienced professionals, to create fast, efficient, and reliable code."
 
   # List of Partners
   Partners:
