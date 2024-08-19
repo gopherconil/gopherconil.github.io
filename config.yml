@@ -82,6 +82,11 @@ params:
         url: "https://www.descope.com/"
         body:
           - text: "Descope helps every developer build secure, frictionless authentication and user journeys for any application. Our no-code workflow builder, SDKs, and APIs enable developers to easily create and customize authentication flows for every user interaction. Designed by security experts, Descope also protects against account takeover fraud, session theft, and bot attacks on login pages. Founded in 2022, Descope is headquartered in Los Altos, CA and is a member of the FIDO Alliance. To learn more, visit https://www.descope.com."
+      - name: "Tenable"
+        logo: "/img/tenable-logo.png"
+        url: "https://www.tenable.com/careers/search?country=Israel"
+        body:
+          - text: "Tenable is the exposure management company, exposing and closing the cybersecurity gaps that erode business value, reputation and trust. The company’s AI-powered exposure management platform radically unifies security visibility, insight and action across the attack surface, equipping modern organizations to protect against attacks from IT infrastructure to cloud environments to critical infrastructure and everywhere in between. By protecting enterprises from security exposure, Tenable reduces business risk for more than 44,000 customers around the globe. Learn more at tenable.com."
     silver:
       - name: "RedHat"
         logo: "/img/redhat-logo.svg"
