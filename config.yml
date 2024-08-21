@@ -93,6 +93,11 @@ params:
         url: "https://www.redhat.com/en/jobs"
         body:
           - text: "Red Hat is the world’s leading provider of enterprise open-source solutions, using a community-powered approach to deliver high-performing Linux, cloud, container, and Kubernetes technologies. We help customers standardize across environments, develop cloud-native applications, and integrate, automate, secure, and manage complex environments with award-winning support, training, and consulting services."
+      - name: "Island"
+        logo: "/img/island-logo.png"
+        url: "https://www.island.io/careers"
+        body:
+          - text: 'Island is a cybersecurity startup founded by experienced entrepreneurs Dan Amiga and Mike. It has gained backing from prominent industry investors and recently raised $3 billion in funding. Island''s innovative browser not only protects organizations, but also enhances user experience with transparency and control. Developing this enterprise-grade browser requires expertise across various fields, including advanced networking, data protection, and AI integration. By seamlessly securing user activities without performance issues, Island has pioneered a new category of "Enterprise Browsers" that Gartner predicts will become the central platform in organizations by 2030. The company has around 100 leading developers in Israel, with the rest of the team based in the US.'
 
   # List of Partners
   Partners:
