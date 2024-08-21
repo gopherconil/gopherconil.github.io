@@ -13,7 +13,7 @@ params:
   Description: "Best Go Conference in Israel"
   Date: "September 9"
   # Price: "100NIS" # If your event is free, just comment this line
-  Venue: "Expo"
+  Venue: "Expo - Bitan 10"
   # Address: "Boulevard Kukulcan, 30"
   City: "Tel Aviv"
   State: "Israel"
