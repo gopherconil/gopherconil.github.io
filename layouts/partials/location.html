@@ -6,6 +6,8 @@
   <span itemprop="addressRegion"> {{ .state }}</span>
 </p>
 
-<div id="map-canvas" class="location-area" data-address="{{ .address }}, {{ .city }} - {{ .state }}" style="margin-bottom: 20px;">
+<div id="map-canvas" class="location-area" data-address="{{ .address }}, {{ .city }} - {{ .state }}" style="margin-bottom: 200px;">
   <iframe src="https://www.google.com/maps/embed?pb={{ .placebounds }}" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
+
+<hr class="section-separator">
