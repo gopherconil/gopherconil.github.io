@@ -14,7 +14,8 @@ params:
   Date: "September 9"
   # Price: "100NIS" # If your event is free, just comment this line
   Venue: "Expo - Bitan 10"
-  # Address: "Boulevard Kukulcan, 30"
+  Address: "Expo - Bitan 10"
+  placebounds: "!1m14!1m12!1m3!1d876.4370918050947!2d34.807993055863754!3d32.10458223177085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sil!4v1724317817107!5m2!1sen!2sil"
   City: "Tel Aviv"
   State: "Israel"
   Images: ["/img/badge.jpg"]
@@ -24,7 +25,7 @@ params:
   # you can also change order here and it will reflect on page
   Sections:
     - about
-    # - location
+    - location
     # - speakers
     - schedule
     - sponsors
