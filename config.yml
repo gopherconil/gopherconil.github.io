@@ -47,13 +47,13 @@ params:
 
   # # The Call To Action button at the header,
   CallToAction:
-    text: "Become a Sponsor"
-    link: "/sponsor"
+    text: "Our Offical App"
+    link: "https://gophercon-israel-2024.sessionize.com/"
 
   # The Call To Action button at the header,
-  VideoButton:
-    text: "2023 Videos"
-    link: "https://www.youtube.com/watch?v=yEcabpza3XA&list=PLRM-8sTy13Xvr1ZaZarF5t_PBPxJdZHxt"
+  # VideoButton:
+  #   text: "2023 Videos"
+  #   link: "https://www.youtube.com/watch?v=yEcabpza3XA&list=PLRM-8sTy13Xvr1ZaZarF5t_PBPxJdZHxt"
 
   # # The Call For Paper button at the header,
   # CallForPaper:
