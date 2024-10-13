@@ -46,14 +46,14 @@ params:
     team: "Team"
 
   # # The Call To Action button at the header,
-  CallToAction:
-    text: "Our Offical App"
-    link: "https://gophercon-israel-2024.sessionize.com/"
+  # CallToAction:
+  #   text: "Our Offical App"
+  #   link: "https://gophercon-israel-2024.sessionize.com/"
 
   # The Call To Action button at the header,
-  # VideoButton:
-  #   text: "2023 Videos"
-  #   link: "https://www.youtube.com/watch?v=yEcabpza3XA&list=PLRM-8sTy13Xvr1ZaZarF5t_PBPxJdZHxt"
+  VideoButton:
+    text: "2024 Videos"
+    link: "https://www.youtube.com/playlist?list=PLRM-8sTy13XtQu_kYd-7e_HbKpXLTWuy1"
 
   # # The Call For Paper button at the header,
   # CallForPaper:
@@ -61,9 +61,9 @@ params:
   #   link: "https://sessionize.com/gophercon-israel-2024/"
 
   # The tickets button at the header,
-  Tickets:
-    text: "Purchase Ticket"
-    link: "https://www.eventer.co.il/gcil24"
+  # Tickets:
+  #   text: "Purchase Ticket"
+  #   link: "https://www.eventer.co.il/gcil24"
 
   # List of Sponsors
   Sponsors:
