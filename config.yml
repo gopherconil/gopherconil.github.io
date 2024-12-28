@@ -1,5 +1,5 @@
 baseurl: "https://www.gophercon.org.il/"
-title: "GopherCon Israel 2024"
+title: "GopherCon Israel 2025"
 canonifyurls: true
 theme: "hugo-conference"
 publishDir: "docs"
@@ -9,9 +9,9 @@ GoogleAnalytics: "UA-125301893-1"
 
 params:
   # Conference info
-  Name: "GopherCon Israel 2024"
+  Name: "GopherCon Israel 2025"
   Description: "Best Go Conference in Israel"
-  Date: "September 9"
+  Date: "End of May"
   # Price: "100NIS" # If your event is free, just comment this line
   Venue: "Expo - Bitan 10"
   Address: "Expo - Bitan 10"
@@ -27,12 +27,12 @@ params:
     - about
     - location
     # - speakers
-    - schedule
-    - sponsors
+    # - schedule
+    # - sponsors
     - team
     - tweets
     # - partners
-    #- contact
+    # - contact
 
   # Titles which you can translate to other languages
   Titles:
@@ -44,6 +44,11 @@ params:
     partners: "Partners"
     contact: "Contact"
     team: "Team"
+  
+  # # The Call To Action button at the header,
+  CallToAction:
+    text: "Become a Sponsor"
+    link: "/sponsor"
 
   # # The Call To Action button at the header,
   # CallToAction:
