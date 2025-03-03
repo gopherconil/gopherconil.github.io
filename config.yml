@@ -60,10 +60,10 @@ params:
     text: "2024 Videos"
     link: "https://www.youtube.com/playlist?list=PLRM-8sTy13XtQu_kYd-7e_HbKpXLTWuy1"
 
-  # # The Call For Paper button at the header,
-  # CallForPaper:
-  #   text: "Apply to Speak"
-  #   link: "https://sessionize.com/gophercon-israel-2024/"
+  # The Call For Paper button at the header,
+  CallForPaper:
+    text: "Apply to Speak"
+    link: "https://sessionize.com/gophercon-israel-2025"
 
   # The tickets button at the header,
   # Tickets:

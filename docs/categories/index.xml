@@ -4,7 +4,8 @@
     <title>Categories on GopherCon Israel 2025</title>
     <link>https://www.gophercon.org.il/categories/</link>
     <description>Recent content in Categories on GopherCon Israel 2025</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://www.gophercon.org.il/categories/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://www.gophercon.org.il/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
