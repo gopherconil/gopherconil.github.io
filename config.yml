@@ -45,7 +45,7 @@ params:
     contact: "Contact"
     team: "Team"
   
-  # # The Call To Action button at the header,
+  # The Call To Action button at the header,
   CallToAction:
     text: "Become a Sponsor"
     link: "/sponsor"
@@ -61,14 +61,14 @@ params:
     link: "https://www.youtube.com/playlist?list=PLRM-8sTy13XtQu_kYd-7e_HbKpXLTWuy1"
 
   # The Call For Paper button at the header,
-  CallForPaper:
-    text: "Apply to Speak"
-    link: "https://sessionize.com/gophercon-israel-2025"
+  # CallForPaper:
+  #   text: "Apply to Speak"
+  #   link: "https://sessionize.com/gophercon-israel-2025"
 
   # The tickets button at the header,
-  # Tickets:
-  #   text: "Purchase Ticket"
-  #   link: "https://www.eventer.co.il/gcil24"
+  Tickets:
+    text: "Purchase Ticket"
+    link: "https://www.eventer.co.il/gc2025"
 
   # List of Sponsors
   Sponsors:
