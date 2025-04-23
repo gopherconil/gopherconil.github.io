@@ -124,13 +124,6 @@ params:
       photo: "img/yoni-davidson.jpg"
       linkedin: "https://www.linkedin.com/in/yoni-davidson-35b53222"
       twitter: "https://twitter.com/yonidavidson"
-    - name: "Yarden Laifenfeld"
-      photo: "img/yarden-laifenfeld.jpg"
-      linkedin: "hhttps://www.linkedin.com/in/yarden-laifenfeld-37b9661b3/"
-      twitter: "https://twitter.com/YardenLaif"
-    - name: "Aviv Laufer"
-      photo: "img/aviv-laufer.jpg"
-      linkedin: "https://www.linkedin.com/in/avivl"
     - name: Shlomi Noach
       photo: "img/shlomi-noach.jpg"
       linkedin: "https://www.linkedin.com/in/shlominoach"
