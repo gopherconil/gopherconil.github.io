@@ -50,10 +50,10 @@ params:
     text: "Become a Sponsor"
     link: "/sponsor"
 
-  # # The Call To Action button at the header,
-  # CallToAction:
-  #   text: "Our Offical App"
-  #   link: "https://gophercon-israel-2024.sessionize.com/"
+   # The Call To Action button at the header,
+  CallForPaper:
+    text: "Schedule"
+    link: "https://gophercon-israel-2025.sessionize.com/schedule"
 
   # The Call To Action button at the header,
   VideoButton:
