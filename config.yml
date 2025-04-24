@@ -26,7 +26,7 @@ params:
   Sections:
     - about
     - location
-    # - speakers
+    - speakers
     # - schedule
     # - sponsors
     - team
@@ -77,7 +77,7 @@ params:
         logo: "/img/appsflyer-logo.png"
         url: "https://careers.appsflyer.com/"
         body:
-          - text: "The world’s leading brands use AppsFlyer to make good choices for their business and customers, through privacy-preserving measurement, analytics and engagement technologies."
+          - text: "The world's leading brands use AppsFlyer to make good choices for their business and customers, through privacy-preserving measurement, analytics and engagement technologies."
       - name: "Google"
         logo: "/img/google-logo.svg"
         url: "https://careers.google.com/"
@@ -92,13 +92,13 @@ params:
         logo: "/img/tenable-logo.png"
         url: "https://www.tenable.com/careers/search?country=Israel"
         body:
-          - text: "Tenable is the exposure management company, exposing and closing the cybersecurity gaps that erode business value, reputation and trust. The company’s AI-powered exposure management platform radically unifies security visibility, insight and action across the attack surface, equipping modern organizations to protect against attacks from IT infrastructure to cloud environments to critical infrastructure and everywhere in between. By protecting enterprises from security exposure, Tenable reduces business risk for more than 44,000 customers around the globe. Learn more at tenable.com."
+          - text: "Tenable is the exposure management company, exposing and closing the cybersecurity gaps that erode business value, reputation and trust. The company's AI-powered exposure management platform radically unifies security visibility, insight and action across the attack surface, equipping modern organizations to protect against attacks from IT infrastructure to cloud environments to critical infrastructure and everywhere in between. By protecting enterprises from security exposure, Tenable reduces business risk for more than 44,000 customers around the globe. Learn more at tenable.com."
     silver:
       - name: "RedHat"
         logo: "/img/redhat-logo.svg"
         url: "https://www.redhat.com/en/jobs"
         body:
-          - text: "Red Hat is the world’s leading provider of enterprise open-source solutions, using a community-powered approach to deliver high-performing Linux, cloud, container, and Kubernetes technologies. We help customers standardize across environments, develop cloud-native applications, and integrate, automate, secure, and manage complex environments with award-winning support, training, and consulting services."
+          - text: "Red Hat is the world's leading provider of enterprise open-source solutions, using a community-powered approach to deliver high-performing Linux, cloud, container, and Kubernetes technologies. We help customers standardize across environments, develop cloud-native applications, and integrate, automate, secure, and manage complex environments with award-winning support, training, and consulting services."
       - name: "Island"
         logo: "/img/island-logo.svg"
         url: "https://www.island.io/careers"
@@ -133,158 +133,3 @@ params:
     - name: "Orit Wasserman"
       photo: "img/orit-wasserman.jpg"
       linkedin: "https://www.linkedin.com/in/orit-wasserman-73547"
-  Speakers:
-    - name: "Derek Parker"
-      photo: "img/derek-parker.jpeg"
-      bio: "wrote a tool that every Go developer uses and thinks that Go is the language of dreamers."
-    - name: "Adrian Cole"
-      photo: "img/adrian-cole.jpeg"
-      bio: "Adrian is an engineer working at Tetrate on Open Source projects. He’s been a routine contributor to open source for over ten years. Lately, he spends most of his time on wazero: the zero dependency WebAssembly runtime for Go developers, as well http-wasm.io which is a portability specification. His past notable project work includes Zipkin, OpenFeign, and Apache jclouds."
-    - name: "Idan Katz"
-      photo: "img/idan-katz.jpg"
-      bio: "Senior Developer and Team Leader @Raftt"
-    - name: "Liri Sokol"
-      photo: "img/liri-sokol.jpeg"
-      bio: "Tech Lead @Diversion"
-    - name: "Amit Lichtenberg"
-      photo: "img/amit-lichtenberg.jpeg"
-      bio: "Lead Architect @Otterize"
-    - name: "David Freilich"
-      photo: "img/david-freilich.jpg"
-      bio: "David Freilich is a Software Engineer in the Platform group at AppsFlyer, where he works on providing a smooth developer experience for the entire R&D Department. He is also a platform maintainer for the Cloud Native Buildpacks project. He is passionate about clean code, delightful user experiences, and beautiful products. He holds a BA from Yeshiva University and a MSc from Carnegie Mellon University."
-    - name: "Doron Segal"
-      photo: "img/doron-segal.jpg"
-      bio: "Hey, I'm Doron! A seasoned, hands-on, technical leader with a track record of building teams and products. I focus on building organizations and enabling them to get things done. Passionate about people and technology and how to make it scale. Management of engineering teams ranging of all sizes (over 50 engineers).  My leadership mantra is Leadership is not wielding authority; it's empowering others. I lead by listening and example. I served in the Israeli Army as Platoon Commander for 4 years in a technology combat unit.  Co-founded CityOwls, a data aggregation startup.  I was CTO at NKStream a 4K - 16K streaming solution.   I led a platform team at Beats Music (later Apple);  Engineering manager at OpenTable and later  director of platform engineering at Saildrone. Currently I’m the CTO & co-founder of  TryPerDiem, a YC-backed startup. I'm also a dad of 3 adorable kids."
-    - name: "Aviv Klasquin Komissar"
-      photo: "img/aviv-komissar.png"
-      bio: "Aviv is a Lead Architect @Cyolo and enjoys creating exciting, genuine tech. Aviv is programming in Go for the last 7 years."
-    - name: "Natalie Pistunovich"
-      photo: "img/natalie-pistunovich.png"
-      bio: "As a professional question asker and passionate learner, Natalie found that the intersection of AI, code, and security sparks joy. She is an OpenAI Developer Ambassador, a Google Developer Expert for Go and consulting companies that want to incorporate AI. In addition to being a university lecturer teaching DevOps, she is also a public speaker and conference and community organizer in Berlin.Throughout her career, she has worked on four different continents as an engineering manager, software and hardware engineer, developer advocate, and co-founder of a mobile start-up. Still thinks that passing Calculus at the Technion was harder than getting a sailing license in Germany."
-    - name: "Noam Soloveichik"
-      photo: "img/noam-soloveichik.png"
-      bio: "Software Engineer @Raftt"
-    - name: "Jonathan Harel"
-      photo: "img/jonathan-harel.jpg"
-      bio: "Jonathan is a digital comedian - touching on everything that involves humor, technology and creativity. In the past few years he released multiple items, including `Dark{mode}`: a docu-comedy web series that covers developer experience topics, trends, and best practices; “UHMMM”: A software that plays elevator music when online meetings go silent; and “yyynet”, an extension that adds drama to news headlines. Today he is working on fine.dev - the developer experience company."
-    - name: "Nahshon Unna-Tsameret"
-      photo: "img/nashon-unna-tsameret.jpg"
-      bio: "Senior Software Engineer at Red Hat, developing cloud native applications with golang for the last three years. Naturally, my code is open. Have more than 20 years of experience in software development, from low level devices to backend applications. Married + two teenagers."
-    - name: "Nir Barak"
-      photo: "img/nir-barak.png"
-      bio: "Big Data Tech Lead."
-    - name: "Guy Brandwine"
-      photo: "img/guy-brandwine.png"
-      bio: "I'm a technology leader with almost 30 years of experience in managing and implementing innovative System architecture, scalable R&D, quality assurance and integration teams. As a serial startups and development teams kick starter, code, architecture and best practice enthusiastic. The founder and co-host of the Golang Israel community (https://www.meetup.com/Go-Israel/)."
-    - name: "Hagai Dayan"
-      photo: "img/hagai-dayan.jpeg"
-      bio: "Working in the industry in the past couple of years as a Backend Engineer and as an Engineering Team Lead. I took a part in designing, implementing and improving real-time systems that process data at high scale, mostly in Go."
-    - name: "Shay Nehmad"
-      photo: "img/shay-nehmad.png"
-      bio: "Founding Engineer @Reco"
-  # The entire schedule
-  Schedule:
-    - time: "08:30 09:30"
-      event:
-        name: "Registration & Breakfast"
-    - time: "09:30 09:45"
-      event:
-        name: "Opening Words"
-    - time: "09:45 10:30"
-      talk:
-        - name: "Derek Parker"
-          title: "Go: the language of dreamers - Keynote"
-          description: "Keynote"
-          language: "English"
-
-    - time: "10:30 11:00"
-      event:
-        name: "Break"
-    - time: "11:00 11:30"
-      talk:
-        - name: "Amit Lichtenberg "
-          title: "Generics are a Gopher's Best Friend"
-          language: "Hebrew"
-        - name: "Nir Barak & Shay Nehmad"
-          title: "Shifting Left with Protobuf - a multi-disciplinary approach to schema management"
-          language: "Hebrew"
-    - time: "11:30 11:45"
-      event:
-        name: "Break"
-    - time: "11:45 12:15"
-      talk:
-        - name: "Hagai Dayan"
-          title: "Bottlenecks in Golang memory management"
-          language: "Hebrew"
-        - name: "Natalie Pistunovich"
-          title: "AI-Assisted Go: Up Your Game and Have More Fun"
-          language: "Hebrew"
-    - time: "12:15 13:15"
-      event:
-        name: "Lunch"
-    - time: "13:15 13:45"
-      talk:
-        - name: "Guy Brandwine"
-          title: "A journey from development chaos to total control"
-          language: "English"
-        - name: "Doron Segal"
-          title: "How Golang can help fighting global warming"
-          language: "Hebrew"
-    - time: "13:45 14:00"
-      event:
-        name: "Break"
-    - time: "14:00 14:30"
-      talk:
-        - name: "Liri Sokol"
-          title: "Writing a virtual file system was never simpler"
-          language: "Hebrew"
-        - name: "Adrian Cole"
-          title: "WebAssembly for the backend"
-          language: "English"
-    - time: "14:30 14:45"
-      event:
-        name: "Break"
-    - time: "14:45 15:15"
-      talk:
-        - name: "David Freilich"
-          title: "Creating a CLI Manager with Cobra"
-          language: "English"
-        - name: "Aviv Klasquin Komissar"
-          title: "Hot path optimizations for latency-critical applications in GO"
-          language: "Hebrew"
-    - time: "15:15 15:45"
-      event:
-        name: "Break"
-    - time: "15:45 16:30"
-      event:
-        name: "Lightning Talks"
-    - time: ""
-      talk:
-        - name: "Nahshon Unna - Tsameret"
-          title: "Writing a custom golang linter"
-    - time: ""
-      talk:
-        - name: "Noam Soloveichik"
-          title: "Single Method Interfaces and How to Use Them"
-    - time: ""
-      talk:
-        - name: "Miki Tebeka"
-          title: "In the Loop"
-    - time: ""
-      talk:
-        - name: "Idan Katz"
-          title: "Ain't nobody got time.Time fo' that"
-    - time: ""
-      talk:
-        - name: "Ori Shoshan"
-          title: "People-oriented programming: effectively using Go's built-in features to make life easier for your fellow devs"
-    - time: ""
-      talk:
-        - name: "Jonathan Harel"
-          title: "Code Smarter not Harder"
-    - time: "16:30 16:45"
-      event:
-        name: "Closing words"
-    - time: "16:45 17:30"
-      event:
-        name: "Social Event"

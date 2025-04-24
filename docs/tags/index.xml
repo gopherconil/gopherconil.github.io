@@ -4,8 +4,7 @@
     <title>Tags on GopherCon Israel 2025</title>
     <link>https://www.gophercon.org.il/tags/</link>
     <description>Recent content in Tags on GopherCon Israel 2025</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <atom:link href="https://www.gophercon.org.il/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://www.gophercon.org.il/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
