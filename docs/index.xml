@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GopherCon Israel 2025</title>
+    <title>GopherCon Israel 2026</title>
     <link>https://www.gophercon.org.il/</link>
-    <description>Recent content on GopherCon Israel 2025</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://www.gophercon.org.il/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content on GopherCon Israel 2026</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://www.gophercon.org.il/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://www.gophercon.org.il/sponsor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.gophercon.org.il/sponsor/</guid>
+      <description>&lt;!doctype html&gt;&#xA;&lt;html&gt;&#xA;&lt;head&gt;&#xA;    &lt;meta charset=&#34;utf-8&#34;&gt;&#xA;    &lt;title&gt;GopherCon Israel 2026 Sponsorship Details&lt;/title&gt;&#xA;    &lt;style&gt;&#xA;        body, html {&#xA;            height: 100%;&#xA;            margin: 0;&#xA;            padding: 0;&#xA;            overflow: hidden;&#xA;        }&#xA;        iframe {&#xA;            width: 100%;&#xA;            height: 100%;&#xA;            border: none;&#xA;        }&#xA;    &lt;/style&gt;&#xA;&lt;/head&gt;&#xA;&lt;body&gt;&#xA;    &lt;iframe src=&#34;https://docs.google.com/document/d/1SK2EZc4MLlILW3XHU9rKC-kac_NIw4VgOqzpeyQw44c/edit?usp=sharing&#34;&gt;&lt;/iframe&gt;&#xA;&lt;/body&gt;&#xA;&lt;/html&gt;</description>
+    </item>
   </channel>
 </rss>
