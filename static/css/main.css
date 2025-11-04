@@ -339,15 +339,21 @@ hr {
 
 .content {
     background: #ffffff;
-    padding: 50px 0 0 0;
-    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
+    padding: 60px 0 40px 0;
+    box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.08);
 }
 
 .content section {
-    margin-top: 50px;
-    padding-top: 0;
-    margin-bottom: 50px;
+    margin-top: 60px;
+    padding-top: 40px;
+    margin-bottom: 60px;
     transition: all 0.3s ease;
+    scroll-margin-top: 80px;
+}
+
+.content section:first-child {
+    margin-top: 0;
+    padding-top: 0;
 }
 
 /* =============================================================================
@@ -356,24 +362,28 @@ hr {
 h2,
 h3,
 h4 {
-    font-size: 5em;
-    font-weight: normal;
-    margin-bottom: .4em;
+    font-size: 4.5em;
+    font-weight: 600;
+    margin-bottom: .5em;
     letter-spacing: -0.02em;
+    color: #1a1a1a;
 }
 
 h3 {
-    font-size: 4em;
+    font-size: 3.5em;
+    font-weight: 500;
 }
 
 h4 {
-    font-size: 3em;
+    font-size: 2.8em;
+    font-weight: 500;
 }
 
 p {
-    font-size: 1.6em;
-    line-height: 1.6em;
+    font-size: 1.7em;
+    line-height: 1.7em;
     margin-bottom: 1.4em;
+    color: #444;
 }
 
 .photo {
@@ -398,11 +408,14 @@ p {
    NAVIGATION
    ========================================================================== */
 nav {
-    padding: 15px 0;
+    padding: 12px 0;
     position: fixed;
     width: 100%;
     z-index: 10;
     transition: all 0.3s ease;
+    background: rgba(43, 43, 43, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-menu {
@@ -411,13 +424,25 @@ nav {
 
 .nav-item {
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 5px;
     transition: all 0.3s ease;
 }
 
 .nav-link {
-    font-size: 1.4em;
+    font-size: 1.5em;
     transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    color: #fddd52 !important;
 }
 
 /* Mobile menu toggle button */
@@ -470,20 +495,25 @@ nav {
    HEADER
    ========================================================================== */
 .header {
-    padding: 100px 0 100px;
+    padding: 80px 0 60px;
     text-align: center;
+    min-height: auto;
 }
 
 .logo-name {
-    margin-bottom: 0;
-    font-size: 10em;
+    margin-bottom: 15px;
+    font-size: 8em;
     letter-spacing: -0.04em;
+    font-weight: 700;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
 .tagline {
-    margin-bottom: 50px;
-    font-size: 2em;
-    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    letter-spacing: -0.01em;
+    font-weight: 400;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .call-action-area .price {
@@ -533,8 +563,10 @@ nav {
    ABOUT
    ========================================================================== */
 .about {
-    padding: 19px;
+    padding: 30px;
     margin: 0 -20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* =============================================================================
@@ -852,16 +884,18 @@ nav {
     }
 
     .header {
-        padding: 20px 0;
+        padding: 70px 0 40px;
+        min-height: auto;
     }
 
     .logo-name {
-        font-size: 4em;
+        font-size: 4.5em;
+        margin-bottom: 10px;
     }
 
     .tagline {
-        margin-bottom: 15px;
-        font-size: 1.4em;
+        margin-bottom: 25px;
+        font-size: 1.6em;
     }
 
     .call-action-area .price {
@@ -904,11 +938,19 @@ nav {
 
     /* content */
     .content {
-        padding: 0;
+        padding: 20px 0 20px 0;
     }
 
     .content section {
-        padding-top: 50px;
+        padding-top: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        scroll-margin-top: 80px;
+    }
+
+    .content section:first-child {
+        padding-top: 0;
+        margin-top: 0;
     }
 
     /* speakers */
@@ -971,8 +1013,10 @@ nav {
    ========================================================================== */
 html {
     background: #F6F6F6;
-    font: normal normal 10px/1.2em helvetica, arial, sans-serif;
-    color: #777;
+    font: normal normal 10px/1.2em -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    color: #555;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* =============================================================================
@@ -1009,18 +1053,34 @@ nav {
    HEADER
    ========================================================================== */
 .header {
-    background-image: url('../img/bg-blue.jpg');
-    background-color: #214f87;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+    background-image:
+        linear-gradient(135deg, rgba(30, 58, 138, 0.95) 0%, rgba(59, 130, 246, 0.9) 50%, rgba(96, 165, 250, 0.85) 100%),
+        url('../img/bg-blue.jpg');
     background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: 100% auto;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+    pointer-events: none;
 }
 
 .logo-link,
 .tagline,
 .call-action-area .price {
-    color: #000;
-    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
 }
 
 .tagline {
@@ -1033,15 +1093,22 @@ nav {
 
 .call-action-area .call-action-link,
 .btn {
-    background-color: #fddd52;
-    background-image: -moz-linear-gradient(top, #fddd52 30%, #f0a303 150%);
-    background-image: -webkit-linear-gradient(top, #fddd52 30%, #f0a303 150%);
-    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fddd52', endColorstr='#f0a303');
-    background-image: linear-gradient(top, #fddd52 30%, #f0a303 150%);
+    background: linear-gradient(135deg, #fddd52 0%, #f0a303 100%);
     color: #2b2b2b;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.4), inset 0 -2px 3px 0 #cc7f0a, inset 0 1px 0 0 #fff9b1;
-    border-radius: 40px;
+    box-shadow: 0 4px 15px rgba(240, 163, 3, 0.4);
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+}
+
+.call-action-area .call-action-link:hover,
+.call-action-area .call-action-link:focus,
+.btn:hover,
+.btn:focus {
+    background: linear-gradient(135deg, #fff176 0%, #ffc107 100%);
+    box-shadow: 0 8px 25px rgba(240, 163, 3, 0.5);
 }
 
 .github-link {
@@ -1072,17 +1139,20 @@ nav {
    ABOUT
    ========================================================================== */
 .about {
-    background: #fff;
+    background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+    border-left: 4px solid #3b82f6;
 }
 
 /* =============================================================================
    LOCATION
    ========================================================================== */
 .location-area {
-    background: #e7e7e7;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    height: 300px;
+    background: #f1f5f9;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    height: 350px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* =============================================================================
@@ -1113,9 +1183,10 @@ nav {
    ========================================================================== */
 .schedule-tbl {
     background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
 }
 
 .schedule-tbl table {
@@ -1164,15 +1235,19 @@ nav {
 .sponsor--link,
 .partner-link {
     background: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+    border: 2px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    transition: all 0.3s ease;
 }
 
 .sponsor--link:hover,
 .sponsor--link:focus,
 .partner-link:hover,
 .partner-link:focus {
-    border-color: #f0a303;
+    border-color: #3b82f6;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+    transform: translateY(-4px);
 }
 
 /* =============================================================================
@@ -1181,17 +1256,20 @@ nav {
 .form input[type=text],
 .form input[type=email],
 .form textarea {
-    color: #777;
-    border: 1px solid #e7e7e7;
+    color: #444;
+    border: 2px solid #e2e8f0;
     background: #fff;
-    border-radius: 4px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1.5em;
 }
 
 .form input[type=text]:focus,
 .form input[type=email]:focus,
 .form textarea:focus {
-    border-color: #aaa;
+    border-color: #3b82f6;
     outline: 0;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 /* =============================================================================
@@ -1199,12 +1277,10 @@ nav {
    ========================================================================== */
 .footer {
     line-height: 1.6;
-    padding: 10px;
-    border-top: lightsteelblue;
-    border-top-width: thin;
-    border-top-style: solid;
+    padding: 40px 10px;
+    border-top: 3px solid #3b82f6;
     text-align: center;
-    background: #2b2b2b;
+    background: linear-gradient(180deg, #2b2b2b 0%, #1a1a1a 100%);
 }
 
 #footer-info {
@@ -1222,9 +1298,10 @@ nav {
 .footer-section h1 {
     margin-bottom: 10px;
     margin-top: 10px;
-    font-size: medium;
-    font-weight: bold;
+    font-size: 1.6em;
+    font-weight: 600;
     color: #fff;
+    letter-spacing: 0.5px;
 }
 
 
