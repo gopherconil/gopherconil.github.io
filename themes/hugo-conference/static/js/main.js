@@ -7,6 +7,7 @@
     conf.init = function () {
         conf.map.init($('#map-canvas'));
         conf.menu.init();
+        conf.mobileMenu.init();
     };
 
     /***
@@ -86,10 +87,74 @@
         var $link = $(link),
             href = $link.attr('href'),
             offSetTop = $(href).offset().top;
-        
+
         conf.menu.document.finish().animate({scrollTop : offSetTop}, conf.menu.animationSpeed, function () {
             location.hash = href;
         });
+    };
+
+    /***
+        Mobile menu toggle functionality
+    ***/
+    conf.mobileMenu = {};
+
+    conf.mobileMenu.init = function () {
+        var $toggle = $('.mobile-menu-toggle');
+        var $menu = $('.nav-menu');
+        var $navLinks = $('.nav-link');
+
+        // Toggle menu on button click
+        $toggle.on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $(this).toggleClass('active');
+            $menu.toggleClass('active');
+            $('body').toggleClass('menu-open');
+        });
+
+        // Close menu when clicking on a nav link
+        $navLinks.on('click', function () {
+            $toggle.removeClass('active');
+            $menu.removeClass('active');
+            $('body').removeClass('menu-open');
+        });
+
+        // Close menu when clicking outside
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('nav').length && $menu.hasClass('active')) {
+                $toggle.removeClass('active');
+                $menu.removeClass('active');
+                $('body').removeClass('menu-open');
+            }
+        });
+
+        // Handle touch events for better mobile experience
+        var touchStartX = 0;
+        var touchEndX = 0;
+
+        $(document).on('touchstart', function (e) {
+            touchStartX = e.touches[0].clientX;
+        });
+
+        $(document).on('touchend', function (e) {
+            touchEndX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            // Swipe left to close menu (when menu is open and swipe > 50px)
+            if (touchStartX - touchEndX > 50 && $menu.hasClass('active')) {
+                $toggle.removeClass('active');
+                $menu.removeClass('active');
+                $('body').removeClass('menu-open');
+            }
+            // Swipe right to open menu (when menu is closed, swipe starts near edge, and swipe > 50px)
+            if (touchEndX - touchStartX > 50 && !$menu.hasClass('active') && touchStartX < 50) {
+                $toggle.addClass('active');
+                $menu.addClass('active');
+                $('body').addClass('menu-open');
+            }
+        }
     };
 
     conf.init();
