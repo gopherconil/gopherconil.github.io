@@ -755,7 +755,7 @@ nav {
         padding: 90px 0 70px;
     }
 
-    /* Adjust city-themed sections for tablet */
+    /* Adjust gopher-themed sections for tablet */
     section.about,
     section.location,
     section.team,
@@ -765,12 +765,30 @@ nav {
         border-radius: 0;
     }
 
-    section.about::after,
-    section.location::after,
-    section.team::after,
-    section.tweets::after {
-        font-size: 0.85em;
-        padding: 8px 16px;
+    /* Slightly larger gophers on tablet */
+    .header::after {
+        width: 350px;
+        height: 350px;
+    }
+
+    section.about::before {
+        width: 180px;
+        height: 180px;
+    }
+
+    section.location::before {
+        width: 160px;
+        height: 160px;
+    }
+
+    section.team::before {
+        width: 220px;
+        height: 220px;
+    }
+
+    section.tweets::before {
+        width: 130px;
+        height: 130px;
     }
 
     .logo-name {
@@ -880,22 +898,43 @@ nav {
 }
 
 /* =============================================================================
-   MOBILE SLEEK ENHANCEMENTS
+   MOBILE GOPHER ENHANCEMENTS
    ========================================================================== */
 
-/* City label badges on mobile */
+/* Adjust gopher backgrounds for mobile */
 @media only screen and (max-width: 768px) {
-    section.about::after,
-    section.location::after,
-    section.team::after,
-    section.tweets::after {
+    .header::after {
+        width: 250px;
+        height: 250px;
+        bottom: -30px;
+        right: -30px;
+        opacity: 0.1;
+    }
+
+    section.about::before {
+        width: 120px;
+        height: 120px;
+        opacity: 0.08;
+    }
+
+    section.location::before {
+        width: 100px;
+        height: 100px;
         top: 15px;
         right: 15px;
-        font-size: 0.75em;
-        padding: 6px 12px;
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 20px;
-        backdrop-filter: blur(5px);
+        opacity: 0.15;
+    }
+
+    section.team::before {
+        width: 150px;
+        height: 150px;
+        opacity: 0.08;
+    }
+
+    section.tweets::before {
+        width: 100px;
+        height: 100px;
+        opacity: 0.12;
     }
 }
 
@@ -1073,7 +1112,7 @@ nav {
         padding: 0 15px;
     }
 
-    /* City-themed sections on mobile */
+    /* Gopher-themed sections on mobile */
     section.about {
         padding: 50px 15px;
         margin: 0 -15px;
@@ -1098,14 +1137,33 @@ nav {
         border-radius: 0;
     }
 
-    section.about h2,
-    section.location h2,
-    section.team h2,
+    section.about h2 {
+        font-size: 2.8em;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid rgba(0, 173, 216, 0.3);
+        color: #00758D !important;
+    }
+
+    section.location h2 {
+        font-size: 2.8em;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid rgba(251, 146, 60, 0.3);
+    }
+
+    section.team h2 {
+        font-size: 2.8em;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid rgba(251, 191, 36, 0.3);
+    }
+
     section.tweets h2 {
         font-size: 2.8em;
         margin-bottom: 25px;
         padding-bottom: 15px;
-        border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 3px solid rgba(59, 130, 246, 0.3);
     }
 
     .about {
@@ -1141,7 +1199,7 @@ nav {
         display: none;
     }
 
-    /* team members - Eilat style */
+    /* team members - Go gopher style */
     .rounded-image-container {
         flex: 1 0 100%;
         max-width: 100%;
@@ -1149,18 +1207,19 @@ nav {
         margin: 15px 0;
         background: rgba(255, 255, 255, 0.98);
         border-radius: 20px;
-        box-shadow: 0 8px 30px rgba(220, 38, 38, 0.2);
+        box-shadow: 0 8px 30px rgba(0, 173, 216, 0.2);
     }
 
     .rounded-image-container .round-image {
         height: 120px;
         width: 120px;
         border-width: 3px;
+        border-color: rgba(93, 201, 226, 0.5);
     }
 
     .rounded-image-container .name {
         font-size: 1.9em;
-        color: #dc2626;
+        color: #00758D;
         font-weight: 600;
     }
 
@@ -1169,15 +1228,15 @@ nav {
     }
 
     .rounded-image-container .links a {
-        color: #f97316;
+        color: #00ADD8;
     }
 
-    /* location - Haifa style */
+    /* location - Adventure gopher style */
     .location-area {
         height: 280px;
         border-radius: 16px;
         border-width: 4px;
-        border-color: #10b981;
+        border-color: #fb923c;
     }
 
     /* Make content background seamless */
@@ -1191,12 +1250,13 @@ nav {
         margin-top: 0;
     }
 
-    /* Better button styles on mobile */
+    /* Better button styles on mobile - Go colors */
     .call-action-area .call-action-link,
     .btn {
-        box-shadow: 0 6px 20px rgba(218, 165, 32, 0.4);
+        box-shadow: 0 6px 20px rgba(93, 201, 226, 0.4);
         font-weight: 700;
         letter-spacing: 0.5px;
+        background: linear-gradient(135deg, #00ADD8 0%, #5DC9E2 100%);
     }
 
     .call-action-area .call-action-link:active,
@@ -1235,12 +1295,18 @@ nav {
         font-size: 1.3em;
     }
 
-    /* Hide city labels on very small screens */
-    section.about::after,
-    section.location::after,
-    section.team::after,
-    section.tweets::after {
-        display: none;
+    /* Smaller gophers on tiny screens */
+    .header::after {
+        width: 180px;
+        height: 180px;
+    }
+
+    section.about::before,
+    section.location::before,
+    section.team::before,
+    section.tweets::before {
+        width: 80px;
+        height: 80px;
     }
 
     /* Tighter section spacing */
@@ -1334,19 +1400,16 @@ nav {
 }
 
 /* =============================================================================
-   HEADER - JERUSALEM THEME (Golden Stone City)
+   HEADER - GOPHER HERO
    ========================================================================== */
 .header {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
-    background-image:
-        linear-gradient(135deg, rgba(184, 134, 11, 0.3) 0%, rgba(218, 165, 32, 0.25) 50%, rgba(255, 215, 0, 0.2) 100%),
-        linear-gradient(to bottom, rgba(139, 115, 85, 0.4), rgba(160, 130, 90, 0.3)),
-        url('../img/bg-blue.jpg');
+    background: linear-gradient(135deg, #00ADD8 0%, #5DC9E2 50%, #00758D 100%);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     position: relative;
-    border-bottom: 4px solid #DAA520;
+    border-bottom: none;
+    overflow: hidden;
 }
 
 .header::before {
@@ -1356,22 +1419,21 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background:
-        radial-gradient(circle at 20% 80%, rgba(218, 165, 32, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(184, 134, 11, 0.15) 0%, transparent 50%),
-        linear-gradient(to bottom, transparent 0%, rgba(139, 115, 85, 0.1) 100%);
+    background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 117, 141, 0.2) 100%);
     pointer-events: none;
 }
 
 .header::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #B8860B, #DAA520, #FFD700, #DAA520, #B8860B);
-    box-shadow: 0 2px 10px rgba(218, 165, 32, 0.5);
+    bottom: -50px;
+    right: -50px;
+    width: 400px;
+    height: 400px;
+    background: url('../img/gopher-superhero.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.15;
+    pointer-events: none;
 }
 
 .logo-link,
@@ -1393,10 +1455,10 @@ nav {
 
 .call-action-area .call-action-link,
 .btn {
-    background: linear-gradient(135deg, #fddd52 0%, #f0a303 100%);
-    color: #2b2b2b;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-    box-shadow: 0 4px 15px rgba(240, 163, 3, 0.4);
+    background: linear-gradient(135deg, #00ADD8 0%, #5DC9E2 100%);
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 173, 216, 0.4);
     border-radius: 50px;
     position: relative;
     z-index: 1;
@@ -1407,8 +1469,8 @@ nav {
 .call-action-area .call-action-link:focus,
 .btn:hover,
 .btn:focus {
-    background: linear-gradient(135deg, #fff176 0%, #ffc107 100%);
-    box-shadow: 0 8px 25px rgba(240, 163, 3, 0.5);
+    background: linear-gradient(135deg, #5DC9E2 0%, #00ADD8 100%);
+    box-shadow: 0 8px 25px rgba(93, 201, 226, 0.5);
 }
 
 .github-link {
@@ -1436,11 +1498,11 @@ nav {
 }
 
 /* =============================================================================
-   ABOUT SECTION - TEL AVIV THEME (Modern Tech Hub by the Sea)
+   ABOUT SECTION - GOPHER STANDING
    ========================================================================== */
 section.about {
     position: relative;
-    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #14b8a6 100%);
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
     padding: 60px 20px;
     margin: 0 -20px;
     overflow: hidden;
@@ -1449,44 +1511,30 @@ section.about {
 section.about::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.3) 0%, transparent 40%),
-        linear-gradient(to bottom right, rgba(14, 165, 233, 0.2), rgba(20, 184, 166, 0.2));
+    bottom: 20px;
+    left: 20px;
+    width: 200px;
+    height: 200px;
+    background: url('../img/gopher-standing.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.12;
     pointer-events: none;
-}
-
-section.about::after {
-    content: '🏖️ Tel Aviv - Innovation Capital';
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.2em;
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-size: 0.9em;
 }
 
 .about {
     background: rgba(255, 255, 255, 0.95);
-    border-left: 4px solid #06b6d4;
+    border-left: 5px solid #00ADD8;
     position: relative;
     z-index: 1;
-    box-shadow: 0 10px 40px rgba(6, 182, 212, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 173, 216, 0.15);
 }
 
 /* =============================================================================
-   LOCATION SECTION - HAIFA THEME (Gardens & Bay)
+   LOCATION SECTION - GOPHER ADVENTURE
    ========================================================================== */
 section.location {
     position: relative;
-    background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+    background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
     padding: 60px 20px;
     margin: 60px -20px;
     overflow: hidden;
@@ -1495,44 +1543,29 @@ section.location {
 section.location::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-        radial-gradient(circle at 30% 30%, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 70% 70%, rgba(52, 211, 153, 0.2) 0%, transparent 50%),
-        linear-gradient(to bottom, rgba(5, 150, 105, 0.1), rgba(16, 185, 129, 0.1));
+    top: 20px;
+    right: 20px;
+    width: 180px;
+    height: 180px;
+    background: url('../img/gopher-adventure.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.2;
     pointer-events: none;
 }
 
-section.location::after {
-    content: '🌿 Haifa - Garden City';
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.2em;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-size: 0.9em;
-}
-
 section.location h2 {
-    color: #fff !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: #7c2d12 !important;
     position: relative;
     z-index: 1;
 }
 
 .location-area {
-    background: rgba(255, 255, 255, 0.95);
-    border: 3px solid #10b981;
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.98);
+    border: 4px solid #fb923c;
+    border-radius: 16px;
     height: 350px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 10px 40px rgba(251, 146, 60, 0.25);
     position: relative;
     z-index: 1;
 }
@@ -1655,11 +1688,11 @@ section.location h2 {
 }
 
 /* =============================================================================
-   TWEETS SECTION - MODERN SOCIAL
+   TWEETS SECTION - GOPHER PARTY
    ========================================================================== */
 section.tweets {
     position: relative;
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
     padding: 60px 20px;
     margin: 60px -20px;
     overflow: hidden;
@@ -1668,44 +1701,31 @@ section.tweets {
 section.tweets::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-        radial-gradient(circle at 15% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 85% 20%, rgba(168, 85, 247, 0.2) 0%, transparent 50%);
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 150px;
+    background: url('../img/gopher-party.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.15;
     pointer-events: none;
 }
 
-section.tweets::after {
-    content: '💬 Social Buzz';
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.2em;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-size: 0.9em;
-}
-
 section.tweets h2 {
-    color: #fff !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #1e3a8a !important;
     position: relative;
     z-index: 1;
 }
 
 /* =============================================================================
-   FOOTER - UNIFIED ISRAEL THEME
+   FOOTER - GO THEME
    ========================================================================== */
 .footer {
     line-height: 1.6;
     padding: 50px 10px;
     text-align: center;
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    background: linear-gradient(135deg, #00758D 0%, #00ADD8 100%);
     position: relative;
     overflow: hidden;
 }
@@ -1717,13 +1737,8 @@ section.tweets h2 {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg,
-        #DAA520 0%,
-        #0ea5e9 25%,
-        #10b981 50%,
-        #f97316 75%,
-        #8b5cf6 100%);
-    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.5);
+    background: linear-gradient(90deg, #00ADD8 0%, #5DC9E2 50%, #00ADD8 100%);
+    box-shadow: 0 2px 10px rgba(0, 173, 216, 0.5);
 }
 
 #footer-info {
@@ -1819,12 +1834,12 @@ section.tweets h2 {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 16px;
     margin: 10px;
-    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 173, 216, 0.15);
 }
 
 .rounded-image-container:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(249, 115, 22, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 173, 216, 0.3);
 }
 
 .rounded-image-container .round-image {
@@ -1834,15 +1849,15 @@ section.tweets h2 {
     object-fit: cover;
     display: block;
     margin: 0 auto;
-    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 173, 216, 0.2);
     transition: all 0.3s ease;
-    border: 4px solid rgba(249, 115, 22, 0.3);
+    border: 4px solid rgba(93, 201, 226, 0.3);
 }
 
 .rounded-image-container:hover .round-image {
-    box-shadow: 0 8px 30px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 173, 216, 0.4);
     transform: scale(1.05);
-    border-color: #f97316;
+    border-color: #00ADD8;
 }
 
 .rounded-image-container .name {
@@ -1870,11 +1885,11 @@ section.tweets h2 {
 }
 
 /* =============================================================================
-   TEAM SECTION - EILAT THEME (Red Sea & Coral Reefs)
+   TEAM SECTION - GOPHER FRIENDS
    ========================================================================== */
 section.team {
     position: relative;
-    background: linear-gradient(135deg, #dc2626 0%, #f97316 50%, #fb923c 100%);
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
     padding: 60px 20px;
     margin: 60px -20px;
     overflow: hidden;
@@ -1883,33 +1898,19 @@ section.team {
 section.team::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-        radial-gradient(circle at 20% 60%, rgba(249, 115, 22, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 40%, rgba(251, 146, 60, 0.2) 0%, transparent 50%),
-        linear-gradient(to bottom, rgba(220, 38, 38, 0.1), rgba(249, 115, 22, 0.1));
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    background: url('../img/gopher-friends.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.1;
     pointer-events: none;
 }
 
-section.team::after {
-    content: '🌊 Eilat - Red Sea Paradise';
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.2em;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-size: 0.9em;
-}
-
 section.team h2 {
-    color: #fff !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #78350f !important;
     position: relative;
     z-index: 1;
 }
