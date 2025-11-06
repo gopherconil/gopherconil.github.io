@@ -1,12 +1,17 @@
 <nav id="nav">
-  <ul class="wrapper">
+  <button class="mobile-menu-toggle" aria-label="Toggle menu">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+  <ul class="wrapper nav-menu">
     {{ range $section := $.Site.Params.Sections }}
       <li class="nav-item">
         <a href="#{{ $section }}" title="{{ index $.Site.Params.Titles $section }}" class="nav-link">
           {{ index $.Site.Params.Titles $section }}
         </a>
       </li>
-    {{ end }}    
+    {{ end }}
   </ul>
 </nav>
 

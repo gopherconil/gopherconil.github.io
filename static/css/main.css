@@ -58,6 +58,7 @@ html {
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    scroll-behavior: smooth;
 }
 
 html,
@@ -70,6 +71,10 @@ textarea {
 
 body {
     margin: 0;
+}
+
+body.menu-open {
+    overflow: hidden;
 }
 
 a:focus {
@@ -334,13 +339,21 @@ hr {
 
 .content {
     background: #ffffff;
-    padding: 50px 0 0 0;
+    padding: 60px 0 40px 0;
+    box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.08);
 }
 
 .content section {
-    margin-top: 50px;
+    margin-top: 60px;
+    padding-top: 40px;
+    margin-bottom: 60px;
+    transition: all 0.3s ease;
+    scroll-margin-top: 80px;
+}
+
+.content section:first-child {
+    margin-top: 0;
     padding-top: 0;
-    margin-bottom: 50px;
 }
 
 /* =============================================================================
@@ -349,24 +362,28 @@ hr {
 h2,
 h3,
 h4 {
-    font-size: 5em;
-    font-weight: normal;
-    margin-bottom: .4em;
+    font-size: 4.5em;
+    font-weight: 600;
+    margin-bottom: .5em;
     letter-spacing: -0.02em;
+    color: #1a1a1a;
 }
 
 h3 {
-    font-size: 4em;
+    font-size: 3.5em;
+    font-weight: 500;
 }
 
 h4 {
-    font-size: 3em;
+    font-size: 2.8em;
+    font-weight: 500;
 }
 
 p {
-    font-size: 1.6em;
-    line-height: 1.6em;
+    font-size: 1.7em;
+    line-height: 1.7em;
     margin-bottom: 1.4em;
+    color: #444;
 }
 
 .photo {
@@ -388,42 +405,131 @@ p {
 }
 
 /* =============================================================================
-   NAVIGATION
+   NAVIGATION WITH ISRAELI ACCENT
    ========================================================================== */
 nav {
-    padding: 15px 0;
+    padding: 12px 0;
     position: fixed;
     width: 100%;
     z-index: 10;
+    transition: all 0.3s ease;
+    background: rgba(43, 43, 43, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(90deg, #0038b8 0%, #00ADD8 50%, #0038b8 100%);
+    border-image-slice: 1;
+}
+
+.nav-menu {
+    transition: all 0.3s ease;
 }
 
 .nav-item {
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 5px;
+    transition: all 0.3s ease;
 }
 
 .nav-link {
-    font-size: 1.4em;
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    color: #5DC9E2 !important;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: #0038b8;
+    border-radius: 50%;
+}
+
+/* Mobile menu toggle button */
+.mobile-menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 11;
+    background: rgba(43, 43, 43, 0.9);
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+    background: rgba(43, 43, 43, 1);
+    transform: scale(1.05);
+}
+
+.mobile-menu-toggle:active {
+    transform: scale(0.95);
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 /* =============================================================================
    HEADER
    ========================================================================== */
 .header {
-    padding: 100px 0 100px;
+    padding: 80px 0 60px;
     text-align: center;
+    min-height: auto;
 }
 
 .logo-name {
-    margin-bottom: 0;
-    font-size: 10em;
+    margin-bottom: 15px;
+    font-size: 8em;
     letter-spacing: -0.04em;
+    font-weight: 700;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
 .tagline {
-    margin-bottom: 50px;
-    font-size: 2em;
-    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    letter-spacing: -0.01em;
+    font-weight: 400;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .call-action-area .price {
@@ -438,7 +544,7 @@ nav {
     top: -5px;
     cursor: pointer;
     display: inline-block;
-    padding: 15px 30px;
+    padding: 18px 36px;
     font-size: 2em;
     line-height: 1em;
     vertical-align: center;
@@ -451,6 +557,7 @@ nav {
     -ms-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .call-action-area .call-action-link:hover,
@@ -458,14 +565,24 @@ nav {
 .btn:hover,
 .btn:focus {
     top: 0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.call-action-area .call-action-link:active,
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* =============================================================================
    ABOUT
    ========================================================================== */
 .about {
-    padding: 19px;
+    padding: 30px;
     margin: 0 -20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* =============================================================================
@@ -644,6 +761,89 @@ nav {
     }
 }
 
+/* Tablet breakpoint */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .wrapper {
+        padding: 0 30px;
+    }
+
+    .header {
+        padding: 90px 0 70px;
+    }
+
+    /* Adjust gopher-themed sections for tablet */
+    section.about,
+    section.location,
+    section.team,
+    section.tweets {
+        margin: 50px -30px;
+        padding: 60px 30px;
+        border-radius: 0;
+    }
+
+    /* Slightly larger gophers on tablet */
+    .header::after {
+        width: 350px;
+        height: 350px;
+    }
+
+    section.about::before {
+        width: 180px;
+        height: 180px;
+    }
+
+    section.location::before {
+        width: 160px;
+        height: 160px;
+    }
+
+    section.team::before {
+        width: 220px;
+        height: 220px;
+    }
+
+    section.tweets::before {
+        width: 130px;
+        height: 130px;
+    }
+
+    .logo-name {
+        font-size: 6em;
+    }
+
+    .tagline {
+        font-size: 2em;
+    }
+
+    h2, h3, h4 {
+        font-size: 3.8em;
+    }
+
+    h3 {
+        font-size: 3em;
+    }
+
+    h4 {
+        font-size: 2.4em;
+    }
+
+    .call-action-area .call-action-link,
+    .btn {
+        font-size: 1.8em;
+        padding: 16px 32px;
+    }
+
+    .rounded-image-container {
+        flex: 1 0 50%;
+        max-width: 50%;
+    }
+
+    .nav-link {
+        font-size: 1.4em;
+        padding: 6px 12px;
+    }
+}
+
 @media only screen and (min-width: 320px) and (max-width: 800px) {
 
     /* schedule */
@@ -713,29 +913,178 @@ nav {
     }
 }
 
+/* =============================================================================
+   MOBILE GOPHER ENHANCEMENTS
+   ========================================================================== */
+
+/* Adjust gopher backgrounds for mobile */
+@media only screen and (max-width: 768px) {
+    .header::after {
+        width: 250px;
+        height: 250px;
+        bottom: -30px;
+        right: -30px;
+        opacity: 0.1;
+    }
+
+    section.about::before {
+        width: 120px;
+        height: 120px;
+        opacity: 0.08;
+    }
+
+    section.location::before {
+        width: 100px;
+        height: 100px;
+        top: 15px;
+        right: 15px;
+        opacity: 0.15;
+    }
+
+    section.team::before {
+        width: 150px;
+        height: 150px;
+        opacity: 0.08;
+    }
+
+    section.tweets::before {
+        width: 100px;
+        height: 100px;
+        opacity: 0.12;
+    }
+}
+
 @media only screen and (max-width: 480px) {
+
+    /* Smooth entrance animations */
+    section {
+        animation: slideInUp 0.6s ease-out;
+    }
+
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
     /* nav */
     nav {
-        display: none;
+        display: block;
+        padding: 8px 0;
+        backdrop-filter: blur(10px);
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        top: 10px;
+        right: 15px;
+        padding: 10px 12px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        max-width: 280px;
+        height: 100vh;
+        background: rgba(43, 43, 43, 0.98);
+        padding: 70px 0 20px;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+        z-index: 12;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0);
+        pointer-events: none;
+        transition: background 0.3s ease;
+        z-index: -1;
+    }
+
+    .nav-menu.active::before {
+        background: rgba(0, 0, 0, 0.5);
+        pointer-events: auto;
+    }
+
+    .nav-item {
+        display: block;
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-link {
+        display: block;
+        padding: 18px 25px;
+        font-size: 1.6em;
+        color: #fff !important;
+        text-align: left;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link:active,
+    .nav-link.active {
+        background: rgba(253, 221, 82, 0.2) !important;
+        padding-left: 35px;
+        color: #fddd52 !important;
     }
 
     .header {
-        padding: 20px 0;
+        padding: 60px 0 35px;
+        min-height: auto;
+        border-bottom-width: 3px;
+    }
+
+    /* Adjust Israeli flag stripes for mobile */
+    .header::before {
+        background:
+            linear-gradient(to bottom,
+                transparent 0%,
+                transparent 20%,
+                rgba(0, 56, 184, 0.05) 20%,
+                rgba(0, 56, 184, 0.05) 23%,
+                transparent 23%,
+                transparent 77%,
+                rgba(0, 56, 184, 0.05) 77%,
+                rgba(0, 56, 184, 0.05) 80%,
+                transparent 80%
+            ),
+            radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 117, 141, 0.2) 100%);
     }
 
     .logo-name {
-        font-size: 4em;
+        font-size: 3.2em;
+        margin-bottom: 8px;
+        line-height: 1.1;
     }
 
     .tagline {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         font-size: 1.4em;
+        line-height: 1.3;
+        padding: 0 15px;
     }
 
     .call-action-area .price {
-        font-size: 2em;
-        margin: 0 0 15px;
+        font-size: 1.8em;
+        margin: 0 0 12px;
         display: block;
     }
 
@@ -743,41 +1092,122 @@ nav {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0 15px;
     }
 
     .call-action-area .call-action-link,
     .btn {
         top: 0;
-        margin: 0 0 15px;
-        width: 80%;
-        max-width: 300px;
+        margin: 0 0 12px;
+        width: 100%;
+        max-width: 280px;
+        padding: 14px 28px;
+        font-size: 1.6em;
     }
 
     h2,
     h3,
     h4 {
-        font-size: 3em;
+        font-size: 2.6em;
+        line-height: 1.2;
     }
 
     h3 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
 
     h4 {
-        font-size: 1.8em;
+        font-size: 1.9em;
     }
 
     p {
-        font-size: 1.4em;
+        font-size: 1.5em;
+        line-height: 1.6;
     }
 
     /* content */
     .content {
-        padding: 0;
+        padding: 30px 0 20px 0;
     }
 
     .content section {
-        padding-top: 50px;
+        padding-top: 25px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        scroll-margin-top: 60px;
+    }
+
+    .content section:first-child {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .wrapper {
+        padding: 0 15px;
+    }
+
+    /* Gopher-themed sections on mobile */
+    section.about {
+        padding: 50px 15px;
+        margin: 0 -15px;
+        border-radius: 0;
+    }
+
+    section.location {
+        padding: 50px 15px;
+        margin: 40px -15px;
+        border-radius: 0;
+    }
+
+    section.team {
+        padding: 50px 15px;
+        margin: 40px -15px;
+        border-radius: 0;
+    }
+
+    section.tweets {
+        padding: 50px 15px;
+        margin: 40px -15px;
+        border-radius: 0;
+    }
+
+    section.about h2,
+    section.location h2,
+    section.team h2,
+    section.tweets h2 {
+        font-size: 2.8em;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+    }
+
+    section.about h2 {
+        border-bottom: 3px solid rgba(0, 173, 216, 0.3);
+        color: #00758D !important;
+    }
+
+    section.location h2 {
+        border-bottom: 3px solid rgba(251, 146, 60, 0.3);
+    }
+
+    section.team h2 {
+        border-bottom: 3px solid rgba(251, 191, 36, 0.3);
+    }
+
+    section.tweets h2 {
+        border-bottom: 3px solid rgba(59, 130, 246, 0.3);
+    }
+
+    /* Israeli flag on mobile header */
+    .logo-name::before {
+        font-size: 0.5em;
+        margin-right: 0.2em;
+    }
+
+    .about {
+        padding: 20px;
+        margin: 0 0 20px;
+        border-radius: 12px;
+        border-left-width: 3px;
     }
 
     /* speakers */
@@ -805,12 +1235,124 @@ nav {
     .speakers-bio {
         display: none;
     }
+
+    /* team members - Go gopher style */
+    .rounded-image-container {
+        flex: 1 0 100%;
+        max-width: 100%;
+        padding: 20px 15px;
+        margin: 15px 0;
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0, 173, 216, 0.2);
+    }
+
+    .rounded-image-container .round-image {
+        height: 120px;
+        width: 120px;
+        border-width: 3px;
+        border-color: rgba(93, 201, 226, 0.5);
+    }
+
+    .rounded-image-container .name {
+        font-size: 1.9em;
+        color: #00758D;
+        font-weight: 600;
+    }
+
+    .rounded-image-container .links {
+        font-size: 1.5em;
+    }
+
+    .rounded-image-container .links a {
+        color: #00ADD8;
+    }
+
+    /* location - Adventure gopher style */
+    .location-area {
+        height: 280px;
+        border-radius: 16px;
+        border-width: 4px;
+        border-color: #fb923c;
+    }
+
+    /* Make content background seamless */
+    .content {
+        background: transparent;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .content section:first-child {
+        margin-top: 0;
+    }
+
+    /* Better button styles on mobile - Go colors */
+    .call-action-area .call-action-link,
+    .btn {
+        box-shadow: 0 6px 20px rgba(93, 201, 226, 0.4);
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        background: linear-gradient(135deg, #00ADD8 0%, #5DC9E2 100%);
+    }
+
+    .call-action-area .call-action-link:active,
+    .btn:active {
+        transform: scale(0.95);
+    }
+
+    /* footer */
+    .footer {
+        padding: 30px 10px;
+    }
+
+    #footer-info {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 15px;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-section h1 {
+        font-size: 1.4em;
+    }
 }
 
-@media only screen and (max-width: 321px) {
+@media only screen and (max-width: 360px) {
     .logo-name {
-        font-size: 4em;
+        font-size: 2.8em;
         margin-bottom: .4em;
+    }
+
+    .tagline {
+        font-size: 1.3em;
+    }
+
+    /* Smaller gophers on tiny screens */
+    .header::after {
+        width: 180px;
+        height: 180px;
+    }
+
+    section.about::before,
+    section.location::before,
+    section.team::before,
+    section.tweets::before {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Tighter section spacing */
+    section.about,
+    section.location,
+    section.team,
+    section.tweets {
+        padding: 40px 12px;
+        margin: 30px -15px;
     }
 
     .schedule-tbl .schedule-description {
@@ -824,14 +1366,32 @@ nav {
     /* partners */
     .sponsor-item,
     .partner-item {
-        margin: 0 12px 15px 0;
+        margin: 0 8px 12px 0;
     }
 
     .sponsor--link,
     .partner-link {
-        width: 115px;
-        height: 115px;
-        line-height: 115px;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+    }
+
+    h2, h3, h4 {
+        font-size: 2.2em;
+    }
+
+    h3 {
+        font-size: 1.9em;
+    }
+
+    h4 {
+        font-size: 1.7em;
+    }
+
+    .call-action-area .call-action-link,
+    .btn {
+        font-size: 1.5em;
+        padding: 12px 24px;
     }
 }
 
@@ -840,8 +1400,10 @@ nav {
    ========================================================================== */
 html {
     background: #F6F6F6;
-    font: normal normal 10px/1.2em helvetica, arial, sans-serif;
-    color: #777;
+    font: normal normal 10px/1.2em -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    color: #555;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* =============================================================================
@@ -875,21 +1437,78 @@ nav {
 }
 
 /* =============================================================================
-   HEADER
+   HEADER - GOPHER HERO WITH ISRAELI FLAG
    ========================================================================== */
 .header {
-    background-image: url('../img/bg-blue.jpg');
-    background-color: #214f87;
+    background:
+        linear-gradient(135deg, #00ADD8 0%, #5DC9E2 50%, #00758D 100%);
     background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: 100% auto;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    border-bottom: 4px solid #0038b8;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        linear-gradient(to bottom,
+            transparent 0%,
+            transparent 15%,
+            rgba(0, 56, 184, 0.03) 15%,
+            rgba(0, 56, 184, 0.03) 20%,
+            transparent 20%,
+            transparent 80%,
+            rgba(0, 56, 184, 0.03) 80%,
+            rgba(0, 56, 184, 0.03) 85%,
+            transparent 85%
+        ),
+        radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 117, 141, 0.2) 100%);
+    pointer-events: none;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 400px;
+    height: 400px;
+    background: url('../img/gopher-superhero.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+/* Israeli flag badge */
+.logo-name::before {
+    content: '🇮🇱';
+    display: inline-block;
+    font-size: 0.6em;
+    margin-right: 0.3em;
+    vertical-align: middle;
+    animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
 }
 
 .logo-link,
 .tagline,
 .call-action-area .price {
-    color: #000;
-    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
 }
 
 .tagline {
@@ -902,15 +1521,22 @@ nav {
 
 .call-action-area .call-action-link,
 .btn {
-    background-color: #fddd52;
-    background-image: -moz-linear-gradient(top, #fddd52 30%, #f0a303 150%);
-    background-image: -webkit-linear-gradient(top, #fddd52 30%, #f0a303 150%);
-    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fddd52', endColorstr='#f0a303');
-    background-image: linear-gradient(top, #fddd52 30%, #f0a303 150%);
-    color: #2b2b2b;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.4), inset 0 -2px 3px 0 #cc7f0a, inset 0 1px 0 0 #fff9b1;
-    border-radius: 40px;
+    background: linear-gradient(135deg, #00ADD8 0%, #5DC9E2 100%);
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 173, 216, 0.4);
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+}
+
+.call-action-area .call-action-link:hover,
+.call-action-area .call-action-link:focus,
+.btn:hover,
+.btn:focus {
+    background: linear-gradient(135deg, #5DC9E2 0%, #00ADD8 100%);
+    box-shadow: 0 8px 25px rgba(93, 201, 226, 0.5);
 }
 
 .github-link {
@@ -938,20 +1564,84 @@ nav {
 }
 
 /* =============================================================================
-   ABOUT
+   ABOUT SECTION - GOPHER STANDING
    ========================================================================== */
+section.about {
+    position: relative;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 60px 20px;
+    margin: 0 -20px;
+    overflow: hidden;
+}
+
+section.about::before {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 200px;
+    height: 200px;
+    background: url('../img/gopher-standing.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.12;
+    pointer-events: none;
+}
+
 .about {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.95);
+    border-left: 5px solid #00ADD8;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 10px 40px rgba(0, 173, 216, 0.15);
 }
 
 /* =============================================================================
-   LOCATION
+   LOCATION SECTION - GOPHER ADVENTURE
    ========================================================================== */
+section.location {
+    position: relative;
+    background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+    padding: 60px 20px;
+    margin: 60px -20px;
+    overflow: hidden;
+}
+
+section.location::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 180px;
+    height: 180px;
+    background: url('../img/gopher-adventure.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+section.location h2 {
+    color: #7c2d12 !important;
+    position: relative;
+    z-index: 1;
+}
+
+section.location h2::before {
+    content: '✡️';
+    font-size: 0.4em;
+    margin-right: 0.5em;
+    opacity: 0.4;
+    vertical-align: middle;
+}
+
 .location-area {
-    background: #e7e7e7;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    height: 300px;
+    background: rgba(255, 255, 255, 0.98);
+    border: 4px solid #fb923c;
+    border-radius: 16px;
+    height: 350px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(251, 146, 60, 0.25);
+    position: relative;
+    z-index: 1;
 }
 
 /* =============================================================================
@@ -982,9 +1672,10 @@ nav {
    ========================================================================== */
 .schedule-tbl {
     background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
 }
 
 .schedule-tbl table {
@@ -1033,15 +1724,19 @@ nav {
 .sponsor--link,
 .partner-link {
     background: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+    border: 2px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    transition: all 0.3s ease;
 }
 
 .sponsor--link:hover,
 .sponsor--link:focus,
 .partner-link:hover,
 .partner-link:focus {
-    border-color: #f0a303;
+    border-color: #3b82f6;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+    transform: translateY(-4px);
 }
 
 /* =============================================================================
@@ -1050,30 +1745,96 @@ nav {
 .form input[type=text],
 .form input[type=email],
 .form textarea {
-    color: #777;
-    border: 1px solid #e7e7e7;
+    color: #444;
+    border: 2px solid #e2e8f0;
     background: #fff;
-    border-radius: 4px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1.5em;
 }
 
 .form input[type=text]:focus,
 .form input[type=email]:focus,
 .form textarea:focus {
-    border-color: #aaa;
+    border-color: #3b82f6;
     outline: 0;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 /* =============================================================================
-   FOOTER
+   TWEETS SECTION - GOPHER PARTY
+   ========================================================================== */
+section.tweets {
+    position: relative;
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    padding: 60px 20px;
+    margin: 60px -20px;
+    overflow: hidden;
+}
+
+section.tweets::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 150px;
+    background: url('../img/gopher-party.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+section.tweets h2 {
+    color: #1e3a8a !important;
+    position: relative;
+    z-index: 1;
+}
+
+section.tweets h2::before {
+    content: '✡️';
+    font-size: 0.4em;
+    margin-right: 0.5em;
+    opacity: 0.4;
+    vertical-align: middle;
+}
+
+/* =============================================================================
+   FOOTER - GO THEME WITH ISRAELI COLORS
    ========================================================================== */
 .footer {
     line-height: 1.6;
-    padding: 10px;
-    border-top: lightsteelblue;
-    border-top-width: thin;
-    border-top-style: solid;
+    padding: 50px 10px;
     text-align: center;
-    background: #2b2b2b;
+    background: linear-gradient(135deg, #00758D 0%, #00ADD8 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg,
+        #0038b8 0%,
+        #00ADD8 25%,
+        #fff 50%,
+        #00ADD8 75%,
+        #0038b8 100%);
+    box-shadow: 0 2px 10px rgba(0, 56, 184, 0.5);
+}
+
+.footer::after {
+    content: '🇮🇱';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2em;
+    opacity: 0.3;
 }
 
 #footer-info {
@@ -1091,9 +1852,10 @@ nav {
 .footer-section h1 {
     margin-bottom: 10px;
     margin-top: 10px;
-    font-size: medium;
-    font-weight: bold;
+    font-size: 1.6em;
+    font-weight: 600;
     color: #fff;
+    letter-spacing: 0.5px;
 }
 
 
@@ -1163,7 +1925,17 @@ nav {
     text-align: center;
     flex: 1 0 20%;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    margin: 10px;
+    box-shadow: 0 4px 20px rgba(0, 173, 216, 0.15);
+}
+
+.rounded-image-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 173, 216, 0.3);
 }
 
 .rounded-image-container .round-image {
@@ -1173,6 +1945,15 @@ nav {
     object-fit: cover;
     display: block;
     margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 173, 216, 0.2);
+    transition: all 0.3s ease;
+    border: 4px solid rgba(93, 201, 226, 0.3);
+}
+
+.rounded-image-container:hover .round-image {
+    box-shadow: 0 8px 30px rgba(0, 173, 216, 0.4);
+    transform: scale(1.05);
+    border-color: #00ADD8;
 }
 
 .rounded-image-container .name {
@@ -1190,10 +1971,52 @@ nav {
 .rounded-image-container .links a {
     margin: 0 10px;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .rounded-image-container .links a:hover {
     text-decoration: underline;
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+/* =============================================================================
+   TEAM SECTION - GOPHER FRIENDS
+   ========================================================================== */
+section.team {
+    position: relative;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    padding: 60px 20px;
+    margin: 60px -20px;
+    overflow: hidden;
+}
+
+section.team::before {
+    content: '';
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    background: url('../img/gopher-friends.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+section.team h2 {
+    color: #78350f !important;
+    position: relative;
+    z-index: 1;
+}
+
+section.team h2::before {
+    content: '✡️';
+    font-size: 0.4em;
+    margin-right: 0.5em;
+    opacity: 0.4;
+    vertical-align: middle;
 }
 
 .flex-container {
@@ -1201,4 +2024,6 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 -10px;
+    position: relative;
+    z-index: 1;
 }
