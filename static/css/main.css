@@ -1129,28 +1129,28 @@ nav {
 
     /* Gopher-themed sections on mobile - toned down backgrounds */
     section.about {
-        padding: 50px 25px;
+        padding: 60px 30px;
         margin: 0 -15px;
         border-radius: 0;
         background: #f8fafc !important;
     }
 
     section.location {
-        padding: 50px 25px;
+        padding: 60px 30px;
         margin: 40px -15px;
         border-radius: 0;
         background: #f8fafc !important;
     }
 
     section.team {
-        padding: 50px 25px;
+        padding: 60px 30px;
         margin: 40px -15px;
         border-radius: 0;
         background: #f8fafc !important;
     }
 
     section.tweets {
-        padding: 50px 25px;
+        padding: 60px 30px;
         margin: 40px -15px;
         border-radius: 0;
         background: #f8fafc !important;
@@ -1174,7 +1174,7 @@ nav {
     }
 
     .about {
-        padding: 30px 25px;
+        padding: 35px 30px;
         margin: 0 0 20px;
         border-radius: 12px;
         border-left-width: 3px;
@@ -1260,17 +1260,19 @@ nav {
     /* Better button styles on mobile */
     .call-action-area .call-action-link,
     .btn {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        font-weight: 600;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        font-weight: 700;
         letter-spacing: 0.3px;
-        background: #2b2b2b;
+        background: #1a1a1a;
         color: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.2);
     }
 
     .call-action-area .call-action-link:hover,
     .btn:hover {
-        background: #1a1a1a;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        background: #000;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        border-color: rgba(255, 255, 255, 0.3);
     }
 
     .call-action-area .call-action-link:active,
