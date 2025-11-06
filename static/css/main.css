@@ -405,7 +405,7 @@ p {
 }
 
 /* =============================================================================
-   NAVIGATION
+   NAVIGATION WITH ISRAELI ACCENT
    ========================================================================== */
 nav {
     padding: 12px 0;
@@ -416,6 +416,9 @@ nav {
     background: rgba(43, 43, 43, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(90deg, #0038b8 0%, #00ADD8 50%, #0038b8 100%);
+    border-image-slice: 1;
 }
 
 .nav-menu {
@@ -442,7 +445,20 @@ nav {
 }
 
 .nav-link.active {
-    color: #fddd52 !important;
+    color: #5DC9E2 !important;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: #0038b8;
+    border-radius: 50%;
 }
 
 /* Mobile menu toggle button */
@@ -1033,6 +1049,24 @@ nav {
     .header {
         padding: 60px 0 35px;
         min-height: auto;
+        border-bottom-width: 3px;
+    }
+
+    /* Adjust Israeli flag stripes for mobile */
+    .header::before {
+        background:
+            linear-gradient(to bottom,
+                transparent 0%,
+                transparent 20%,
+                rgba(0, 56, 184, 0.05) 20%,
+                rgba(0, 56, 184, 0.05) 23%,
+                transparent 23%,
+                transparent 77%,
+                rgba(0, 56, 184, 0.05) 77%,
+                rgba(0, 56, 184, 0.05) 80%,
+                transparent 80%
+            ),
+            radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 117, 141, 0.2) 100%);
     }
 
     .logo-name {
@@ -1137,33 +1171,36 @@ nav {
         border-radius: 0;
     }
 
-    section.about h2 {
+    section.about h2,
+    section.location h2,
+    section.team h2,
+    section.tweets h2 {
         font-size: 2.8em;
         margin-bottom: 25px;
         padding-bottom: 15px;
+    }
+
+    section.about h2 {
         border-bottom: 3px solid rgba(0, 173, 216, 0.3);
         color: #00758D !important;
     }
 
     section.location h2 {
-        font-size: 2.8em;
-        margin-bottom: 25px;
-        padding-bottom: 15px;
         border-bottom: 3px solid rgba(251, 146, 60, 0.3);
     }
 
     section.team h2 {
-        font-size: 2.8em;
-        margin-bottom: 25px;
-        padding-bottom: 15px;
         border-bottom: 3px solid rgba(251, 191, 36, 0.3);
     }
 
     section.tweets h2 {
-        font-size: 2.8em;
-        margin-bottom: 25px;
-        padding-bottom: 15px;
         border-bottom: 3px solid rgba(59, 130, 246, 0.3);
+    }
+
+    /* Israeli flag on mobile header */
+    .logo-name::before {
+        font-size: 0.5em;
+        margin-right: 0.2em;
     }
 
     .about {
@@ -1400,15 +1437,16 @@ nav {
 }
 
 /* =============================================================================
-   HEADER - GOPHER HERO
+   HEADER - GOPHER HERO WITH ISRAELI FLAG
    ========================================================================== */
 .header {
-    background: linear-gradient(135deg, #00ADD8 0%, #5DC9E2 50%, #00758D 100%);
+    background:
+        linear-gradient(135deg, #00ADD8 0%, #5DC9E2 50%, #00758D 100%);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     position: relative;
-    border-bottom: none;
+    border-bottom: 4px solid #0038b8;
     overflow: hidden;
 }
 
@@ -1419,7 +1457,19 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 117, 141, 0.2) 100%);
+    background:
+        linear-gradient(to bottom,
+            transparent 0%,
+            transparent 15%,
+            rgba(0, 56, 184, 0.03) 15%,
+            rgba(0, 56, 184, 0.03) 20%,
+            transparent 20%,
+            transparent 80%,
+            rgba(0, 56, 184, 0.03) 80%,
+            rgba(0, 56, 184, 0.03) 85%,
+            transparent 85%
+        ),
+        radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 117, 141, 0.2) 100%);
     pointer-events: none;
 }
 
@@ -1434,6 +1484,22 @@ nav {
     background-size: contain;
     opacity: 0.15;
     pointer-events: none;
+}
+
+/* Israeli flag badge */
+.logo-name::before {
+    content: '🇮🇱';
+    display: inline-block;
+    font-size: 0.6em;
+    margin-right: 0.3em;
+    vertical-align: middle;
+    animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
 }
 
 .logo-link,
@@ -1557,6 +1623,14 @@ section.location h2 {
     color: #7c2d12 !important;
     position: relative;
     z-index: 1;
+}
+
+section.location h2::before {
+    content: '✡️';
+    font-size: 0.4em;
+    margin-right: 0.5em;
+    opacity: 0.4;
+    vertical-align: middle;
 }
 
 .location-area {
@@ -1718,8 +1792,16 @@ section.tweets h2 {
     z-index: 1;
 }
 
+section.tweets h2::before {
+    content: '✡️';
+    font-size: 0.4em;
+    margin-right: 0.5em;
+    opacity: 0.4;
+    vertical-align: middle;
+}
+
 /* =============================================================================
-   FOOTER - GO THEME
+   FOOTER - GO THEME WITH ISRAELI COLORS
    ========================================================================== */
 .footer {
     line-height: 1.6;
@@ -1737,8 +1819,22 @@ section.tweets h2 {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #00ADD8 0%, #5DC9E2 50%, #00ADD8 100%);
-    box-shadow: 0 2px 10px rgba(0, 173, 216, 0.5);
+    background: linear-gradient(90deg,
+        #0038b8 0%,
+        #00ADD8 25%,
+        #fff 50%,
+        #00ADD8 75%,
+        #0038b8 100%);
+    box-shadow: 0 2px 10px rgba(0, 56, 184, 0.5);
+}
+
+.footer::after {
+    content: '🇮🇱';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2em;
+    opacity: 0.3;
 }
 
 #footer-info {
@@ -1913,6 +2009,14 @@ section.team h2 {
     color: #78350f !important;
     position: relative;
     z-index: 1;
+}
+
+section.team h2::before {
+    content: '✡️';
+    font-size: 0.4em;
+    margin-right: 0.5em;
+    opacity: 0.4;
+    vertical-align: middle;
 }
 
 .flex-container {
