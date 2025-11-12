@@ -917,21 +917,42 @@ nav {
    MOBILE GOPHER ENHANCEMENTS
    ========================================================================== */
 
-/* Adjust gopher backgrounds for mobile */
+/* Adjust gopher backgrounds for mobile - make them visible */
 @media only screen and (max-width: 768px) {
     .header::after {
-        width: 250px;
-        height: 250px;
-        bottom: -30px;
-        right: -30px;
-        opacity: 0.05;
+        width: 280px;
+        height: 280px;
+        bottom: -40px;
+        right: -40px;
+        opacity: 0.15;
     }
 
-    section.about::before,
-    section.location::before,
-    section.team::before,
+    section.about::before {
+        width: 150px;
+        height: 150px;
+        opacity: 0.2;
+        left: 10px;
+        bottom: 10px;
+    }
+
+    section.location::before {
+        width: 140px;
+        height: 140px;
+        top: 10px;
+        right: 10px;
+        opacity: 0.25;
+    }
+
+    section.team::before {
+        width: 180px;
+        height: 180px;
+        opacity: 0.15;
+    }
+
     section.tweets::before {
-        display: none;
+        width: 130px;
+        height: 130px;
+        opacity: 0.2;
     }
 }
 
@@ -1127,44 +1148,81 @@ nav {
         padding: 0 15px;
     }
 
-    /* Gopher-themed sections on mobile - toned down backgrounds */
+    /* Gopher-themed sections on mobile - transparent with Israeli colors */
     section.about {
         padding: 60px 30px;
         margin: 0 -15px;
         border-radius: 0;
-        background: #f8fafc !important;
+        background: linear-gradient(135deg, rgba(0, 173, 216, 0.08) 0%, rgba(93, 201, 226, 0.12) 100%) !important;
+        position: relative;
+        border-top: 3px solid rgba(0, 56, 184, 0.2);
+        border-bottom: 3px solid rgba(0, 56, 184, 0.2);
     }
 
     section.location {
         padding: 60px 30px;
         margin: 40px -15px;
         border-radius: 0;
-        background: #f8fafc !important;
+        background: linear-gradient(135deg, rgba(251, 146, 60, 0.08) 0%, rgba(253, 186, 116, 0.12) 100%) !important;
+        position: relative;
+        border-top: 3px solid rgba(0, 56, 184, 0.15);
+        border-bottom: 3px solid rgba(0, 56, 184, 0.15);
     }
 
     section.team {
         padding: 60px 30px;
         margin: 40px -15px;
         border-radius: 0;
-        background: #f8fafc !important;
+        background: linear-gradient(135deg, rgba(251, 191, 36, 0.08) 0%, rgba(252, 211, 77, 0.12) 100%) !important;
+        position: relative;
+        border-top: 3px solid rgba(0, 56, 184, 0.15);
+        border-bottom: 3px solid rgba(0, 56, 184, 0.15);
     }
 
     section.tweets {
         padding: 60px 30px;
         margin: 40px -15px;
         border-radius: 0;
-        background: #f8fafc !important;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(147, 197, 253, 0.12) 100%) !important;
+        position: relative;
+        border-top: 3px solid rgba(0, 56, 184, 0.2);
+        border-bottom: 3px solid rgba(0, 56, 184, 0.2);
     }
 
-    section.about h2,
-    section.location h2,
-    section.team h2,
+    section.about h2 {
+        font-size: 3.2em;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        color: #00758D !important;
+        border-bottom: 3px solid rgba(0, 173, 216, 0.4);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    section.location h2 {
+        font-size: 3.2em;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        color: #c2410c !important;
+        border-bottom: 3px solid rgba(251, 146, 60, 0.4);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    section.team h2 {
+        font-size: 3.2em;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        color: #92400e !important;
+        border-bottom: 3px solid rgba(251, 191, 36, 0.4);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
     section.tweets h2 {
         font-size: 3.2em;
         margin-bottom: 25px;
         padding-bottom: 15px;
-        color: #2b2b2b !important;
-        border-bottom: 2px solid #e2e8f0;
+        color: #1e40af !important;
+        border-bottom: 3px solid rgba(59, 130, 246, 0.4);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
     /* Israeli flag on mobile header */
@@ -1177,7 +1235,10 @@ nav {
         padding: 35px 30px;
         margin: 0 0 20px;
         border-radius: 12px;
-        border-left-width: 3px;
+        border-left: 4px solid #00ADD8;
+        background: rgba(255, 255, 255, 0.85) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 173, 216, 0.2);
     }
 
     /* speakers */
@@ -1206,28 +1267,32 @@ nav {
         display: none;
     }
 
-    /* team members - simplified style */
+    /* team members - transparent Israeli theme */
     .rounded-image-container {
         flex: 1 0 100%;
         max-width: 100%;
         padding: 25px 20px;
         margin: 15px 0;
-        background: #ffffff;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
         border-radius: 16px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 6px 24px rgba(0, 173, 216, 0.25);
+        border: 2px solid rgba(0, 173, 216, 0.2);
     }
 
     .rounded-image-container .round-image {
         height: 140px;
         width: 140px;
-        border-width: 3px;
-        border-color: #e2e8f0;
+        border-width: 4px;
+        border-color: #00ADD8;
+        box-shadow: 0 4px 16px rgba(0, 173, 216, 0.3);
     }
 
     .rounded-image-container .name {
         font-size: 2.2em;
-        color: #2b2b2b;
-        font-weight: 600;
+        color: #00758D;
+        font-weight: 700;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
     .rounded-image-container .links {
@@ -1235,15 +1300,17 @@ nav {
     }
 
     .rounded-image-container .links a {
-        color: #444;
+        color: #00ADD8;
+        font-weight: 600;
     }
 
-    /* location - Adventure gopher style */
+    /* location - Israeli themed */
     .location-area {
         height: 450px;
         border-radius: 16px;
-        border-width: 2px;
-        border-color: #e2e8f0;
+        border: 4px solid rgba(0, 56, 184, 0.3);
+        box-shadow: 0 8px 32px rgba(251, 146, 60, 0.3);
+        background: rgba(255, 255, 255, 0.9);
     }
 
     /* Make content background seamless */
@@ -1257,27 +1324,29 @@ nav {
         margin-top: 0;
     }
 
-    /* Better button styles on mobile */
+    /* Israeli themed buttons on mobile */
     .call-action-area .call-action-link,
     .btn {
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 6px 24px rgba(0, 56, 184, 0.4);
         font-weight: 700;
-        letter-spacing: 0.3px;
-        background: #1a1a1a;
+        letter-spacing: 0.5px;
+        background: rgba(0, 56, 184, 0.95);
         color: #fff;
-        border: 2px solid rgba(255, 255, 255, 0.2);
+        border: 3px solid rgba(255, 255, 255, 0.9);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
 
     .call-action-area .call-action-link:hover,
     .btn:hover {
-        background: #000;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-        border-color: rgba(255, 255, 255, 0.3);
+        background: rgba(0, 56, 184, 1);
+        box-shadow: 0 8px 32px rgba(0, 56, 184, 0.6);
+        border-color: #fff;
+        transform: translateY(-2px);
     }
 
     .call-action-area .call-action-link:active,
     .btn:active {
-        transform: scale(0.95);
+        transform: scale(0.95) translateY(0);
     }
 
     /* footer */
@@ -1378,7 +1447,12 @@ nav {
    MAIN LAYOUT
    ========================================================================== */
 html {
-    background: #F6F6F6;
+    background: linear-gradient(180deg,
+        rgba(0, 56, 184, 0.03) 0%,
+        rgba(255, 255, 255, 1) 15%,
+        rgba(255, 255, 255, 1) 85%,
+        rgba(0, 56, 184, 0.03) 100%);
+    background-attachment: fixed;
     font: normal normal 10px/1.2em -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     color: #555;
     -webkit-font-smoothing: antialiased;
