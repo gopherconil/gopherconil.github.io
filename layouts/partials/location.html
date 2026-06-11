@@ -1,13 +1,11 @@
-<h2 class="section-title">{{ .titles.location }}</h2>
+<h2 class="section-title reveal">{{ .titles.location }}</h2>
 
-<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-  <span itemprop="streetAddress">{{ .address }}. </span>
+<p class="reveal" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+  <span itemprop="streetAddress">{{ .address }}</span>
   <span itemprop="addressLocality">{{ .city }}</span>,
-  <span itemprop="addressRegion"> {{ .state }}</span>
+  <span itemprop="addressRegion">{{ .state }}</span>
 </p>
 
-<div id="map-canvas" class="location-area" data-address="{{ .address }}, {{ .city }} - {{ .state }}" style="margin-bottom: 200px;">
-  <iframe src="https://www.google.com/maps/embed?pb={{ .placebounds }}" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div id="map-canvas" class="location-area reveal" data-address="{{ .address }}, {{ .city }} - {{ .state }}">
+  <iframe src="https://www.google.com/maps/embed?pb={{ .placebounds }}" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Conference location map"></iframe>
 </div>
-
-<hr class="section-separator">

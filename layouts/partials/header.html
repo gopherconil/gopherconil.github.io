@@ -4,17 +4,30 @@
   </a>
 {{ end }}
 
-<header class="header" id="clouds">
-  <div class="cloud x1"></div>
-  <div class="wrapper">
-    <div class="cloud x2"></div>
-    <h1 class="logo-name">
-      <a class="logo-link" href="#" title="{{ .name }}" itemprop="name">{{ .name }}</a>
+<header class="hero" id="hero">
+  <div class="wrapper hero-inner">
+
+    <span class="hero-eyebrow reveal">
+      <span class="dot"></span>
+      {{ .date }} · {{ .venue }} · {{ .city }}
+    </span>
+
+    <h1 class="logo-name reveal">
+      <a class="logo-link" href="#" title="{{ .name }}" itemprop="name">
+        <span class="flag-chip">🇮🇱</span>{{ .name }}
+      </a>
     </h1>
-    <div class="cloud x3"></div>
-    <h2 class="tagline">{{ .date }} {{ .venue }}, {{ .city }}</h2>
-    <div class="cloud x4"></div>
-    <div class="call-action-area">
+
+    <p class="tagline reveal">{{ .description }} — a full day of <strong>Go</strong> talks, gophers &amp; community in Tel Aviv.</p>
+
+    <div class="countdown reveal" id="countdown" data-target="2026-10-18T09:00:00+03:00" aria-label="Time until the conference">
+      <div class="cd-unit"><span class="cd-num" data-days>--</span><span class="cd-label">Days</span></div>
+      <div class="cd-unit"><span class="cd-num" data-hours>--</span><span class="cd-label">Hours</span></div>
+      <div class="cd-unit"><span class="cd-num" data-mins>--</span><span class="cd-label">Min</span></div>
+      <div class="cd-unit"><span class="cd-num" data-secs>--</span><span class="cd-label">Sec</span></div>
+    </div>
+
+    <div class="call-action-area reveal">
       {{ with .price }}
         <span class="price">{{ . }}</span>
       {{ end }}
@@ -31,10 +44,14 @@
         <a href="{{ .link }}" class="call-action-link" target="_blank" title="{{ .text }}">{{ .text }}</a>
       {{ end }}
     </div>
-    <div class="cloud x5"></div>
-    <img src="/img/pink_bear.png" alt="Pink Bear" class="pink-bear">
-    <img src="/img/green_bear.png" alt="Green Bear" class="green-bear">
+
+  </div>
+
+  <img src="/img/gopher-superhero.svg" alt="" class="hero-gopher" aria-hidden="true">
+
+  <div class="hero-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C240,90 480,0 720,30 C960,60 1200,90 1440,40 L1440,80 L0,80 Z" fill="#f3f9fb"></path>
+    </svg>
   </div>
 </header>
-
-<hr>

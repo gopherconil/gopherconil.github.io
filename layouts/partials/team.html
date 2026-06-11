@@ -1,18 +1,18 @@
-<h2 class="section-title">{{ .titles.team }}</h2>
+<h2 class="section-title reveal">{{ .titles.team }}</h2>
 
 <div class="flex-container">
     {{ range $member := .team }}
-    <div class="rounded-image-container">
+    <div class="rounded-image-container reveal">
         {{ if $member.photo }}
-        <img src="{{ $member.photo }}" class="round-image" alt="{{ $member.name }}">
+        <img src="{{ $member.photo }}" class="round-image" alt="{{ $member.name }}" loading="lazy">
         {{ end }}
         <div class="name">{{ $member.name }}</div>
         <div class="links">
             {{ if $member.linkedin }}
-            <a href="{{ $member.linkedin }}" target="_blank">LinkedIn</a>
+            <a href="{{ $member.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
             {{ end }}
             {{ if $member.twitter }}
-            <a href="{{ $member.twitter }}" target="_blank">Twitter</a>
+            <a href="{{ $member.twitter }}" target="_blank" rel="noopener">Twitter</a>
             {{ end }}
         </div>
     </div>
