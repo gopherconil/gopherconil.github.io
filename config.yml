@@ -30,7 +30,7 @@ params:
     # - schedule
     # - sponsors
     - team
-    - tweets
+    - social
     # - partners
     # - contact
 
@@ -44,7 +44,7 @@ params:
     partners: "Partners"
     contact: "Contact"
     team: "Team"
-    tweets: "Community"
+    social: "Community"
   
   # The Call To Action button at the header,
   CallToAction:
@@ -70,6 +70,29 @@ params:
   # Tickets:
   #   text: "Purchase Ticket"
   #   link: "https://www.eventer.co.il/gc2025"
+
+  # Social / community channels (rendered by the "social" section)
+  Social:
+    - name: "X / Twitter"
+      handle: "@GopherConIL"
+      url: "https://twitter.com/GopherConIL"
+      icon: "x"
+      color: "#0f1419"
+    - name: "Facebook"
+      handle: "/gopherconil"
+      url: "https://www.facebook.com/gopherconil"
+      icon: "facebook"
+      color: "#1877f2"
+    - name: "YouTube"
+      handle: "Talks & recordings"
+      url: "https://www.youtube.com/playlist?list=PLRM-8sTy13XvT_S1KJWZz2KOJgOt_vVVH"
+      icon: "youtube"
+      color: "#ff0000"
+    - name: "Newsletter"
+      handle: "Join the mailing list"
+      url: "http://eepurl.com/dDcXef"
+      icon: "mail"
+      color: "#00add8"
 
   # List of Sponsors
   Sponsors:
