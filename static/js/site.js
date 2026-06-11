@@ -8,6 +8,7 @@
     initScrollSpy();
     initReveal();
     initCountdown();
+    initShare();
   });
 
   /* --- sticky nav shadow on scroll --- */
@@ -125,5 +126,62 @@
     };
     tick();
     setInterval(tick, 1000);
+  }
+
+  /* --- share: native share sheet + copy link + toast --- */
+  function initShare() {
+    var card = document.querySelector(".share-card");
+    var toast = document.getElementById("share-toast");
+    var toastTimer;
+    var showToast = function (msg) {
+      if (!toast) return;
+      if (msg) toast.textContent = msg;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toast.classList.remove("show"); }, 2200);
+    };
+
+    // native share (mobile) — reveal only when supported
+    if (card && navigator.share) {
+      var nativeBtn = card.querySelector(".share-native");
+      if (nativeBtn) {
+        nativeBtn.hidden = false;
+        nativeBtn.addEventListener("click", function () {
+          navigator.share({
+            title: card.getAttribute("data-share-title") || document.title,
+            text: card.getAttribute("data-share-text") || "",
+            url: card.getAttribute("data-share-url") || location.href
+          }).catch(function () { /* user cancelled */ });
+        });
+      }
+    }
+
+    // copy link
+    var copyBtn = document.querySelector(".s-copy");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", function () {
+        var url = copyBtn.getAttribute("data-copy") || location.href;
+        var done = function () {
+          copyBtn.classList.add("copied");
+          showToast("Link copied to clipboard");
+          setTimeout(function () { copyBtn.classList.remove("copied"); }, 2000);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(done).catch(fallback);
+        } else {
+          fallback();
+        }
+        function fallback() {
+          var ta = document.createElement("textarea");
+          ta.value = url;
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand("copy"); done(); } catch (e) { /* noop */ }
+          document.body.removeChild(ta);
+        }
+      });
+    }
   }
 })();

@@ -859,6 +859,131 @@ section.social .section-title::after {
     color: var(--brand);
 }
 
+/* ---- Spread the word / share ---- */
+.share-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 760px;
+    margin: clamp(20px, 3vw, 28px) auto 0;
+    padding: clamp(20px, 3vw, 30px);
+    border-radius: var(--r-lg);
+    color: var(--on-dark);
+    background:
+        radial-gradient(600px 240px at 100% 0%, rgba(255, 212, 59, 0.18), transparent 60%),
+        linear-gradient(135deg, var(--go-teal) 0%, var(--go-cyan) 100%);
+    box-shadow: var(--shadow-cyan);
+}
+
+.share-copy {
+    min-width: 220px;
+    flex: 1 1 240px;
+}
+
+.share-title {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+}
+
+.share-copy p {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.98rem;
+    margin: 0;
+}
+
+.share-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: var(--r-pill);
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: transform 0.2s var(--ease), background 0.2s var(--ease);
+}
+
+.share-btn:hover {
+    color: var(--go-teal);
+    background: #fff;
+    transform: translateY(-3px) scale(1.04);
+}
+
+.share-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.share-btn.share-native {
+    width: auto;
+    padding: 0 20px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: #fff;
+    color: var(--go-teal);
+    border-color: #fff;
+}
+
+/* copy button icon swap */
+.s-copy .ic-check {
+    display: none;
+}
+
+.s-copy.copied {
+    color: var(--go-teal);
+    background: #fff;
+}
+
+.s-copy.copied .ic-copy {
+    display: none;
+}
+
+.s-copy.copied .ic-check {
+    display: block;
+}
+
+/* toast */
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    transform: translate(-50%, 20px);
+    z-index: 200;
+    padding: 12px 22px;
+    border-radius: var(--r-pill);
+    background: var(--ink);
+    color: #fff;
+    font-size: 0.92rem;
+    font-weight: 500;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), visibility 0.3s;
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
 /* ----------------------------------------------------------------------------
    Sponsors / partners (kept for when re-enabled)
    ------------------------------------------------------------------------- */
