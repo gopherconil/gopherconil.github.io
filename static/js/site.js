@@ -4,7 +4,6 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
-    initMobileMenu();
     initScrollSpy();
     initReveal();
     initCountdown();
@@ -20,36 +19,6 @@
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-  }
-
-  /* --- mobile drawer --- */
-  function initMobileMenu() {
-    var toggle = document.querySelector(".mobile-menu-toggle");
-    var menu = document.querySelector(".nav-menu");
-    if (!toggle || !menu) return;
-
-    var backdrop = document.createElement("div");
-    backdrop.className = "nav-backdrop";
-    document.body.appendChild(backdrop);
-
-    var setOpen = function (open) {
-      toggle.classList.toggle("active", open);
-      menu.classList.toggle("active", open);
-      backdrop.classList.toggle("active", open);
-      document.body.classList.toggle("menu-open", open);
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    };
-
-    toggle.addEventListener("click", function () {
-      setOpen(!menu.classList.contains("active"));
-    });
-    backdrop.addEventListener("click", function () { setOpen(false); });
-    menu.querySelectorAll(".nav-link").forEach(function (link) {
-      link.addEventListener("click", function () { setOpen(false); });
-    });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") setOpen(false);
-    });
   }
 
   /* --- scrollspy highlights current section in nav --- */
