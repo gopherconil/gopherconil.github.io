@@ -11,6 +11,7 @@ params:
   # Conference info
   Name: "GopherCon Israel 2026"
   Description: "Best Go Conference in Israel"
+  Subtitle: "Where the engineers building AI infrastructure meet"
   Date: "October 18"
   # Price: "100NIS" # If your event is free, just comment this line
   Venue: "Expo - Bitan 10"
@@ -70,6 +71,13 @@ params:
   # Tickets:
   #   text: "Purchase Ticket"
   #   link: "https://www.eventer.co.il/gc2025"
+
+  # Featured pull-quote (rendered between the hero and the sections)
+  Quote:
+    text: "It's quite something that Go became the lingua franca for agentic systems at Google."
+    author: "Jaana Dogan"
+    handle: "@rakyll"
+    url: "https://x.com/rakyll/status/2056528039698403498"
 
   # Social / community channels (rendered by the "social" section)
   Social:

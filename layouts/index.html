@@ -39,6 +39,7 @@
 
         <div class="content" id="content">
             <div class="wrapper">
+                {{ partial "quote.html" .Site.Params }}
                 {{ range $section := .Site.Params.Sections }}
                 <section class="{{ $section }}" id="{{ $section }}">
                     {{ partial $section $.Site.Params }}
