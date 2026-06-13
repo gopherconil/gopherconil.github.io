@@ -586,10 +586,10 @@ p:last-child {
 
 .quote-mark {
     position: absolute;
-    top: clamp(-14px, -1vw, -8px);
-    right: 18px;
+    top: clamp(-10px, -1vw, -4px);
+    right: clamp(12px, 2vw, 18px);
     font-family: var(--font-display);
-    font-size: clamp(7rem, 14vw, 11rem);
+    font-size: clamp(3.25rem, 11vw, 10rem);
     line-height: 1;
     color: var(--go-cyan);
     opacity: 0.12;
