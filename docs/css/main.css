@@ -385,11 +385,12 @@ p:last-child {
 
 .hero-subtitle {
     font-family: var(--font-display);
-    font-weight: 600;
+    font-weight: 700;
     font-size: clamp(1.2rem, 0.85rem + 1.7vw, 2.05rem);
     line-height: 1.2;
     letter-spacing: -0.015em;
     color: #fff;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45), 0 1px 2px rgba(0, 0, 0, 0.3);
     max-width: 18ch;
     margin: 0 auto clamp(14px, 1.8vw, 20px);
     text-wrap: balance;
