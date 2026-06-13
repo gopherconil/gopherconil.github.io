@@ -26,7 +26,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
 
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    {{ $css := resources.Get "css/main.css" | fingerprint "sha256" }}
+    <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
 </head>
 
@@ -55,7 +56,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.7.1.min.js"><\/script>')</script>
-    <script src="/js/site.js" defer></script>
+    {{ $sitejs := resources.Get "js/site.js" | fingerprint "sha256" }}
+    <script src="{{ $sitejs.RelPermalink }}" integrity="{{ $sitejs.Data.Integrity }}" defer></script>
     {{ if isset .Site.Params "address" }}
     {{ with .Site.Params.GoogleMapsKey }}
     <script src="https://maps.google.com/maps/api/js?key={{ . }}"></script>
