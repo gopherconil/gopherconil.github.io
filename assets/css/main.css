@@ -1582,3 +1582,34 @@ section.social .section-title::after {
     .sp-tiers { max-width: 420px; }
     .sp-hero-cta .btn { flex: 1 1 auto; }
 }
+
+/* Comparison table fits phones without side-scroll */
+@media (max-width: 560px) {
+    .sp-table {
+        min-width: 0;
+        table-layout: fixed;
+        font-size: 0.84rem;
+    }
+    .sp-table th,
+    .sp-table td {
+        padding: 12px 8px;
+    }
+    .sp-table thead th {
+        font-size: 0.92rem;
+    }
+    /* let the label column wrap and take the remaining width */
+    .sp-table th:first-child,
+    .sp-table td:first-child {
+        width: auto;
+        text-align: left;
+        line-height: 1.3;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    /* keep the value columns compact */
+    .sp-table th:not(:first-child),
+    .sp-table td:not(:first-child) {
+        width: 4.2em;
+    }
+    .sp-yes { width: 19px; height: 19px; }
+}
