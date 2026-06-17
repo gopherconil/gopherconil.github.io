@@ -1,0 +1,89 @@
+{{ $p := .Site.Params }}
+{{ $s := $p.Sponsorship }}
+
+<header class="sp-hero">
+  <div class="wrapper sp-hero-inner">
+    <span class="hero-eyebrow reveal">
+      <span class="dot"></span>
+      {{ $p.date }} · {{ $p.venue }} · {{ $p.city }}
+    </span>
+    <h1 class="sp-title reveal">Sponsor <span class="sp-title-accent">GopherCon Israel</span> 2026</h1>
+    <p class="sp-intro reveal">{{ $s.intro }}</p>
+    <div class="sp-hero-cta reveal">
+      <a href="mailto:{{ $s.contact }}?subject=GopherCon%20Israel%202026%20%E2%80%94%20Sponsorship" class="btn sp-btn-primary">Talk to us</a>
+      <a href="#packages" class="btn sp-btn-ghost">See packages</a>
+    </div>
+  </div>
+  <div class="hero-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C240,90 480,0 720,30 C960,60 1200,90 1440,40 L1440,80 L0,80 Z" fill="#f3f9fb"></path>
+    </svg>
+  </div>
+</header>
+
+<div class="wrapper sp-body">
+
+  <section id="packages" class="sp-tiers-section">
+    <h2 class="section-title reveal">Choose your package</h2>
+    <div class="sp-tiers">
+      {{ range $s.tiers }}
+      <article class="sp-tier reveal{{ if .featured }} is-featured{{ end }} tier-{{ .name | lower }}">
+        {{ if .featured }}<span class="sp-tier-flag">Most popular</span>{{ end }}
+        <h3 class="sp-tier-name">{{ .name }}</h3>
+        <div class="sp-tier-price">{{ .price }}</div>
+        <span class="sp-tier-spots">{{ .spots }}</span>
+        <p class="sp-tier-summary">{{ .summary }}</p>
+        <ul class="sp-perks">
+          {{ range .perks }}
+          <li>
+            <svg class="sp-check" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M4 12.5l5 5L20 6.5"/></svg>
+            <span>{{ . }}</span>
+          </li>
+          {{ end }}
+        </ul>
+        <a href="mailto:{{ $s.contact }}?subject=GopherCon%20Israel%202026%20%E2%80%94%20{{ .name }}%20Sponsorship" class="btn sp-tier-cta">Become a {{ .name }} sponsor</a>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="sp-compare-section reveal">
+    <h2 class="section-title">Compare in detail</h2>
+    <div class="sp-table-wrap">
+      <table class="sp-table">
+        <thead>
+          <tr>
+            <th scope="col" class="sp-th-label"></th>
+            <th scope="col" class="sp-th-gold">Gold</th>
+            <th scope="col" class="sp-th-silver">Silver</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range $s.benefits }}
+          <tr>
+            <th scope="row">{{ .label }}</th>
+            {{ range $col := slice .gold .silver }}
+            <td>
+              {{ if eq $col "yes" }}
+                <svg class="sp-yes" viewBox="0 0 24 24" aria-label="Included"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M4 12.5l5 5L20 6.5"/></svg>
+              {{ else if eq $col "no" }}
+                <span class="sp-no" aria-label="Not included">—</span>
+              {{ else }}
+                <span class="sp-val">{{ $col }}</span>
+              {{ end }}
+            </td>
+            {{ end }}
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="sp-cta-band reveal">
+    <p class="sp-note">{{ $s.note }}</p>
+    <a href="mailto:{{ $s.contact }}?subject=GopherCon%20Israel%202026%20%E2%80%94%20Sponsorship" class="sp-mail">{{ $s.contact }}</a>
+    <p class="sp-back"><a href="/">← Back to the conference</a></p>
+  </section>
+
+</div>

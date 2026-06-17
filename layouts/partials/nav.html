@@ -1,8 +1,9 @@
 <nav id="nav">
+  {{ $prefix := "" }}{{ if not .IsHome }}{{ $prefix = "/" }}{{ end }}
   <ul class="nav-menu">
     {{ range $section := $.Site.Params.Sections }}
       <li class="nav-item">
-        <a href="#{{ $section }}" title="{{ index $.Site.Params.Titles $section }}" class="nav-link">
+        <a href="{{ $prefix }}#{{ $section }}" title="{{ index $.Site.Params.Titles $section }}" class="nav-link">
           {{ index $.Site.Params.Titles $section }}
         </a>
       </li>

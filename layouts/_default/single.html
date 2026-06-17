@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{{ .Title }} · {{ .Site.Params.Name }}</title>
+
+    <meta charset="utf-8">
+    <meta name="author" content="{{ .Site.Params.Name }}" />
+    <meta name="description" content="{{ .Description | default .Site.Params.Description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b1b26">
+
+    {{ hugo.Generator }}
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+
+    {{ $css := resources.Get "css/main.css" | fingerprint "sha256" }}
+    <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+</head>
+
+<body>
+    <script>document.documentElement.classList.add('js');</script>
+    <div class="global">
+
+        {{ partial "nav.html" . }}
+
+        <main class="content" id="content">
+            {{ partial "sponsor-page.html" . }}
+        </main>
+
+        {{ partial "footer/site-footer.html" . }}
+
+    </div>
+
+    {{ $sitejs := resources.Get "js/site.js" | fingerprint "sha256" }}
+    <script src="{{ $sitejs.RelPermalink }}" integrity="{{ $sitejs.Data.Integrity }}" defer></script>
+    {{ template "_internal/google_analytics.html" . }}
+</body>
+
+</html>

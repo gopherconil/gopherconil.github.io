@@ -102,6 +102,41 @@ params:
       icon: "mail"
       color: "#00add8"
 
+  # Sponsorship page (/sponsor) — modern tiered options
+  Sponsorship:
+    intro: "GopherCon Israel brings together the engineers building AI infrastructure, cloud platforms and developer tooling in Go. Put your brand in front of the people who decide what the Israeli tech stack looks like."
+    note: "Only 3 Gold packages left. Have something else in mind? We're flexible — tell us your goals and we'll tailor a package that fits."
+    contact: "info@gophercon.org.il"
+    tiers:
+      - name: "Gold"
+        price: "₪35,000"
+        spots: "5 packages · 3 left"
+        featured: true
+        summary: "Maximum visibility — a booth on the floor and your brand everywhere."
+        perks:
+          - "On-site booth"
+          - "8 conference tickets"
+          - "Logo & text on the website"
+          - "Logo on conference videos"
+          - "\"GopherCon brought to you by…\" on site"
+      - name: "Silver"
+        price: "₪12,000"
+        spots: "8 packages"
+        featured: false
+        summary: "Strong brand exposure across the conference and beyond."
+        perks:
+          - "4 conference tickets"
+          - "Logo & text on the website"
+          - "Logo on conference videos"
+          - "\"GopherCon brought to you by…\" on site"
+    # Side-by-side comparison. value of "yes" / "no" renders a check / dash.
+    benefits:
+      - { label: "On-site booth", gold: "yes", silver: "no" }
+      - { label: "Conference tickets", gold: "8", silver: "4" }
+      - { label: "Logo & text on conference website", gold: "yes", silver: "yes" }
+      - { label: "Logo on conference videos", gold: "yes", silver: "yes" }
+      - { label: "On-site \"GopherCon brought to you by…\"", gold: "yes", silver: "yes" }
+
   # List of Sponsors
   Sponsors:
     gold:
