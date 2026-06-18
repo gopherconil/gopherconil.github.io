@@ -11,33 +11,115 @@
     initMailLinks();
   });
 
-  /* --- mailto: → Gmail compose in a new tab ---
-     mailto only works when the OS has a default mail handler; many browser
-     users (Gmail-in-a-tab, no native client) get nothing. Open a pre-filled
-     Gmail compose window instead, and fall back to the native mailto only if
-     the popup is blocked. No-JS users still get the plain mailto href. */
+  /* --- mailto: → small "Gmail / Outlook / Default / Copy" chooser ---
+     mailto only works when the OS has a registered mail handler; many browser
+     users (Gmail-in-a-tab, no native client) get nothing on click. Instead of
+     forcing one provider, pop a tiny menu next to the link so the user picks
+     their own webmail, their native app, or just copies the address.
+     No-JS users still get the plain mailto href. */
   function initMailLinks() {
     var links = document.querySelectorAll('a[href^="mailto:"]');
     if (!links.length) return;
+
+    var menu = buildMailMenu();
+    var addr = "";
+
+    function parse(href) {
+      var rest = href.slice("mailto:".length);
+      var qi = rest.indexOf("?");
+      var to = decodeURIComponent(qi === -1 ? rest : rest.slice(0, qi));
+      var params = new URLSearchParams(qi === -1 ? "" : rest.slice(qi + 1));
+      return { to: to, su: params.get("subject") || "", body: params.get("body") || "" };
+    }
+
+    function place(trigger) {
+      menu.hidden = false; // make measurable
+      var r = trigger.getBoundingClientRect();
+      var mw = menu.offsetWidth, mh = menu.offsetHeight;
+      var vw = document.documentElement.clientWidth;
+      var vh = document.documentElement.clientHeight;
+      var left = Math.min(Math.max(12, r.left), vw - mw - 12);
+      var top = r.bottom + 8;
+      if (top + mh > vh - 12) top = Math.max(12, r.top - mh - 8); // flip above
+      menu.style.left = left + "px";
+      menu.style.top = top + "px";
+    }
+
+    function close() { menu.hidden = true; }
+
     Array.prototype.forEach.call(links, function (a) {
       a.addEventListener("click", function (e) {
-        var href = a.getAttribute("href") || "";
-        var rest = href.slice("mailto:".length);
-        var qi = rest.indexOf("?");
-        var to = decodeURIComponent(qi === -1 ? rest : rest.slice(0, qi));
-        var params = new URLSearchParams(qi === -1 ? "" : rest.slice(qi + 1));
-        var su = params.get("subject") || "";
-        var body = params.get("body") || "";
-        var gmail = "https://mail.google.com/mail/?view=cm&fs=1&to=" +
-          encodeURIComponent(to) +
-          (su ? "&su=" + encodeURIComponent(su) : "") +
-          (body ? "&body=" + encodeURIComponent(body) : "");
-        var win = window.open(gmail, "_blank", "noopener");
-        // Only suppress the native mailto when Gmail actually opened;
-        // if the popup was blocked, let mailto fire as the fallback.
-        if (win) e.preventDefault();
+        e.preventDefault();
+        var m = parse(a.getAttribute("href"));
+        addr = m.to;
+        var enc = encodeURIComponent;
+        var q = (k, v) => (v ? "&" + k + "=" + enc(v) : "");
+        menu.querySelector('[data-action="gmail"]').href =
+          "https://mail.google.com/mail/?view=cm&fs=1&to=" + enc(m.to) + q("su", m.su) + q("body", m.body);
+        menu.querySelector('[data-action="outlook"]').href =
+          "https://outlook.office.com/mail/deeplink/compose?to=" + enc(m.to) + q("subject", m.su) + q("body", m.body);
+        menu.querySelector('[data-action="default"]').href = a.getAttribute("href");
+        menu.querySelector(".mail-menu-addr").textContent = m.to;
+        var copyLabel = menu.querySelector('[data-action="copy"] .mail-menu-label');
+        copyLabel.textContent = "Copy address";
+        place(a);
+        menu.hidden = false;
       });
     });
+
+    menu.addEventListener("click", function (e) {
+      var item = e.target.closest(".mail-menu-item");
+      if (!item) return;
+      if (item.getAttribute("data-action") === "copy") {
+        e.preventDefault();
+        copyText(addr);
+        item.querySelector(".mail-menu-label").textContent = "Copied!";
+        setTimeout(close, 900);
+        return;
+      }
+      setTimeout(close, 0); // gmail / outlook / default: navigate then close
+    });
+
+    document.addEventListener("click", function (e) {
+      if (menu.hidden) return;
+      if (menu.contains(e.target)) return;
+      if (e.target.closest && e.target.closest('a[href^="mailto:"]')) return;
+      close();
+    });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+    window.addEventListener("resize", close);
+    window.addEventListener("scroll", close, { passive: true });
+  }
+
+  function buildMailMenu() {
+    var env = '<path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 6h18v12H3z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3.5 7l8.5 6 8.5-6"/>';
+    var clip = '<path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 5h8v3H8z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 6h3v15H5V6h3"/>';
+    var ico = function (d) { return '<svg class="mail-menu-ico" viewBox="0 0 24 24" aria-hidden="true">' + d + "</svg>"; };
+    var m = document.createElement("div");
+    m.className = "mail-menu";
+    m.setAttribute("role", "menu");
+    m.hidden = true;
+    m.innerHTML =
+      '<p class="mail-menu-head">Email <span class="mail-menu-addr"></span></p>' +
+      '<a class="mail-menu-item" role="menuitem" data-action="gmail" target="_blank" rel="noopener">' + ico(env) + '<span class="mail-menu-label">Gmail</span></a>' +
+      '<a class="mail-menu-item" role="menuitem" data-action="outlook" target="_blank" rel="noopener">' + ico(env) + '<span class="mail-menu-label">Outlook</span></a>' +
+      '<a class="mail-menu-item" role="menuitem" data-action="default">' + ico(env) + '<span class="mail-menu-label">Default mail app</span></a>' +
+      '<button type="button" class="mail-menu-item" role="menuitem" data-action="copy">' + ico(clip) + '<span class="mail-menu-label">Copy address</span></button>';
+    document.body.appendChild(m);
+    return m;
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).catch(fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement("textarea");
+      ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); } catch (e) { /* noop */ }
+      document.body.removeChild(ta);
+    }
   }
 
   /* --- sticky nav shadow on scroll --- */

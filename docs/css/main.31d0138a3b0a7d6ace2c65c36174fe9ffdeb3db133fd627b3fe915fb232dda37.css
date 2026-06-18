@@ -1613,3 +1613,70 @@ section.social .section-title::after {
     }
     .sp-yes { width: 19px; height: 19px; }
 }
+
+/* ----------------------------------------------------------------------------
+   Mail chooser popover (Gmail / Outlook / Default / Copy)
+   ------------------------------------------------------------------------- */
+.mail-menu {
+    position: fixed;
+    z-index: 200;
+    min-width: 232px;
+    padding: 8px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-lg);
+    font-family: var(--font-body);
+    animation: mail-menu-in 0.16s var(--ease);
+}
+
+@keyframes mail-menu-in {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.mail-menu-head {
+    margin: 4px 10px 8px;
+    font-size: 0.78rem;
+    color: var(--text-mut);
+}
+.mail-menu-addr {
+    display: block;
+    margin-top: 2px;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--text);
+    word-break: break-all;
+}
+
+.mail-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    border: 0;
+    border-radius: var(--r-sm);
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    font-size: 0.94rem;
+    font-weight: 500;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.14s var(--ease), color 0.14s var(--ease);
+}
+.mail-menu-item:hover,
+.mail-menu-item:focus-visible {
+    background: var(--surface-3);
+    color: var(--go-teal);
+    outline: none;
+}
+
+.mail-menu-ico {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 auto;
+    color: var(--go-cyan);
+}
