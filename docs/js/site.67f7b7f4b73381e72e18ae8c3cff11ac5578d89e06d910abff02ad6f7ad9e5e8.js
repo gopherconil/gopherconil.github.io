@@ -8,7 +8,37 @@
     initReveal();
     initCountdown();
     initShare();
+    initMailLinks();
   });
+
+  /* --- mailto: → Gmail compose in a new tab ---
+     mailto only works when the OS has a default mail handler; many browser
+     users (Gmail-in-a-tab, no native client) get nothing. Open a pre-filled
+     Gmail compose window instead, and fall back to the native mailto only if
+     the popup is blocked. No-JS users still get the plain mailto href. */
+  function initMailLinks() {
+    var links = document.querySelectorAll('a[href^="mailto:"]');
+    if (!links.length) return;
+    Array.prototype.forEach.call(links, function (a) {
+      a.addEventListener("click", function (e) {
+        var href = a.getAttribute("href") || "";
+        var rest = href.slice("mailto:".length);
+        var qi = rest.indexOf("?");
+        var to = decodeURIComponent(qi === -1 ? rest : rest.slice(0, qi));
+        var params = new URLSearchParams(qi === -1 ? "" : rest.slice(qi + 1));
+        var su = params.get("subject") || "";
+        var body = params.get("body") || "";
+        var gmail = "https://mail.google.com/mail/?view=cm&fs=1&to=" +
+          encodeURIComponent(to) +
+          (su ? "&su=" + encodeURIComponent(su) : "") +
+          (body ? "&body=" + encodeURIComponent(body) : "");
+        var win = window.open(gmail, "_blank", "noopener");
+        // Only suppress the native mailto when Gmail actually opened;
+        // if the popup was blocked, let mailto fire as the fallback.
+        if (win) e.preventDefault();
+      });
+    });
+  }
 
   /* --- sticky nav shadow on scroll --- */
   function initNav() {
