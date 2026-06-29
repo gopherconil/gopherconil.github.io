@@ -1,0 +1,41 @@
+{{ $cfp := .cfp }}
+
+<div class="cfp-head reveal">
+  <h2 class="section-title">Call for Speakers</h2>
+  {{ with $cfp.status }}<span class="cfp-status"><span class="cfp-status-dot"></span>{{ . }}</span>{{ end }}
+</div>
+
+<div class="cfp-grid">
+  <div class="cfp-main reveal">
+    <p class="cfp-intro">{{ $cfp.intro }}</p>
+
+    {{ with $cfp.topics }}
+    <p class="cfp-topics-label">Topics we love</p>
+    <ul class="cfp-topics">
+      {{ range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+    {{ end }}
+
+    <div class="cfp-cta">
+      <a href="{{ $cfp.submitLink }}" class="cfp-btn-primary" target="_blank" rel="noopener">Submit a session</a>
+      <a href="{{ $cfp.submitLink }}" class="cfp-btn-link" target="_blank" rel="noopener">View the full CFP →</a>
+    </div>
+
+    {{ with $cfp.note }}<p class="cfp-note">{{ . }}</p>{{ end }}
+  </div>
+
+  {{ with $cfp.dates }}
+  <aside class="cfp-dates reveal" aria-label="Key dates">
+    <h3 class="cfp-dates-title">Dates to remember</h3>
+    <ol class="cfp-timeline">
+      {{ range . }}
+      <li class="cfp-tl-item{{ if .highlight }} is-highlight{{ end }}">
+        <span class="cfp-tl-dot" aria-hidden="true"></span>
+        <span class="cfp-tl-label">{{ .label }}</span>
+        <span class="cfp-tl-date">{{ .date }}</span>
+      </li>
+      {{ end }}
+    </ol>
+  </aside>
+  {{ end }}
+</div>

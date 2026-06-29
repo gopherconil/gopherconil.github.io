@@ -26,6 +26,7 @@ params:
   # you can also change order here and it will reflect on page
   Sections:
     - about
+    - cfp
     - location
     # - speakers
     # - schedule
@@ -38,6 +39,7 @@ params:
   # Titles which you can translate to other languages
   Titles:
     about: "About"
+    cfp: "Speak"
     location: "Location"
     # speakers: "Speakers"
     schedule: "Schedule"
@@ -71,6 +73,29 @@ params:
   # Tickets:
   #   text: "Purchase Ticket"
   #   link: "https://www.eventer.co.il/gc2025"
+
+  # Call for Speakers (Sessionize CFP) — rendered as the "cfp" section
+  CFP:
+    status: "Open · submissions close July 31"
+    submitLink: "https://sessionize.com/gophercon-israel-2026/"
+    intro: "We're looking for a diverse range of sessions for both newcomers and seasoned Gophers. This year we're focused on building AI systems — but there's plenty more we'd love to hear about. Sessions should bring practical, real-world takeaways the audience can apply."
+    topics:
+      - "AI systems"
+      - "Concurrency"
+      - "Web development"
+      - "Microservices"
+      - "Tooling"
+      - "Performance"
+      - "Security"
+      - "Community projects"
+    dates:
+      - { label: "CFP opens", date: "June 29" }
+      - { label: "CFP closes", date: "July 31 · 11:59pm" }
+      - { label: "Notifications", date: "September 1" }
+      - { label: "Schedule announced", date: "September 13" }
+      - { label: "Dry-run sessions", date: "October 14–15" }
+      - { label: "Conference day", date: "October 18", highlight: true }
+    note: "This is a community event — no product or vendor sales pitches. By submitting you agree to the Go Community Code of Conduct."
 
   # Featured pull-quote (rendered between the hero and the sections)
   Quote:
