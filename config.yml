@@ -225,3 +225,6 @@ params:
     - name: "Orit Wasserman"
       photo: "img/orit-wasserman.jpg"
       linkedin: "https://www.linkedin.com/in/orit-wasserman-73547"
+    - name: "Koren Cohen"
+      photo: "img/koren-cohen.jpg"
+      linkedin: "https://www.linkedin.com/in/koren-cohen-/"
