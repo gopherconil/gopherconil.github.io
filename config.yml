@@ -49,30 +49,15 @@ params:
     team: "Team"
     social: "Community"
   
-  # The Call To Action button at the header,
+  # The secondary button at the header
   CallToAction:
     text: "Become a Sponsor"
     link: "/sponsor"
 
-   # The Call To Action button at the header,
-  CallForPaper:
-    text: "2025 Photos"
-    link: "https://photos.app.goo.gl/f7cb8nFzQKhkFNXN8"
-
-  # The Call To Action button at the header,
-  VideoButton:
-    text: "2025 Videos"
-    link: "https://www.youtube.com/playlist?list=PLRM-8sTy13XvT_S1KJWZz2KOJgOt_vVVH"
-
-  # The Call For Paper button at the header,
-  # CallForPaper:
-  #   text: "Apply to Speak"
-  #   link: "https://sessionize.com/gophercon-israel-2025"
-
-  # The tickets button at the header,
-  # Tickets:
-  #   text: "Purchase Ticket"
-  #   link: "https://www.eventer.co.il/gc2025"
+  # The primary button at the header
+  Tickets:
+    text: "Buy a Ticket"
+    link: "https://www.eventer.co.il/gophercon2026"
 
   # Call for Speakers (Sessionize CFP) — rendered as the "cfp" section
   CFP:
