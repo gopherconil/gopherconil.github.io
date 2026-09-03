@@ -70,9 +70,9 @@ params:
   #   link: "https://sessionize.com/gophercon-israel-2025"
 
   # The tickets button at the header,
-  # Tickets:
-  #   text: "Purchase Ticket"
-  #   link: "https://www.eventer.co.il/gc2025"
+  Tickets:
+    text: "Purchase Ticket"
+    link: "https://www.eventer.co.il/gophercon2026"
 
   # Call for Speakers (Sessionize CFP) — rendered as the "cfp" section
   CFP:
