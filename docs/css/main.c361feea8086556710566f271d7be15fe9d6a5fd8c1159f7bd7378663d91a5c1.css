@@ -494,6 +494,32 @@ p:last-child {
     box-shadow: 0 22px 50px rgba(0, 173, 216, 0.42);
 }
 
+/* tickets = the money CTA — gold + pulsing glow, stands out in any position */
+.call-action-area .call-action-link--tickets {
+    color: var(--ink);
+    background: linear-gradient(135deg, #ffe873, var(--gold));
+    border: 1px solid transparent;
+    box-shadow: 0 14px 36px rgba(255, 212, 59, 0.32);
+    animation: tickets-glow 2.8s ease-in-out infinite;
+}
+
+.call-action-area .call-action-link--tickets:hover {
+    color: var(--ink);
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #fff0a0, #ffdf55);
+    box-shadow: 0 22px 60px rgba(255, 212, 59, 0.60);
+    animation: none;
+}
+
+.call-action-area .call-action-link--tickets:active {
+    transform: translateY(0);
+}
+
+@keyframes tickets-glow {
+    0%, 100% { box-shadow: 0 14px 36px rgba(255, 212, 59, 0.32); }
+    50%      { box-shadow: 0 18px 58px rgba(255, 212, 59, 0.62); }
+}
+
 /* secondary CTAs = glass */
 .call-action-link,
 .btn {
@@ -1255,6 +1281,11 @@ section.social .section-title::after {
     .call-action-area .btn {
         width: 100%;
         max-width: 320px;
+    }
+
+    /* tickets first in the stack on mobile — easiest to find & buy */
+    .call-action-area .call-action-link--tickets {
+        order: -1;
     }
 
     .call-action-area .price {
