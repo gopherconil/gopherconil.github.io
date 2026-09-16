@@ -22,9 +22,12 @@
 
     {{ with .cancellation }}
     <div class="hero-cancel reveal">
-      <p class="hero-cancel-text">{{ .text }}</p>
-      <p class="hero-cancel-note">Originally planned for {{ $.date }} at {{ $.venue }}, {{ $.city }}.</p>
-      <a class="hero-cancel-link" href="{{ .link }}" target="_blank" rel="noopener">{{ .linkText }}</a>
+      {{ with .image }}<img class="hero-cancel-img" src="{{ . }}" alt="The Go gopher locking the door" loading="lazy">{{ end }}
+      <div class="hero-cancel-body">
+        <p class="hero-cancel-text">{{ .text }}</p>
+        <p class="hero-cancel-note">Originally planned for {{ $.date }} at {{ $.venue }}, {{ $.city }}.</p>
+        <a class="hero-cancel-link" href="{{ .link }}" target="_blank" rel="noopener">{{ .linkText }}</a>
+      </div>
     </div>
     {{ end }}
 

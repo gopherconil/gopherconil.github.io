@@ -457,15 +457,29 @@ p:last-child {
 }
 
 .hero-cancel {
-    max-width: 760px;
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 3.4vw, 36px);
+    max-width: 880px;
     margin: 0 auto clamp(28px, 4vw, 40px);
-    padding: clamp(22px, 3.2vw, 34px) clamp(22px, 4vw, 44px);
+    padding: clamp(20px, 3vw, 30px) clamp(22px, 4vw, 38px);
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-left: 4px solid var(--gold);
     border-radius: var(--r-lg);
-    text-align: center;
+    text-align: left;
     backdrop-filter: blur(8px);
+}
+
+.hero-cancel-img {
+    flex: 0 0 auto;
+    width: clamp(150px, 24vw, 230px);
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-md);
+}
+
+.hero-cancel-body {
+    min-width: 0;
 }
 
 .hero-cancel-text {
@@ -1317,6 +1331,15 @@ section.social .section-title::after {
 
     .countdown {
         max-width: 360px;
+    }
+
+    .hero-cancel {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-cancel-img {
+        width: clamp(160px, 55vw, 220px);
     }
 
     .rounded-image-container {

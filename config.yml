@@ -25,6 +25,7 @@ params:
   # Cancellation notice — shown in the hero
   Cancellation:
     text: "We really tried. But with heavy hearts, we've decided to cancel this year's GopherCon Israel. Tech conferences worldwide are struggling, and we're no exception. We'll wait for better times and return with the conference you deserve. Shana Tova!"
+    image: "/img/cancel-gopher.jpg"
     link: "https://x.com/gopherconil/status/2099048465405714570"
     linkText: "Read the announcement on X"
 
