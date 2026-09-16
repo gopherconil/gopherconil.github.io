@@ -28,9 +28,9 @@
   {{ end }}
 </div>
 
-{{/* ---- Spread the word / share ---- */}}
+{{/* ---- Keep the community in the loop / share ---- */}}
 {{ $url := "https://www.gophercon.org.il/" }}
-{{ $text := printf "I'm going to %s 🐹 — a full day of Go talks in Tel Aviv on %s. Join me!" .name .date }}
+{{ $text := printf "%s is cancelled, but the Go community in Israel lives on — follow @GopherConIL for news about the next edition 🐹" .name }}
 {{ $twitter := printf "https://twitter.com/intent/tweet?%s" (querify "text" $text "url" $url "hashtags" "golang,GopherConIL") }}
 {{ $linkedin := printf "https://www.linkedin.com/sharing/share-offsite/?%s" (querify "url" $url) }}
 {{ $whatsapp := printf "https://wa.me/?%s" (querify "text" (printf "%s %s" $text $url)) }}
@@ -39,8 +39,8 @@
      data-share-text="{{ $text }}"
      data-share-title="{{ .name }}">
   <div class="share-copy">
-    <h3 class="share-title">Spread the word 🐹</h3>
-    <p>Know a fellow gopher? Give Go in Israel a signal boost.</p>
+    <h3 class="share-title">Stay in the loop 🐹</h3>
+    <p>GopherCon Israel 2026 is cancelled, but we'll be back. Follow us for updates and community news.</p>
   </div>
   <div class="share-actions">
     <button type="button" class="share-btn share-native" hidden>

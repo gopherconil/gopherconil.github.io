@@ -10,8 +10,8 @@ GoogleAnalytics: "UA-125301893-1"
 params:
   # Conference info
   Name: "GopherCon Israel 2026"
-  Description: "Best Go Conference in Israel"
-  Subtitle: "Where the engineers building AI infrastructure meet"
+  Description: "GopherCon Israel 2026 has been cancelled — we'll wait for better times and return with the conference you deserve."
+  Subtitle: "Israel's Go community conference"
   Date: "October 18"
   # Price: "100NIS" # If your event is free, just comment this line
   Venue: "Expo - Bitan 10"
@@ -22,19 +22,18 @@ params:
   Images: ["/img/og-share.png"]
   # GoogleMapsKey: "my-secret-maps-key"
 
+  # Cancellation notice — shown in the hero
+  Cancellation:
+    text: "We really tried. But with heavy hearts, we've decided to cancel this year's GopherCon Israel. Tech conferences worldwide are struggling, and we're no exception. We'll wait for better times and return with the conference you deserve. Shana Tova!"
+    link: "https://x.com/gopherconil/status/2099048465405714570"
+    linkText: "Read the announcement on X"
+
   # Active sections on the website to deactivate comment out with '#'
   # you can also change order here and it will reflect on page
   Sections:
     - about
-    - cfp
-    - location
-    # - speakers
-    # - schedule
-    # - sponsors
     - team
     - social
-    # - partners
-    # - contact
 
   # Titles which you can translate to other languages
   Titles:
@@ -48,11 +47,6 @@ params:
     contact: "Contact"
     team: "Team"
     social: "Community"
-  
-  # The Call To Action button at the header,
-  # CallToAction:
-  #   text: "Become a Sponsor"
-  #   link: "/sponsor"
 
    # The Call To Action button at the header,
   CallForPaper:
@@ -63,46 +57,6 @@ params:
   VideoButton:
     text: "2025 Videos"
     link: "https://www.youtube.com/playlist?list=PLRM-8sTy13XvT_S1KJWZz2KOJgOt_vVVH"
-
-  # The Call For Paper button at the header,
-  # CallForPaper:
-  #   text: "Apply to Speak"
-  #   link: "https://sessionize.com/gophercon-israel-2025"
-
-  # The tickets button at the header,
-  # Tickets:
-  #   text: "Purchase Ticket"
-  #   link: "https://www.eventer.co.il/gophercon2026"
-
-  # Call for Speakers (Sessionize CFP) — rendered as the "cfp" section
-  CFP:
-    status: "Open · submissions close August 15"
-    submitLink: "https://sessionize.com/gophercon-israel-2026/"
-    intro: "We're looking for a diverse range of sessions for both newcomers and seasoned Gophers. This year we're focused on building AI systems — but there's plenty more we'd love to hear about. Sessions should bring practical, real-world takeaways the audience can apply."
-    topics:
-      - "AI systems"
-      - "Concurrency"
-      - "Web development"
-      - "Microservices"
-      - "Tooling"
-      - "Performance"
-      - "Security"
-      - "Community projects"
-    dates:
-      - { label: "CFP opens", date: "June 29" }
-      - { label: "CFP closes", date: "August 15 · 11:59pm" }
-      - { label: "Notifications", date: "September 1" }
-      - { label: "Schedule announced", date: "September 13" }
-      - { label: "Dry-run sessions", date: "October 14–15" }
-      - { label: "Conference day", date: "October 18", highlight: true }
-    note: "This is a community event — no product or vendor sales pitches. By submitting you agree to the Go Community Code of Conduct."
-
-  # Featured pull-quote (rendered between the hero and the sections)
-  Quote:
-    text: "It's quite something that Go became the lingua franca for agentic systems at Google."
-    author: "Jaana Dogan"
-    handle: "@rakyll"
-    url: "https://x.com/rakyll/status/2056528039698403498"
 
   # Social / community channels (rendered by the "social" section)
   Social:
@@ -126,41 +80,6 @@ params:
       url: "http://eepurl.com/dDcXef"
       icon: "mail"
       color: "#00add8"
-
-  # Sponsorship page (/sponsor) — modern tiered options
-  Sponsorship:
-    intro: "GopherCon Israel brings together the engineers building AI infrastructure, cloud platforms and developer tooling in Go. Put your brand in front of the people who decide what the Israeli tech stack looks like."
-    note: "Only 3 Gold packages left. Have something else in mind? We're flexible — tell us your goals and we'll tailor a package that fits."
-    contact: "info@gophercon.org.il"
-    tiers:
-      - name: "Gold"
-        price: "₪35,000"
-        spots: "5 packages · 3 left"
-        featured: true
-        summary: "Maximum visibility — a booth on the floor and your brand everywhere."
-        perks:
-          - "On-site booth"
-          - "8 conference tickets"
-          - "Logo & text on the website"
-          - "Logo on conference videos"
-          - "\"GopherCon brought to you by…\" on site"
-      - name: "Silver"
-        price: "₪12,000"
-        spots: "8 packages"
-        featured: false
-        summary: "Strong brand exposure across the conference and beyond."
-        perks:
-          - "4 conference tickets"
-          - "Logo & text on the website"
-          - "Logo on conference videos"
-          - "\"GopherCon brought to you by…\" on site"
-    # Side-by-side comparison. value of "yes" / "no" renders a check / dash.
-    benefits:
-      - { label: "On-site booth", gold: "yes", silver: "no" }
-      - { label: "Conference tickets", gold: "8", silver: "4" }
-      - { label: "Logo & text on conference website", gold: "yes", silver: "yes" }
-      - { label: "Logo on conference videos", gold: "yes", silver: "yes" }
-      - { label: "On-site \"GopherCon brought to you by…\"", gold: "yes", silver: "yes" }
 
   # List of Sponsors
   Sponsors:
